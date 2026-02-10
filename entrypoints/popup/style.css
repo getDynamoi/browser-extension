@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+	--color-brand-emerald: oklch(66.661% 0.17569 151.098);
+	--color-brand-blue: oklch(0.65 0.18 250);
+	--color-brand-red: oklch(59.378% 0.22023 28.494);
+
+	--color-surface-bg: oklch(0.18 0 0);
+	--color-surface-card: oklch(0.21 0 0);
+	--color-surface-border: oklch(0.3 0 0);
+	--color-surface-input: oklch(0.25 0 0);
+	--color-surface-muted: oklch(0.28 0 0);
+
+	--color-text-primary: oklch(0.98 0 0);
+	--color-text-secondary: oklch(0.7 0 0);
+	--color-text-muted: oklch(0.5 0 0);
+}
