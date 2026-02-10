@@ -1,36 +1,55 @@
 const THROTTLE_MS = 2000;
 
-let lastRequestTime = 0;
-let throttleTimeout: ReturnType<typeof setTimeout> | null = null;
-let pendingCallback: (() => void) | null = null;
+type ThrottleState = {
+	lastRequestTime: number;
+	throttleTimeout: ReturnType<typeof setTimeout> | null;
+	pendingCallback: (() => void) | null;
+};
+
+const throttleStates = new Map<string, ThrottleState>();
+
+function getState(key: string): ThrottleState {
+	const existing = throttleStates.get(key);
+	if (existing) return existing;
+
+	const next: ThrottleState = {
+		lastRequestTime: 0,
+		pendingCallback: null,
+		throttleTimeout: null,
+	};
+	throttleStates.set(key, next);
+	return next;
+}
 
 /**
- * Throttle function calls to at most once every THROTTLE_MS.
- * If called during cooldown, the latest call replaces any pending call.
+ * Throttle function calls per key to at most once every THROTTLE_MS.
+ * If called during cooldown, the latest call replaces any pending call for that key.
  */
-export function throttledCall(callback: () => void): void {
+export function throttledCall(key: string, callback: () => void): void {
+	const state = getState(key);
+
 	const now = Date.now();
-	const timeSinceLast = now - lastRequestTime;
+	const timeSinceLast = now - state.lastRequestTime;
 
 	if (timeSinceLast >= THROTTLE_MS) {
-		lastRequestTime = now;
+		state.lastRequestTime = now;
 		callback();
 		return;
 	}
 
-	// Replace pending callback with latest
-	pendingCallback = callback;
+	state.pendingCallback = callback;
 
-	if (!throttleTimeout) {
-		const delay = THROTTLE_MS - timeSinceLast;
-		throttleTimeout = setTimeout(() => {
-			throttleTimeout = null;
-			const pending = pendingCallback;
-			pendingCallback = null;
-			if (pending) {
-				lastRequestTime = Date.now();
-				pending();
-			}
-		}, delay);
-	}
+	if (state.throttleTimeout) return;
+
+	const delay = THROTTLE_MS - timeSinceLast;
+	state.throttleTimeout = setTimeout(() => {
+		state.throttleTimeout = null;
+		const pending = state.pendingCallback;
+		state.pendingCallback = null;
+		if (pending) {
+			state.lastRequestTime = Date.now();
+			pending();
+		}
+	}, delay);
 }
+

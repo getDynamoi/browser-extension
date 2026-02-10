@@ -85,6 +85,17 @@ export default defineContentScript({
 			) {
 				return;
 			}
+
+			// Ignore late responses that no longer match the current Spotify URL.
+			const currentInfo = parseSpotifyUrl(window.location.pathname);
+			if (
+				!currentInfo ||
+				currentInfo.id !== message.id ||
+				currentInfo.type !== message.itemType
+			) {
+				return;
+			}
+
 			currentData = message;
 			if (!isHidden) {
 				void mountOverlay().then(renderApp);

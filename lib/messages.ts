@@ -16,21 +16,26 @@ export type RequestMessage = {
 export type ResponseMessage =
 	| {
 			type: "SPOTIFY_DATA_RESULT";
+			id: string;
 			itemType: "track";
 			data: TrackData;
 	  }
 	| {
 			type: "SPOTIFY_DATA_RESULT";
+			id: string;
 			itemType: "album";
 			data: AlbumData;
 	  }
 	| {
 			type: "SPOTIFY_DATA_RESULT";
+			id: string;
 			itemType: "artist";
 			data: ArtistData;
 	  }
 	| {
 			type: "SPOTIFY_DATA_ERROR";
+			id: string;
+			itemType: SpotifyItemType;
 			error: string;
 	  };
 

@@ -15,26 +15,46 @@ export default defineBackground(() => {
 
 			const { id, itemType } = message;
 
-			throttledCall(async () => {
-				const result = await fetchSpotifyData<
-					TrackData | AlbumData | ArtistData
-				>(itemType, id);
+			throttledCall(String(tabId), () => {
+				void (async () => {
+					let response: ResponseMessage;
 
-				let response: ResponseMessage;
+					try {
+						const result = await fetchSpotifyData<
+							TrackData | AlbumData | ArtistData
+						>(itemType, id);
 
-				if ("error" in result) {
-					response = { type: "SPOTIFY_DATA_ERROR", error: result.error };
-				} else {
-					response = {
-						type: "SPOTIFY_DATA_RESULT",
-						itemType,
-						data: result.data,
-					} as ResponseMessage;
-				}
+						if ("error" in result) {
+							response = {
+								type: "SPOTIFY_DATA_ERROR",
+								error: result.error,
+								id,
+								itemType,
+							};
+						} else {
+							response = {
+								type: "SPOTIFY_DATA_RESULT",
+								data: result.data,
+								id,
+								itemType,
+							} as ResponseMessage;
+						}
+					} catch (error) {
+						response = {
+							type: "SPOTIFY_DATA_ERROR",
+							error:
+								error instanceof Error
+									? error.message
+									: "Unexpected network error.",
+							id,
+							itemType,
+						};
+					}
 
-				chrome.tabs.sendMessage(tabId, response).catch(() => {
-					// Tab may have navigated away
-				});
+					chrome.tabs.sendMessage(tabId, response).catch(() => {
+						// Tab may have navigated away
+					});
+				})();
 			});
 		},
 	);
