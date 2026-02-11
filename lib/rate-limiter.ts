@@ -52,4 +52,3 @@ export function throttledCall(key: string, callback: () => void): void {
 		}
 	}, delay);
 }
-
