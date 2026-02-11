@@ -1,6 +1,7 @@
 import type { SpotifyItemType, SpotifyUrlInfo } from "./types";
 
-const SPOTIFY_PATH_REGEX = /^\/(track|album|artist)\/([A-Za-z0-9]+)/;
+const SPOTIFY_PATH_REGEX =
+	/^(?:\/intl-[a-z]{2}(?:-[A-Za-z]{2,})*)?\/(track|album|artist)\/([A-Za-z0-9]+)/;
 
 const VALID_TYPES = new Set<SpotifyItemType>(["track", "album", "artist"]);
 
