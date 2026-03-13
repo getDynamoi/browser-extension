@@ -1,7 +1,7 @@
 {
 	"name": "@dynamoi/chrome-extension",
 	"version": "1.0.0",
-	"description": "Displays enhanced music data on Spotify's web app. Quickly see popularity, genres, audio features, label, and UPC as you browse.",
+	"description": "Displays enhanced music data on Spotify's web app. Quickly see popularity, genres, label, and UPC as you browse.",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -18,13 +18,13 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.0",
-		"@types/chrome": "^0.0.304",
+		"@types/chrome": "^0.1.36",
 		"@types/react": "^19.1.0",
 		"@types/react-dom": "^19.1.0",
 		"@wxt-dev/module-react": "^1.1.0",
 		"postcss": "^8.5.0",
 		"tailwindcss": "^4.1.0",
 		"typescript": "^5.8.0",
-		"wxt": "^0.19.0"
+		"wxt": "^0.20.17"
 	}
 }

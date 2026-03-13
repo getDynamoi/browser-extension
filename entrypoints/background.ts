@@ -1,4 +1,4 @@
-import { defineBackground } from "wxt/sandbox";
+import { defineBackground } from "wxt/utils/define-background";
 import { fetchSpotifyData } from "../lib/api-client";
 import type { RequestMessage, ResponseMessage } from "../lib/messages";
 import { throttledCall } from "../lib/rate-limiter";

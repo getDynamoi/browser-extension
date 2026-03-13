@@ -38,5 +38,3 @@ export type ResponseMessage =
 			itemType: SpotifyItemType;
 			error: string;
 	  };
-
-export type ExtensionMessage = RequestMessage | ResponseMessage;

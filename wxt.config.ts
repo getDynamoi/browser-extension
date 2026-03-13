@@ -5,7 +5,7 @@ export default defineConfig({
 	manifest: ({ mode }) => ({
 		name: "Dynamoi",
 		description:
-			"See hidden Spotify metadata — popularity, audio features, genres, labels, and more — right on the page.",
+			"See hidden Spotify metadata — popularity, genres, labels, and more — right on the page.",
 		permissions: ["activeTab"],
 		host_permissions: [
 			"https://open.spotify.com/*",

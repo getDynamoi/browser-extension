@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { createShadowRootUi } from "wxt/client";
-import { defineContentScript } from "wxt/sandbox";
+import { defineContentScript } from "wxt/utils/define-content-script";
 import type { RequestMessage, ResponseMessage } from "../../lib/messages";
 import { parseSpotifyUrl } from "../../lib/spotify-url";
 import App from "./components/App";
