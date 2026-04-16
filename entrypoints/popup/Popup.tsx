@@ -23,7 +23,7 @@ export default function Popup() {
 	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
 
 	useEffect(() => {
-		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+		chrome.tabs.query({ active: true, currentWindow: true }, (tabs: chrome.tabs.Tab[]) => {
 			const url = tabs[0]?.url;
 			try {
 				if (url && new URL(url).origin === "https://open.spotify.com") {

@@ -7,7 +7,11 @@ import type { AlbumData, ArtistData, TrackData } from "../lib/types";
 export default defineBackground(() => {
 	// Handle data requests from content script
 	chrome.runtime.onMessage.addListener(
-		(message: RequestMessage, sender, _sendResponse) => {
+		(
+			message: RequestMessage,
+			sender: chrome.runtime.MessageSender,
+			_sendResponse: (response?: unknown) => void,
+		) => {
 			if (message.type !== "GET_SPOTIFY_DATA") return;
 
 			const tabId = sender.tab?.id;

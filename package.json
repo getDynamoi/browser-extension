@@ -8,7 +8,7 @@
 		"dev": "wxt",
 		"build": "wxt build",
 		"zip": "wxt zip",
-		"typecheck": "tsc --noEmit",
+		"typecheck": "tsgo --noEmit -p tsconfig.json",
 		"lint": "echo 'no lint configured'",
 		"postinstall": "wxt prepare"
 	},

@@ -2,8 +2,10 @@
 	"extends": "./.wxt/tsconfig.json",
 	"compilerOptions": {
 		"strict": true,
+		"exactOptionalPropertyTypes": true,
 		"jsx": "react-jsx",
 		"noUnusedLocals": true,
-		"noUnusedParameters": true
+		"noUnusedParameters": true,
+		"types": ["chrome", "node"]
 	}
 }

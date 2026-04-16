@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { createShadowRootUi } from "wxt/client";
+import { createShadowRootUi } from "wxt/utils/content-script-ui/shadow-root";
 import { defineContentScript } from "wxt/utils/define-content-script";
 import type { RequestMessage, ResponseMessage } from "../../lib/messages";
 import { parseSpotifyUrl } from "../../lib/spotify-url";
@@ -39,14 +39,14 @@ export default defineContentScript({
 			const ui = await createShadowRootUi(ctx, {
 				name: "music-data-lens",
 				position: "overlay",
-				onMount(container) {
+				onMount(container: Element) {
 					const wrapper = document.createElement("div");
 					container.append(wrapper);
 					root = createRoot(wrapper);
 					renderApp();
 					return root;
 				},
-				onRemove(r) {
+				onRemove(r: ReturnType<typeof createRoot> | undefined) {
 					r?.unmount();
 					root = null;
 				},
