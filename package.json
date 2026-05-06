@@ -24,7 +24,7 @@
 		"@wxt-dev/module-react": "1.2.2",
 		"postcss": "8.5.12",
 		"tailwindcss": "4.2.4",
-		"typescript": "5.9.3",
+		"typescript": "6.0.3",
 		"wxt": "0.20.25"
 	}
 }
