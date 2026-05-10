@@ -18,7 +18,7 @@ export default function OverlayHeader({ logoUrl, onClose }: OverlayHeaderProps) 
 			<button
 				type="button"
 				onClick={onClose}
-				className="w-5 h-5 rounded-md bg-surface-muted/60 text-text-muted hover:bg-surface-border hover:text-text-primary flex items-center justify-center text-[12px] leading-none transition-colors cursor-pointer"
+				className="size-5 rounded-md bg-surface-muted/60 text-text-muted hover:bg-surface-border hover:text-text-primary flex items-center justify-center text-[12px] leading-none transition-colors cursor-pointer"
 			>
 				&times;
 			</button>

@@ -18,6 +18,21 @@ function SpotifyLogo({ className }: { className?: string }) {
 	);
 }
 
+function DynamoiFooterLink() {
+	return (
+		<div className="text-center">
+			<a
+				href="https://dynamoi.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-[10px] text-text-muted hover:text-brand-emerald transition-colors"
+			>
+				dynamoi.com
+			</a>
+		</div>
+	);
+}
+
 export default function Popup() {
 	const [tabState, setTabState] = useState<TabState>("loading");
 	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
@@ -48,20 +63,11 @@ export default function Popup() {
 					{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension UI is not rendered by Next.js runtime. */}
 					<img src={logoUrl} alt="Dynamoi" className="h-[14px] w-auto" />
 					<div className="flex items-center gap-1.5">
-						<div className="w-1.5 h-1.5 rounded-full bg-brand-emerald" />
+						<div className="size-1.5 rounded-full bg-brand-emerald" />
 						<span className="text-[11px] text-brand-emerald">Active</span>
 					</div>
 				</div>
-				<div className="text-center">
-					<a
-						href="https://dynamoi.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-[10px] text-text-muted hover:text-brand-emerald transition-colors"
-					>
-						dynamoi.com
-					</a>
-				</div>
+				<DynamoiFooterLink />
 			</div>
 		);
 	}
@@ -69,7 +75,7 @@ export default function Popup() {
 	return (
 		<div className="w-[280px] bg-surface-bg text-text-primary p-5 space-y-4">
 			<div className="flex flex-col items-center text-center gap-3">
-				<SpotifyLogo className="w-10 h-10" />
+				<SpotifyLogo className="size-10" />
 				<div>
 					{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension UI is not rendered by Next.js runtime. */}
 					<img
@@ -90,16 +96,7 @@ export default function Popup() {
 					</p>
 				</div>
 			</div>
-			<div className="text-center">
-				<a
-					href="https://dynamoi.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-[10px] text-text-muted hover:text-brand-emerald transition-colors"
-				>
-					dynamoi.com
-				</a>
-			</div>
+			<DynamoiFooterLink />
 		</div>
 	);
 }
