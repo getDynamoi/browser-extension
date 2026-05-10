@@ -1,6 +1,43 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type TabState = "spotify" | "other" | "loading";
+let currentTabState: TabState = "loading";
+
+function tabStateFromUrl(url: string | undefined): Exclude<TabState, "loading"> {
+	if (!url) {
+		return "other";
+	}
+
+	try {
+		return new URL(url).origin === "https://open.spotify.com"
+			? "spotify"
+			: "other";
+	} catch {
+		return "other";
+	}
+}
+
+function subscribeToTabState(onStoreChange: () => void) {
+	let isSubscribed = true;
+	currentTabState = "loading";
+	onStoreChange();
+
+	chrome.tabs.query({ active: true, currentWindow: true }, (tabs: chrome.tabs.Tab[]) => {
+		if (!isSubscribed) {
+			return;
+		}
+		currentTabState = tabStateFromUrl(tabs[0]?.url);
+		onStoreChange();
+	});
+
+	return () => {
+		isSubscribed = false;
+	};
+}
+
+function getTabStateSnapshot() {
+	return currentTabState;
+}
 
 function SpotifyLogo({ className }: { className?: string }) {
 	return (
@@ -34,23 +71,12 @@ function DynamoiFooterLink() {
 }
 
 export default function Popup() {
-	const [tabState, setTabState] = useState<TabState>("loading");
+	const tabState = useSyncExternalStore(
+		subscribeToTabState,
+		getTabStateSnapshot,
+		getTabStateSnapshot,
+	);
 	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
-
-	useEffect(() => {
-		chrome.tabs.query({ active: true, currentWindow: true }, (tabs: chrome.tabs.Tab[]) => {
-			const url = tabs[0]?.url;
-			try {
-				if (url && new URL(url).origin === "https://open.spotify.com") {
-					setTabState("spotify");
-				} else {
-					setTabState("other");
-				}
-			} catch {
-				setTabState("other");
-			}
-		});
-	}, []);
 
 	if (tabState === "loading") {
 		return <div className="w-[280px] h-[100px] bg-surface-bg" />;
