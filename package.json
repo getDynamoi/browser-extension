@@ -8,7 +8,7 @@
 		"dev": "wxt",
 		"build": "wxt build",
 		"zip": "wxt zip",
-		"typecheck": "tsgo --noEmit -p tsconfig.json",
+		"typecheck": "tsc --noEmit -p tsconfig.json",
 		"lint": "echo 'no lint configured'",
 		"postinstall": "wxt prepare"
 	},
@@ -24,7 +24,7 @@
 		"@wxt-dev/module-react": "1.2.2",
 		"postcss": "8.5.15",
 		"tailwindcss": "4.2.4",
-		"typescript": "6.0.3",
+		"typescript": "7.0.2",
 		"wxt": "0.20.25"
 	}
 }
