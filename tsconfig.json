@@ -4,6 +4,7 @@
 		"strict": true,
 		"exactOptionalPropertyTypes": true,
 		"jsx": "react-jsx",
+		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"types": ["chrome", "node"]
