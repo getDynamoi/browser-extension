@@ -16,7 +16,7 @@ export default function App({ data, logoUrl, onClose }: AppProps) {
 
 	if (data.type === "SPOTIFY_DATA_ERROR") {
 		return (
-			<div className="fixed top-5 right-5 z-[10000] w-[360px] glass-card animate-fade-in p-5">
+			<div className="fixed top-5 right-5 z-[10000] w-90 glass-card animate-fade-in p-5">
 				<OverlayHeader logoUrl={logoUrl} onClose={onClose} />
 				<p className="text-brand-red text-[12px]">{data.error}</p>
 				<PoweredBy />
@@ -25,7 +25,7 @@ export default function App({ data, logoUrl, onClose }: AppProps) {
 	}
 
 	return (
-		<div className="fixed top-5 right-5 z-[10000] w-[360px] glass-card animate-fade-in p-5">
+		<div className="fixed top-5 right-5 z-[10000] w-90 glass-card animate-fade-in p-5">
 			<OverlayHeader logoUrl={logoUrl} onClose={onClose} />
 			{data.itemType === "track" && <TrackOverlay data={data.data} />}
 			{data.itemType === "album" && <AlbumOverlay data={data.data} />}

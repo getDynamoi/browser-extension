@@ -29,7 +29,7 @@ export default function AudioFeatures({ features }: AudioFeaturesProps) {
 
 					return (
 						<div key={feature.key} className="flex items-center gap-2.5">
-							<span className="text-[10px] text-text-secondary w-[68px] shrink-0">
+							<span className="text-[10px] text-text-secondary w-17 shrink-0">
 								{feature.label}
 							</span>
 							<div className="flex-1 h-1.5 rounded-full bg-surface-muted/80 overflow-hidden">
@@ -38,7 +38,7 @@ export default function AudioFeatures({ features }: AudioFeaturesProps) {
 									style={{ width: `${percent}%` }}
 								/>
 							</div>
-							<span className="text-[10px] text-text-muted w-[26px] text-right tabular-nums">
+							<span className="text-[10px] text-text-muted w-6.5 text-right tabular-nums">
 								{percent}%
 							</span>
 						</div>

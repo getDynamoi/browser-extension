@@ -79,15 +79,15 @@ export default function Popup() {
 	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
 
 	if (tabState === "loading") {
-		return <div className="w-[280px] h-[100px] bg-surface-bg" />;
+		return <div className="w-70 h-25 bg-surface-bg" />;
 	}
 
 	if (tabState === "spotify") {
 		return (
-			<div className="w-[280px] bg-surface-bg text-text-primary p-4 space-y-3">
+			<div className="w-70 bg-surface-bg text-text-primary p-4 space-y-3">
 				<div className="flex items-center justify-between">
 					{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension UI is not rendered by Next.js runtime. */}
-					<img src={logoUrl} alt="Dynamoi" className="h-[14px] w-auto" />
+					<img src={logoUrl} alt="Dynamoi" className="h-3.5 w-auto" />
 					<div className="flex items-center gap-1.5">
 						<div className="size-1.5 rounded-full bg-brand-emerald" />
 						<span className="text-[11px] text-brand-emerald">Active</span>
@@ -99,7 +99,7 @@ export default function Popup() {
 	}
 
 	return (
-		<div className="w-[280px] bg-surface-bg text-text-primary p-5 space-y-4">
+		<div className="w-70 bg-surface-bg text-text-primary p-5 space-y-4">
 			<div className="flex flex-col items-center text-center gap-3">
 				<SpotifyLogo className="size-10" />
 				<div>
@@ -107,7 +107,7 @@ export default function Popup() {
 					<img
 						src={logoUrl}
 						alt="Dynamoi"
-						className="h-[16px] w-auto mx-auto"
+						className="h-4 w-auto mx-auto"
 					/>
 					<p className="text-[12px] text-text-secondary mt-2">
 						Only works on{" "}
