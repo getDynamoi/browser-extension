@@ -12,18 +12,18 @@
 		"postinstall": "wxt prepare"
 	},
 	"dependencies": {
-		"react": "19.2.6",
-		"react-dom": "19.2.6"
+		"react": "catalog:",
+		"react-dom": "catalog:"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "4.2.4",
+		"@tailwindcss/postcss": "catalog:",
 		"@types/chrome": "0.1.43",
-		"@types/react": "19.2.17",
-		"@types/react-dom": "19.2.3",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:",
 		"@wxt-dev/module-react": "1.2.2",
-		"postcss": "8.5.15",
-		"tailwindcss": "4.2.4",
-		"typescript": "7.0.2",
+		"postcss": "catalog:",
+		"tailwindcss": "catalog:",
+		"typescript": "catalog:",
 		"wxt": "0.20.25"
 	}
 }
