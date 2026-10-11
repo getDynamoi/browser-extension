@@ -22,7 +22,7 @@ export default function ArtistOverlay({ data }: ArtistOverlayProps) {
 					</p>
 					{data.followers !== null && (
 						<p className="text-[12px] text-text-secondary mt-0.5">
-							<span className="text-brand-emerald font-semibold">
+							<span className="text-brand-ember font-semibold">
 								{formatFollowers(data.followers)}
 							</span>{" "}
 							followers

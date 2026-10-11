@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+	/* Brand: ink/cream/ember from packages/design-foundation. Ember is the one
+	   accent; the other hues below are data-viz/status colours only. */
+	--color-brand-ember: #e2733f;
 	/* Brand colors (OKLCH) */
 	--color-brand-emerald: oklch(66.661% 0.17569 151.098);
 	--color-brand-blue: oklch(0.65 0.18 250);
@@ -11,34 +14,34 @@
 	--color-brand-yellow: oklch(0.85 0.18 85);
 
 	/* Surfaces */
-	--color-surface-bg: oklch(0.18 0 0);
-	--color-surface-card: oklch(0.21 0 0);
-	--color-surface-border: oklch(0.3 0 0);
-	--color-surface-input: oklch(0.25 0 0);
-	--color-surface-muted: oklch(0.28 0 0);
+	--color-surface-bg: #0c0b0a; /* foundation --brand-ink */
+	--color-surface-card: #181715; /* --role-surface */
+	--color-surface-border: color-mix(in srgb, #f4ece0 13%, transparent);
+	--color-surface-input: #2d2b28; /* --role-surface-field */
+	--color-surface-muted: #22201e; /* --role-surface-raised */
 
 	/* Text */
-	--color-text-primary: oklch(0.98 0 0);
-	--color-text-secondary: oklch(0.7 0 0);
-	--color-text-muted: oklch(0.5 0 0);
+	--color-text-primary: #f4ece0; /* --brand-cream */
+	--color-text-secondary: #c1bab1; /* --role-text-muted */
+	--color-text-muted: #a09b94; /* --role-text-quiet */
 }
 
-/* Glass card with emerald top accent */
+/* Glass card with an ember top accent */
 @utility glass-card {
-	background: oklch(0.21 0 0 / 0.9);
+	background: color-mix(in srgb, #181715 90%, transparent);
 	backdrop-filter: blur(20px);
-	border: 1px solid oklch(0.3 0 0 / 0.5);
-	border-top: 1px solid oklch(66.661% 0.17569 151.098 / 0.4);
+	border: 1px solid color-mix(in srgb, #f4ece0 13%, transparent);
+	border-top: 1px solid color-mix(in srgb, #e2733f 40%, transparent);
 	border-radius: 16px;
 	box-shadow:
 		0 8px 32px oklch(0 0 0 / 0.5),
-		0 0 0 0.5px oklch(0.3 0 0 / 0.3),
+		0 0 0 0.5px color-mix(in srgb, #f4ece0 8%, transparent),
 		inset 0 1px 0 oklch(1 0 0 / 0.04);
 }
 
 /* Subtle inner section card */
 @utility section-card {
-	background: oklch(0.24 0 0 / 0.6);
+	background: color-mix(in srgb, #22201e 60%, transparent);
 	border-radius: 10px;
 	padding: 10px 12px;
 }

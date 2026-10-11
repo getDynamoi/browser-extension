@@ -14,7 +14,7 @@ export default defineConfig({
 		],
 		web_accessible_resources: [
 			{
-				resources: ["dynamoi-wordmark.png"],
+				resources: ["dynamoi-wordmark.svg"],
 				matches: ["https://open.spotify.com/*"],
 			},
 		],

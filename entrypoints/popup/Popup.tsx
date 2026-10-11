@@ -62,7 +62,7 @@ function DynamoiFooterLink() {
 				href="https://dynamoi.com"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="text-[10px] text-text-muted hover:text-brand-emerald transition-colors"
+				className="text-[10px] text-text-muted hover:text-brand-ember transition-colors"
 			>
 				dynamoi.com
 			</a>
@@ -76,7 +76,7 @@ export default function Popup() {
 		getTabStateSnapshot,
 		getTabStateSnapshot,
 	);
-	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
+	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.svg");
 
 	if (tabState === "loading") {
 		return <div className="w-70 h-25 bg-surface-bg" />;
@@ -115,7 +115,7 @@ export default function Popup() {
 							href="https://open.spotify.com"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-brand-emerald hover:underline"
+							className="text-brand-ember hover:underline"
 						>
 							open.spotify.com
 						</a>

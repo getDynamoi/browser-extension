@@ -5,7 +5,7 @@ export default function PoweredBy() {
 				href="https://dynamoi.com"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="text-[10px] text-text-muted hover:text-brand-emerald transition-colors"
+				className="text-[10px] text-text-muted hover:text-brand-ember transition-colors"
 			>
 				dynamoi.com
 			</a>

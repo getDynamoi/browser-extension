@@ -11,7 +11,7 @@ export default defineContentScript({
 	cssInjectionMode: "ui",
 
 	async main(ctx) {
-		const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.png");
+		const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.svg");
 
 		let currentData: ResponseMessage | null = null;
 		let isHidden = false;
