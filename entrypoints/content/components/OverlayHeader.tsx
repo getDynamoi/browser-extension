@@ -12,7 +12,6 @@ export default function OverlayHeader({ logoUrl, onClose }: OverlayHeaderProps) 
 				rel="noopener noreferrer"
 				className="opacity-90 hover:opacity-100 transition-opacity"
 			>
-				{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension, not Next.js */}
 				<img src={logoUrl} alt="Dynamoi" className="h-4 w-auto" />
 			</a>
 			<button

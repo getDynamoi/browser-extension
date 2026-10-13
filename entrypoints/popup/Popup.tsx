@@ -86,7 +86,6 @@ export default function Popup() {
 		return (
 			<div className="w-70 bg-surface-bg text-text-primary p-4 space-y-3">
 				<div className="flex items-center justify-between">
-					{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension UI is not rendered by Next.js runtime. */}
 					<img src={logoUrl} alt="Dynamoi" className="h-3.5 w-auto" />
 					<div className="flex items-center gap-1.5">
 						<div className="size-1.5 rounded-full bg-brand-emerald" />
@@ -103,7 +102,6 @@ export default function Popup() {
 			<div className="flex flex-col items-center text-center gap-3">
 				<SpotifyLogo className="size-10" />
 				<div>
-					{/* oxlint-disable-next-line nextjs/no-img-element -- Chrome extension UI is not rendered by Next.js runtime. */}
 					<img
 						src={logoUrl}
 						alt="Dynamoi"
