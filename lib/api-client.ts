@@ -14,7 +14,10 @@ export async function fetchSpotifyData<T>(
 	const response = await fetch(url);
 
 	if (!response.ok) {
-		const body = await response.json().catch(() => null);
+		const body = await response.json().catch((error: unknown) => {
+			console.warn("Spotify API error response was not JSON", error);
+			return null;
+		});
 		const message =
 			body && typeof body === "object" && "error" in body
 				? String(body.error)
