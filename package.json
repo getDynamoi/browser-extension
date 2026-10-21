@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "wxt",
 		"build": "wxt build",
-		"typecheck": "tsc --noEmit -p tsconfig.json",
+		"typecheck": "tsrs --noEmit -p tsconfig.json",
 		"lint": "echo 'no lint configured'",
 		"postinstall": "wxt prepare"
 	},
