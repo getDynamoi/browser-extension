@@ -3,7 +3,7 @@
 		"message": "Dynamoi リリース検索: ISRC・UPC・レーベル"
 	},
 	"extDescription": {
-		"message": "アーティスト向けの無料Dynamoiツール。Spotifyのアルバムや曲のISRC/UPC、レーベル、リリース日、各ストアへのリンクを表示します。"
+		"message": "アーティスト向けの無料Dynamoiツール。SpotifyのアルバムやトラックのUPC/ISRCとリリース情報をワンクリックでコピーできます。"
 	},
 	"commandToggle": {
 		"message": "リリースカードの表示を切り替え"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "ほかのストア"
 	},
-	"noLinks": {
-		"message": "ほかのストアのリンクはまだありません。"
+	"notAvailable": {
+		"message": "利用できません"
 	},
 	"opensInNewTab": {
 		"message": "(新しいタブで開きます)"
@@ -153,7 +153,7 @@
 		"message": "どのアルバムや曲でもリリース情報を"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi は、Spotify で開いた音楽の ISRC または UPC、レーベル、リリース日、クレジットされたアーティスト、ほかのストアへのリンクを表示します。無料、アカウント不要です。"
+		"message": "Dynamoi は、Spotify で開いた音楽の UPC または ISRC とリリース情報を表示します。ほかのストアのリンクが見つかればあわせて表示します。無料、アカウント不要です。"
 	},
 	"welcomeOpenTitle": {
 		"message": "アルバムか曲を開く"

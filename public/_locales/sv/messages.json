@@ -3,7 +3,7 @@
 		"message": "Dynamoi Release-sök: ISRC, UPC och bolag"
 	},
 	"extDescription": {
-		"message": "Gratis Dynamoi-verktyg för artister: ISRC eller UPC, skivbolag, releasedatum och butikslänkar för alla album och spår på Spotify."
+		"message": "Gratis Dynamoi-verktyg för artister: kopiera UPC eller ISRC och releaseuppgifter för album och spår på Spotify med ett klick."
 	},
 	"commandToggle": {
 		"message": "Visa eller dölj releasekortet"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Finns även på"
 	},
-	"noLinks": {
-		"message": "Inga andra butikslänkar hittades än."
+	"notAvailable": {
+		"message": "Inte tillgänglig"
 	},
 	"opensInNewTab": {
 		"message": "(öppnas i en ny flik)"
@@ -153,7 +153,7 @@
 		"message": "Releaseuppgifter för alla album och spår"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi visar ISRC eller UPC, skivbolag, releasedatum, krediterade artister och länkar till andra butiker för musiken du öppnar på Spotify. Gratis, utan konto."
+		"message": "Dynamoi visar UPC eller ISRC och releaseuppgifter för musiken du öppnar på Spotify, plus länkar till andra butiker när de hittas. Gratis, utan konto."
 	},
 	"welcomeOpenTitle": {
 		"message": "Öppna ett album eller spår"

@@ -3,7 +3,7 @@
 		"message": "Dynamoi: Cek ISRC, UPC & Label Rilisan"
 	},
 	"extDescription": {
-		"message": "Alat gratis Dynamoi untuk artis: ISRC atau UPC, label, tanggal rilis, dan tautan toko untuk album atau lagu Spotify mana pun."
+		"message": "Alat gratis Dynamoi untuk artis: salin UPC atau ISRC dan detail rilis album dan lagu Spotify dengan sekali klik."
 	},
 	"commandToggle": {
 		"message": "Tampilkan atau sembunyikan kartu rilisan"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Juga di"
 	},
-	"noLinks": {
-		"message": "Belum ada tautan toko lain."
+	"notAvailable": {
+		"message": "Tidak tersedia"
 	},
 	"opensInNewTab": {
 		"message": "(terbuka di tab baru)"
@@ -153,7 +153,7 @@
 		"message": "Detail rilisan untuk setiap album dan lagu"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi menampilkan ISRC atau UPC, label, tanggal rilis, artis yang dikreditkan, dan tautan ke toko lain untuk musik yang Anda buka di Spotify. Gratis, tanpa akun."
+		"message": "Dynamoi menampilkan UPC atau ISRC dan detail rilis musik yang Anda buka di Spotify, serta tautan ke toko lain jika ditemukan. Gratis, tanpa akun."
 	},
 	"welcomeOpenTitle": {
 		"message": "Buka album atau lagu"

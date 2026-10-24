@@ -3,7 +3,7 @@
 		"message": "Dynamoi Release-zoeker: ISRC, UPC & label"
 	},
 	"extDescription": {
-		"message": "Gratis Dynamoi-tool voor artiesten: ISRC of UPC, label, releasedatum en winkellinks voor elk Spotify-album of -nummer."
+		"message": "Gratis Dynamoi-tool voor artiesten: kopieer de UPC of ISRC en releasegegevens van Spotify-albums en -nummers met één klik."
 	},
 	"commandToggle": {
 		"message": "Releasekaart tonen of verbergen"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Ook op"
 	},
-	"noLinks": {
-		"message": "Nog geen andere winkellinks gevonden."
+	"notAvailable": {
+		"message": "Niet beschikbaar"
 	},
 	"opensInNewTab": {
 		"message": "(opent in een nieuw tabblad)"
@@ -153,7 +153,7 @@
 		"message": "Releasegegevens voor elk album en nummer"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi toont de ISRC of UPC, het label, de releasedatum, de vermelde artiesten en links naar andere winkels voor de muziek die je op Spotify opent. Gratis, zonder account."
+		"message": "Dynamoi toont de UPC of ISRC en releasegegevens van de muziek die je op Spotify opent, plus links naar andere winkels als die worden gevonden. Gratis, zonder account."
 	},
 	"welcomeOpenTitle": {
 		"message": "Open een album of nummer"

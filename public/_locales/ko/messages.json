@@ -3,7 +3,7 @@
 		"message": "Dynamoi 릴리스 조회: ISRC, UPC, 레이블"
 	},
 	"extDescription": {
-		"message": "아티스트를 위한 무료 Dynamoi 도구: Spotify 앨범이나 트랙의 ISRC 또는 UPC, 레이블, 발매일, 다른 스토어 링크를 보여줍니다."
+		"message": "아티스트를 위한 무료 Dynamoi 도구: Spotify 앨범과 트랙의 UPC 또는 ISRC와 발매 정보를 한 번에 복사하세요."
 	},
 	"commandToggle": {
 		"message": "릴리스 카드 표시 또는 숨기기"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "다른 스토어"
 	},
-	"noLinks": {
-		"message": "아직 다른 스토어 링크가 없습니다."
+	"notAvailable": {
+		"message": "제공되지 않음"
 	},
 	"opensInNewTab": {
 		"message": "(새 탭에서 열림)"
@@ -153,7 +153,7 @@
 		"message": "모든 앨범과 트랙의 릴리스 정보"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi는 Spotify에서 여는 음악의 ISRC 또는 UPC, 레이블, 발매일, 크레딧 아티스트, 다른 스토어 링크를 보여줍니다. 무료이며 계정이 필요 없습니다."
+		"message": "Dynamoi는 Spotify에서 여는 음악의 UPC 또는 ISRC와 발매 정보를 보여주고, 다른 스토어 링크를 찾으면 함께 보여줍니다. 무료이며 계정이 필요 없습니다."
 	},
 	"welcomeOpenTitle": {
 		"message": "앨범이나 트랙 열기"

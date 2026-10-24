@@ -3,7 +3,7 @@
 		"message": "Dynamoi: wyszukiwarka ISRC, UPC i wytwórni"
 	},
 	"extDescription": {
-		"message": "Darmowe narzędzie Dynamoi dla artystów: ISRC lub UPC, wytwórnia, data wydania i linki do sklepów dla albumów i utworów ze Spotify."
+		"message": "Darmowe narzędzie Dynamoi dla artystów: kopiuj UPC lub ISRC i dane wydania albumów i utworów ze Spotify jednym kliknięciem."
 	},
 	"commandToggle": {
 		"message": "Pokaż lub ukryj kartę wydania"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Także w"
 	},
-	"noLinks": {
-		"message": "Nie znaleziono jeszcze linków do innych sklepów."
+	"notAvailable": {
+		"message": "Niedostępne"
 	},
 	"opensInNewTab": {
 		"message": "(otwiera się w nowej karcie)"
@@ -153,7 +153,7 @@
 		"message": "Szczegóły wydania każdego albumu i utworu"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi pokazuje ISRC lub UPC, wytwórnię, datę wydania, wymienionych artystów i linki do innych sklepów dla muzyki, którą otwierasz na Spotify. Za darmo, bez konta."
+		"message": "Dynamoi pokazuje UPC lub ISRC i dane wydania muzyki, którą otwierasz na Spotify, a także linki do innych sklepów, jeśli je znajdzie. Za darmo, bez konta."
 	},
 	"welcomeOpenTitle": {
 		"message": "Otwórz album lub utwór"

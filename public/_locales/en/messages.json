@@ -3,7 +3,7 @@
 		"message": "Dynamoi Release Lookup: ISRC, UPC & Label"
 	},
 	"extDescription": {
-		"message": "Free Dynamoi tool for artists: see the ISRC or UPC, label, release date and store links for any Spotify album or track."
+		"message": "Free Dynamoi tool for artists: copy the UPC or ISRC and release details of Spotify albums and tracks in one click."
 	},
 	"commandToggle": {
 		"message": "Show or hide the release card"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Also on"
 	},
-	"noLinks": {
-		"message": "No other store links found yet."
+	"notAvailable": {
+		"message": "Not available"
 	},
 	"opensInNewTab": {
 		"message": "(opens in a new tab)"
@@ -153,7 +153,7 @@
 		"message": "Release details for any album or track"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi shows the ISRC or UPC, label, release date, credited artists and links to other stores for the music you open on Spotify. Free, with no account."
+		"message": "Dynamoi shows the UPC or ISRC and release details of the music you open on Spotify, plus links to other stores when it finds them. Free, with no account."
 	},
 	"welcomeOpenTitle": {
 		"message": "Open an album or track"

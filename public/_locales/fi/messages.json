@@ -3,7 +3,7 @@
 		"message": "Dynamoi-julkaisuhaku: ISRC, UPC ja levy-yhtiö"
 	},
 	"extDescription": {
-		"message": "Ilmainen Dynamoi-työkalu artisteille: ISRC tai UPC, levy-yhtiö, julkaisupäivä ja kauppalinkit Spotifyn albumeille ja kappaleille."
+		"message": "Ilmainen Dynamoi-työkalu artisteille: kopioi Spotifyn albumien ja kappaleiden UPC- tai ISRC-koodi ja julkaisutiedot."
 	},
 	"commandToggle": {
 		"message": "Näytä tai piilota julkaisukortti"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Myös palvelussa"
 	},
-	"noLinks": {
-		"message": "Muita kauppalinkkejä ei vielä löytynyt."
+	"notAvailable": {
+		"message": "Ei saatavilla"
 	},
 	"opensInNewTab": {
 		"message": "(avautuu uuteen välilehteen)"
@@ -153,7 +153,7 @@
 		"message": "Julkaisutiedot jokaisesta albumista ja kappaleesta"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi näyttää ISRC- tai UPC-koodin, levy-yhtiön, julkaisupäivän, mainitut artistit ja linkit muihin kauppoihin Spotifyssa avaamallesi musiikille. Ilmainen, ei tiliä."
+		"message": "Dynamoi näyttää Spotifyssa avaamasi musiikin UPC- tai ISRC-koodin ja julkaisutiedot sekä linkit muihin kauppoihin, kun niitä löytyy. Ilmainen, ei tiliä."
 	},
 	"welcomeOpenTitle": {
 		"message": "Avaa albumi tai kappale"

@@ -3,7 +3,7 @@
 		"message": "Dynamoi: ISRC, UPC ve Plak Şirketi Sorgusu"
 	},
 	"extDescription": {
-		"message": "Sanatçılar için ücretsiz Dynamoi aracı: Spotify albüm ve parçaları için ISRC ya da UPC, plak şirketi, tarih ve mağaza bağlantıları."
+		"message": "Sanatçılar için ücretsiz Dynamoi aracı: Spotify albüm ve parçalarının UPC ya da ISRC kodunu ve yayın bilgilerini kopyalayın."
 	},
 	"commandToggle": {
 		"message": "Yayın kartını göster veya gizle"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Diğer platformlar"
 	},
-	"noLinks": {
-		"message": "Henüz başka mağaza bağlantısı bulunamadı."
+	"notAvailable": {
+		"message": "Mevcut değil"
 	},
 	"opensInNewTab": {
 		"message": "(yeni sekmede açılır)"
@@ -153,7 +153,7 @@
 		"message": "Her albüm ve parça için yayın bilgileri"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi, Spotify'da açtığınız müzik için ISRC veya UPC'yi, plak şirketini, yayın tarihini, katkıda bulunan sanatçıları ve diğer mağaza bağlantılarını gösterir. Ücretsiz, hesap gerekmez."
+		"message": "Dynamoi, Spotify'da açtığınız müziğin UPC veya ISRC kodunu ve yayın bilgilerini gösterir; bulursa diğer mağaza bağlantılarını da ekler. Ücretsiz, hesap gerekmez."
 	},
 	"welcomeOpenTitle": {
 		"message": "Bir albüm veya parça açın"

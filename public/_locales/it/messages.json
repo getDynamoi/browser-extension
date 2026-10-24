@@ -3,7 +3,7 @@
 		"message": "Dynamoi: ISRC, UPC ed etichetta"
 	},
 	"extDescription": {
-		"message": "Strumento Dynamoi gratuito per artisti: ISRC o UPC, etichetta, data di uscita e link agli store di ogni album o brano Spotify."
+		"message": "Strumento Dynamoi gratuito per artisti: copia UPC o ISRC e i dettagli di uscita di album e brani Spotify con un clic."
 	},
 	"commandToggle": {
 		"message": "Mostra o nascondi la scheda dell'uscita"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Anche su"
 	},
-	"noLinks": {
-		"message": "Nessun altro link agli store per ora."
+	"notAvailable": {
+		"message": "Non disponibile"
 	},
 	"opensInNewTab": {
 		"message": "(si apre in una nuova scheda)"
@@ -153,7 +153,7 @@
 		"message": "I dettagli di ogni album e brano"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi mostra ISRC o UPC, etichetta, data di uscita, artisti accreditati e link ad altri store per la musica che apri su Spotify. Gratis, senza account."
+		"message": "Dynamoi mostra UPC o ISRC e i dettagli di uscita della musica che apri su Spotify, più i link ad altri store quando li trova. Gratis, senza account."
 	},
 	"welcomeOpenTitle": {
 		"message": "Apri un album o un brano"

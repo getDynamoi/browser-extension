@@ -3,7 +3,7 @@
 		"message": "Dynamoi : ISRC, UPC et label des sorties"
 	},
 	"extDescription": {
-		"message": "Outil Dynamoi gratuit pour artistes : ISRC ou UPC, label, date de sortie et liens des plateformes de tout album ou titre Spotify."
+		"message": "Outil Dynamoi gratuit pour artistes : copiez l'UPC ou l'ISRC et les infos de sortie des albums et titres Spotify en un clic."
 	},
 	"commandToggle": {
 		"message": "Afficher ou masquer la fiche de la sortie"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Aussi sur"
 	},
-	"noLinks": {
-		"message": "Aucun autre lien de plateforme pour l'instant."
+	"notAvailable": {
+		"message": "Non disponible"
 	},
 	"opensInNewTab": {
 		"message": "(s'ouvre dans un nouvel onglet)"
@@ -153,7 +153,7 @@
 		"message": "Les infos de sortie de chaque album et titre"
 	},
 	"welcomeBody": {
-		"message": "Dynamoi affiche l'ISRC ou l'UPC, le label, la date de sortie, les artistes crédités et les liens vers d'autres plateformes pour la musique que vous ouvrez sur Spotify. Gratuit, sans compte."
+		"message": "Dynamoi affiche l'UPC ou l'ISRC et les infos de sortie de la musique que vous ouvrez sur Spotify, ainsi que des liens vers d'autres plateformes quand il en trouve. Gratuit, sans compte."
 	},
 	"welcomeOpenTitle": {
 		"message": "Ouvrez un album ou un titre"

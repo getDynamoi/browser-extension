@@ -150,22 +150,26 @@ function Loaded({
 				</p>
 			</div>
 
-			{code ? (
-				<div className="flex items-center gap-3 rounded-md bg-sunken py-3 pr-2 pl-4">
-					<div className="min-w-0 flex-1">
-						<p className="text-label font-semibold text-quiet">{codeLabel}</p>
+			<div className="flex items-center gap-3 rounded-md bg-sunken py-3 pr-2 pl-4">
+				<div className="min-w-0 flex-1">
+					<p className="text-label font-semibold text-quiet">{codeLabel}</p>
+					{code ? (
 						<p className="tabular mt-0.5 text-value font-medium tracking-wide break-all text-text select-all">
 							{code}
 						</p>
-					</div>
+					) : (
+						<p className="mt-0.5 text-body text-muted">{t("notAvailable")}</p>
+					)}
+				</div>
+				{code ? (
 					<CopyButton
 						announce={announce}
 						className="size-10 justify-center rounded-sm text-muted hover:bg-hover hover:text-text"
 						label={codeLabel}
 						text={code}
 					/>
-				</div>
-			) : null}
+				) : null}
+			</div>
 
 			<dl>
 				{release.label ? (
@@ -179,11 +183,11 @@ function Loaded({
 				) : null}
 			</dl>
 
-			<section aria-labelledby="dynamoi-also-on">
-				<h3 className="text-label font-semibold text-quiet" id="dynamoi-also-on">
-					{t("alsoOn")}
-				</h3>
-				{storeLinks.length > 0 ? (
+			{storeLinks.length > 0 ? (
+				<section aria-labelledby="dynamoi-also-on">
+					<h3 className="text-label font-semibold text-quiet" id="dynamoi-also-on">
+						{t("alsoOn")}
+					</h3>
 					<ul className="mt-2 flex flex-wrap gap-1.5">
 						{storeLinks.map((link) => (
 							<li key={link.service}>
@@ -200,10 +204,8 @@ function Loaded({
 							</li>
 						))}
 					</ul>
-				) : (
-					<p className="mt-1.5 text-body text-muted">{t("noLinks")}</p>
-				)}
-			</section>
+				</section>
+			) : null}
 
 			<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 				<CopyButton

@@ -7,7 +7,8 @@
 
 Open an album or track on [open.spotify.com](https://open.spotify.com) and a
 small Dynamoi card shows its release details: the UPC or ISRC, label, release
-date, credited artists and links to the same release on other stores. Use it to
+date and credited artists, plus links to other stores when Dynamoi finds them,
+and "Not available" when a code can't be confirmed. Use it to
 check your own release metadata or research comparable releases. No account
 needed, nothing to set up.
 
@@ -19,8 +20,7 @@ needed, nothing to set up.
 
 - **Release card.** On album and track pages, the card shows the UPC (albums)
   or ISRC (tracks), label, release date and credited artists, each with a copy
-  button, plus links to Apple Music, YouTube Music, Amazon Music, Deezer, TIDAL
-  and more.
+  button. Links to the release on other stores appear when Dynamoi finds them.
 - **Copy release sheet.** One click copies every field as plain text, ready
   for a distributor ticket or a pitch.
 - **Look up anything.** Paste a Spotify link, UPC or ISRC into the toolbar

@@ -3,7 +3,7 @@
 		"message": "Dynamoi: consulta de ISRC, UPC e selo"
 	},
 	"extDescription": {
-		"message": "Ferramenta grátis da Dynamoi para artistas: ISRC ou UPC, selo, data e links de lojas de qualquer álbum ou faixa do Spotify."
+		"message": "Ferramenta grátis da Dynamoi para artistas: copie o UPC ou ISRC e os dados de lançamento de álbuns e faixas do Spotify."
 	},
 	"commandToggle": {
 		"message": "Mostrar ou ocultar o cartão do lançamento"
@@ -72,8 +72,8 @@
 	"alsoOn": {
 		"message": "Também em"
 	},
-	"noLinks": {
-		"message": "Ainda não há links de outras lojas."
+	"notAvailable": {
+		"message": "Não disponível"
 	},
 	"opensInNewTab": {
 		"message": "(abre em uma nova guia)"
@@ -153,7 +153,7 @@
 		"message": "Dados de lançamento de qualquer álbum ou faixa"
 	},
 	"welcomeBody": {
-		"message": "A Dynamoi mostra o ISRC ou UPC, o selo, a data de lançamento, os artistas creditados e links de outras lojas para a música que você abre no Spotify. Grátis e sem conta."
+		"message": "A Dynamoi mostra o UPC ou ISRC e os dados de lançamento da música que você abre no Spotify, além de links de outras lojas quando os encontra. Grátis e sem conta."
 	},
 	"welcomeOpenTitle": {
 		"message": "Abra um álbum ou uma faixa"

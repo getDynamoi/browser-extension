@@ -8,9 +8,9 @@ All notable changes to the Dynamoi Chrome extension will be documented in this f
 
 ### Changed
 
-- Rebuilt as a release lookup: UPC or ISRC, label, release date, credited
-  artists and links to other stores for any Spotify album or track, served from
-  Dynamoi's release data.
+- Rebuilt as a release lookup: UPC or ISRC, label, release date and credited
+  artists for Spotify albums and tracks, plus other store links when found,
+  served from Dynamoi data. A code that can't be confirmed shows "Not available".
 - The card reads only the Spotify ID from the page address; it no longer reads
   the Spotify page.
 - New Dynamoi design, in 16 languages.
