@@ -1,7 +1,7 @@
 {
 	"name": "@dynamoi/chrome-extension",
-	"version": "1.0.0",
-	"description": "Displays enhanced music data on Spotify's web app. Quickly see popularity, genres, label, and UPC as you browse.",
+	"version": "2.0.0",
+	"description": "Free Dynamoi release lookup: ISRC or UPC, label, release date, credited artists and store links for any Spotify album or track.",
 	"private": true,
 	"type": "module",
 	"scripts": {

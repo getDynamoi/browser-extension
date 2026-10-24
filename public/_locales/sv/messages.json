@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi Release-sök: ISRC, UPC och bolag"
+	},
+	"extDescription": {
+		"message": "Gratis Dynamoi-verktyg för artister: ISRC eller UPC, skivbolag, releasedatum och butikslänkar för alla album och spår på Spotify."
+	},
+	"commandToggle": {
+		"message": "Visa eller dölj releasekortet"
+	},
+	"badgeDetected": {
+		"message": "Releaseuppgifter finns"
+	},
+	"cardLabel": {
+		"message": "Releaseuppgifter från Dynamoi"
+	},
+	"close": {
+		"message": "Stäng"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Spår"
+	},
+	"untitled": {
+		"message": "Release utan titel"
+	},
+	"fieldTitle": {
+		"message": "Titel"
+	},
+	"fieldArtists": {
+		"message": "Artister"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Skivbolag"
+	},
+	"fieldReleased": {
+		"message": "Släppt"
+	},
+	"copyField": {
+		"message": "Kopiera $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ kopierad",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Det gick inte att kopiera. Markera texten och kopiera den själv."
+	},
+	"copySheet": {
+		"message": "Kopiera releaseblad"
+	},
+	"sheetCopied": {
+		"message": "Releaseblad kopierat"
+	},
+	"alsoOn": {
+		"message": "Finns även på"
+	},
+	"noLinks": {
+		"message": "Inga andra butikslänkar hittades än."
+	},
+	"opensInNewTab": {
+		"message": "(öppnas i en ny flik)"
+	},
+	"promote": {
+		"message": "Marknadsför den här releasen med Dynamoi"
+	},
+	"loading": {
+		"message": "Söker efter releasen"
+	},
+	"notFoundTitle": {
+		"message": "Inte i vår katalog än"
+	},
+	"notFoundBody": {
+		"message": "Nya releaser dyker oftast upp inom ett dygn. Titta in igen i morgon."
+	},
+	"limitedTitle": {
+		"message": "En kort paus"
+	},
+	"limitedBody": {
+		"message": "Gratissökningarna är hårt belastade just nu. Försök igen senare."
+	},
+	"unavailableTitle": {
+		"message": "Sökningen är inte tillgänglig"
+	},
+	"unavailableBody": {
+		"message": "Något gick fel hos oss. Försök igen om några minuter."
+	},
+	"offlineTitle": {
+		"message": "Du är offline"
+	},
+	"offlineBody": {
+		"message": "Anslut till internet för att söka efter releasen."
+	},
+	"retry": {
+		"message": "Försök igen"
+	},
+	"ratePrompt": {
+		"message": "Har du nytta av Dynamoi? Ett snabbt betyg hjälper andra artister att hitta det."
+	},
+	"rateAction": {
+		"message": "Betygsätt"
+	},
+	"rateDismiss": {
+		"message": "Inte nu"
+	},
+	"popupInputLabel": {
+		"message": "Sök efter en release"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify-länk, UPC eller ISRC"
+	},
+	"popupSubmit": {
+		"message": "Sök"
+	},
+	"popupInvalid": {
+		"message": "Klistra in en album- eller spårlänk från open.spotify.com, en UPC eller en ISRC."
+	},
+	"popupRecent": {
+		"message": "Senaste sökningar"
+	},
+	"popupEmptyHistory": {
+		"message": "Dina 20 senaste sökningar visas här. De stannar på den här enheten."
+	},
+	"popupClearHistory": {
+		"message": "Rensa"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ visar eller döljer kortet på Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Releaseuppgifter för alla album och spår"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi visar ISRC eller UPC, skivbolag, releasedatum, krediterade artister och länkar till andra butiker för musiken du öppnar på Spotify. Gratis, utan konto."
+	},
+	"welcomeOpenTitle": {
+		"message": "Öppna ett album eller spår"
+	},
+	"welcomeOpenBody": {
+		"message": "Gå till open.spotify.com och öppna valfritt album eller spår. Kortet visas uppe till höger."
+	},
+	"welcomePinTitle": {
+		"message": "Fäst Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Klicka på pusselikonen i Chromes verktygsfält och sedan på nålen bredvid Dynamoi. Popup-fönstret söker upp alla Spotify-länkar, UPC- och ISRC-koder du klistrar in."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Använd kortkommandot"
+	},
+	"welcomeShortcutBody": {
+		"message": "Tryck på $VALUE$ på en Spotify-sida för att visa eller dölja kortet.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Integritet"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi tar bara emot Spotify-ID:t för albumet eller spåret du öppnar, eller koden du klistrar in, för att slå upp releaseuppgifterna. Inget konto, ingen spårning. Dina senaste sökningar stannar på den här enheten."
+	},
+	"welcomeCta": {
+		"message": "Öppna Spotify"
+	},
+	"welcomeAbout": {
+		"message": "Om Dynamoi"
+	}
+}

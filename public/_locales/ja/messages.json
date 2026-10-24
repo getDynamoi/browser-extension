@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi リリース検索: ISRC・UPC・レーベル"
+	},
+	"extDescription": {
+		"message": "アーティスト向けの無料Dynamoiツール。Spotifyのアルバムや曲のISRC/UPC、レーベル、リリース日、各ストアへのリンクを表示します。"
+	},
+	"commandToggle": {
+		"message": "リリースカードの表示を切り替え"
+	},
+	"badgeDetected": {
+		"message": "リリース情報があります"
+	},
+	"cardLabel": {
+		"message": "Dynamoi のリリース情報"
+	},
+	"close": {
+		"message": "閉じる"
+	},
+	"kindAlbum": {
+		"message": "アルバム"
+	},
+	"kindTrack": {
+		"message": "曲"
+	},
+	"untitled": {
+		"message": "タイトルなしのリリース"
+	},
+	"fieldTitle": {
+		"message": "タイトル"
+	},
+	"fieldArtists": {
+		"message": "アーティスト"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "レーベル"
+	},
+	"fieldReleased": {
+		"message": "リリース日"
+	},
+	"copyField": {
+		"message": "$VALUE$ をコピー",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ をコピーしました",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "コピーできませんでした。テキストを選択してコピーしてください。"
+	},
+	"copySheet": {
+		"message": "リリースシートをコピー"
+	},
+	"sheetCopied": {
+		"message": "リリースシートをコピーしました"
+	},
+	"alsoOn": {
+		"message": "ほかのストア"
+	},
+	"noLinks": {
+		"message": "ほかのストアのリンクはまだありません。"
+	},
+	"opensInNewTab": {
+		"message": "(新しいタブで開きます)"
+	},
+	"promote": {
+		"message": "Dynamoi でこのリリースをプロモーション"
+	},
+	"loading": {
+		"message": "リリースを検索中"
+	},
+	"notFoundTitle": {
+		"message": "まだカタログにありません"
+	},
+	"notFoundBody": {
+		"message": "新しいリリースは通常1日以内に表示されます。明日もう一度お試しください。"
+	},
+	"limitedTitle": {
+		"message": "少しお休み中"
+	},
+	"limitedBody": {
+		"message": "無料検索が混み合っています。しばらくしてからお試しください。"
+	},
+	"unavailableTitle": {
+		"message": "検索を利用できません"
+	},
+	"unavailableBody": {
+		"message": "こちら側で問題が発生しました。数分後にもう一度お試しください。"
+	},
+	"offlineTitle": {
+		"message": "オフラインです"
+	},
+	"offlineBody": {
+		"message": "このリリースを検索するにはインターネットに接続してください。"
+	},
+	"retry": {
+		"message": "再試行"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi は役に立っていますか?評価をいただけると、ほかのアーティストが見つけやすくなります。"
+	},
+	"rateAction": {
+		"message": "評価する"
+	},
+	"rateDismiss": {
+		"message": "あとで"
+	},
+	"popupInputLabel": {
+		"message": "リリースを検索"
+	},
+	"popupPlaceholder": {
+		"message": "Spotifyのリンク、UPC、ISRC"
+	},
+	"popupSubmit": {
+		"message": "検索"
+	},
+	"popupInvalid": {
+		"message": "open.spotify.com のアルバムまたは曲のリンク、UPC、ISRC を貼り付けてください。"
+	},
+	"popupRecent": {
+		"message": "最近の検索"
+	},
+	"popupEmptyHistory": {
+		"message": "直近20件の検索がここに表示されます。データはこの端末に保存されます。"
+	},
+	"popupClearHistory": {
+		"message": "消去"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ で Spotify 上のカードを表示/非表示",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "どのアルバムや曲でもリリース情報を"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi は、Spotify で開いた音楽の ISRC または UPC、レーベル、リリース日、クレジットされたアーティスト、ほかのストアへのリンクを表示します。無料、アカウント不要です。"
+	},
+	"welcomeOpenTitle": {
+		"message": "アルバムか曲を開く"
+	},
+	"welcomeOpenBody": {
+		"message": "open.spotify.com でアルバムか曲を開くと、右上にカードが表示されます。"
+	},
+	"welcomePinTitle": {
+		"message": "Dynamoi を固定する"
+	},
+	"welcomePinBody": {
+		"message": "Chrome のツールバーにあるパズルのアイコンをクリックし、Dynamoi の横のピンをクリックします。ポップアップでは、貼り付けた Spotify のリンク、UPC、ISRC を検索できます。"
+	},
+	"welcomeShortcutTitle": {
+		"message": "ショートカットを使う"
+	},
+	"welcomeShortcutBody": {
+		"message": "Spotify のページで $VALUE$ を押すと、カードの表示を切り替えられます。",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "プライバシー"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi が受け取るのは、リリース情報を調べるための、開いたアルバムや曲の Spotify ID、または貼り付けたコードだけです。アカウントもトラッキングもありません。最近の検索はこの端末に保存されます。"
+	},
+	"welcomeCta": {
+		"message": "Spotify を開く"
+	},
+	"welcomeAbout": {
+		"message": "Dynamoi について"
+	}
+}

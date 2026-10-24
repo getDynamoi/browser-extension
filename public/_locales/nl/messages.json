@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi Release-zoeker: ISRC, UPC & label"
+	},
+	"extDescription": {
+		"message": "Gratis Dynamoi-tool voor artiesten: ISRC of UPC, label, releasedatum en winkellinks voor elk Spotify-album of -nummer."
+	},
+	"commandToggle": {
+		"message": "Releasekaart tonen of verbergen"
+	},
+	"badgeDetected": {
+		"message": "Releasegegevens beschikbaar"
+	},
+	"cardLabel": {
+		"message": "Dynamoi-releasegegevens"
+	},
+	"close": {
+		"message": "Sluiten"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Nummer"
+	},
+	"untitled": {
+		"message": "Release zonder titel"
+	},
+	"fieldTitle": {
+		"message": "Titel"
+	},
+	"fieldArtists": {
+		"message": "Artiesten"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Label"
+	},
+	"fieldReleased": {
+		"message": "Uitgebracht"
+	},
+	"copyField": {
+		"message": "$VALUE$ kopiëren",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ gekopieerd",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Kopiëren lukte niet. Selecteer de tekst en kopieer hem zelf."
+	},
+	"copySheet": {
+		"message": "Releaseoverzicht kopiëren"
+	},
+	"sheetCopied": {
+		"message": "Overzicht gekopieerd"
+	},
+	"alsoOn": {
+		"message": "Ook op"
+	},
+	"noLinks": {
+		"message": "Nog geen andere winkellinks gevonden."
+	},
+	"opensInNewTab": {
+		"message": "(opent in een nieuw tabblad)"
+	},
+	"promote": {
+		"message": "Promoot deze release met Dynamoi"
+	},
+	"loading": {
+		"message": "Release wordt opgezocht"
+	},
+	"notFoundTitle": {
+		"message": "Nog niet in onze catalogus"
+	},
+	"notFoundBody": {
+		"message": "Nieuwe releases verschijnen meestal binnen een dag. Kijk morgen nog eens."
+	},
+	"limitedTitle": {
+		"message": "Even pauze"
+	},
+	"limitedBody": {
+		"message": "Het gratis opzoeken is nu druk. Probeer het later opnieuw."
+	},
+	"unavailableTitle": {
+		"message": "Opzoeken niet beschikbaar"
+	},
+	"unavailableBody": {
+		"message": "Er ging bij ons iets mis. Probeer het over een paar minuten opnieuw."
+	},
+	"offlineTitle": {
+		"message": "Je bent offline"
+	},
+	"offlineBody": {
+		"message": "Maak verbinding met internet om deze release op te zoeken."
+	},
+	"retry": {
+		"message": "Opnieuw proberen"
+	},
+	"ratePrompt": {
+		"message": "Heb je iets aan Dynamoi? Een snelle beoordeling helpt andere artiesten het te vinden."
+	},
+	"rateAction": {
+		"message": "Beoordelen"
+	},
+	"rateDismiss": {
+		"message": "Niet nu"
+	},
+	"popupInputLabel": {
+		"message": "Een release opzoeken"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify-link, UPC of ISRC"
+	},
+	"popupSubmit": {
+		"message": "Opzoeken"
+	},
+	"popupInvalid": {
+		"message": "Plak een album- of nummerlink van open.spotify.com, een UPC of een ISRC."
+	},
+	"popupRecent": {
+		"message": "Recent opgezocht"
+	},
+	"popupEmptyHistory": {
+		"message": "Je laatste 20 zoekopdrachten verschijnen hier. Ze blijven op dit apparaat."
+	},
+	"popupClearHistory": {
+		"message": "Wissen"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ toont of verbergt de kaart op Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Releasegegevens voor elk album en nummer"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi toont de ISRC of UPC, het label, de releasedatum, de vermelde artiesten en links naar andere winkels voor de muziek die je op Spotify opent. Gratis, zonder account."
+	},
+	"welcomeOpenTitle": {
+		"message": "Open een album of nummer"
+	},
+	"welcomeOpenBody": {
+		"message": "Ga naar open.spotify.com en open een album of nummer. De kaart verschijnt rechtsboven."
+	},
+	"welcomePinTitle": {
+		"message": "Zet Dynamoi vast"
+	},
+	"welcomePinBody": {
+		"message": "Klik op het puzzelpictogram in de Chrome-werkbalk en daarna op de punaise naast Dynamoi. De pop-up zoekt elke Spotify-link, UPC of ISRC op die je plakt."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Gebruik de sneltoets"
+	},
+	"welcomeShortcutBody": {
+		"message": "Druk op $VALUE$ op een Spotify-pagina om de kaart te tonen of te verbergen.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Privacy"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi ontvangt alleen de Spotify-ID van het album of nummer dat je opent, of de code die je plakt, om de releasegegevens op te zoeken. Geen account, geen tracking. Je recente zoekopdrachten blijven op dit apparaat."
+	},
+	"welcomeCta": {
+		"message": "Spotify openen"
+	},
+	"welcomeAbout": {
+		"message": "Over Dynamoi"
+	}
+}

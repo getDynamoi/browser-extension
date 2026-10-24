@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi-julkaisuhaku: ISRC, UPC ja levy-yhtiö"
+	},
+	"extDescription": {
+		"message": "Ilmainen Dynamoi-työkalu artisteille: ISRC tai UPC, levy-yhtiö, julkaisupäivä ja kauppalinkit Spotifyn albumeille ja kappaleille."
+	},
+	"commandToggle": {
+		"message": "Näytä tai piilota julkaisukortti"
+	},
+	"badgeDetected": {
+		"message": "Julkaisun tiedot saatavilla"
+	},
+	"cardLabel": {
+		"message": "Dynamoin julkaisutiedot"
+	},
+	"close": {
+		"message": "Sulje"
+	},
+	"kindAlbum": {
+		"message": "Albumi"
+	},
+	"kindTrack": {
+		"message": "Kappale"
+	},
+	"untitled": {
+		"message": "Nimetön julkaisu"
+	},
+	"fieldTitle": {
+		"message": "Nimi"
+	},
+	"fieldArtists": {
+		"message": "Artistit"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Levy-yhtiö"
+	},
+	"fieldReleased": {
+		"message": "Julkaistu"
+	},
+	"copyField": {
+		"message": "Kopioi $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ kopioitu",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Kopiointi epäonnistui. Valitse teksti ja kopioi se itse."
+	},
+	"copySheet": {
+		"message": "Kopioi julkaisukooste"
+	},
+	"sheetCopied": {
+		"message": "Julkaisukooste kopioitu"
+	},
+	"alsoOn": {
+		"message": "Myös palvelussa"
+	},
+	"noLinks": {
+		"message": "Muita kauppalinkkejä ei vielä löytynyt."
+	},
+	"opensInNewTab": {
+		"message": "(avautuu uuteen välilehteen)"
+	},
+	"promote": {
+		"message": "Markkinoi tätä julkaisua Dynamoilla"
+	},
+	"loading": {
+		"message": "Haetaan julkaisua"
+	},
+	"notFoundTitle": {
+		"message": "Ei vielä luettelossamme"
+	},
+	"notFoundBody": {
+		"message": "Uudet julkaisut näkyvät yleensä vuorokauden kuluessa. Katso uudelleen huomenna."
+	},
+	"limitedTitle": {
+		"message": "Pieni tauko"
+	},
+	"limitedBody": {
+		"message": "Ilmaiset haut ovat nyt ruuhkaisia. Yritä myöhemmin uudelleen."
+	},
+	"unavailableTitle": {
+		"message": "Haku ei ole käytettävissä"
+	},
+	"unavailableBody": {
+		"message": "Jokin meni vikaan meidän päässämme. Yritä uudelleen muutaman minuutin kuluttua."
+	},
+	"offlineTitle": {
+		"message": "Olet offline-tilassa"
+	},
+	"offlineBody": {
+		"message": "Muodosta internetyhteys hakeaksesi julkaisun."
+	},
+	"retry": {
+		"message": "Yritä uudelleen"
+	},
+	"ratePrompt": {
+		"message": "Onko Dynamoista hyötyä? Nopea arvio auttaa muita artisteja löytämään sen."
+	},
+	"rateAction": {
+		"message": "Arvioi"
+	},
+	"rateDismiss": {
+		"message": "Ei nyt"
+	},
+	"popupInputLabel": {
+		"message": "Hae julkaisua"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify-linkki, UPC tai ISRC"
+	},
+	"popupSubmit": {
+		"message": "Hae"
+	},
+	"popupInvalid": {
+		"message": "Liitä albumin tai kappaleen linkki osoitteesta open.spotify.com, UPC tai ISRC."
+	},
+	"popupRecent": {
+		"message": "Viimeisimmät haut"
+	},
+	"popupEmptyHistory": {
+		"message": "20 viimeisintä hakuasi näkyvät tässä. Ne pysyvät tällä laitteella."
+	},
+	"popupClearHistory": {
+		"message": "Tyhjennä"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ näyttää tai piilottaa kortin Spotifyssa",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Julkaisutiedot jokaisesta albumista ja kappaleesta"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi näyttää ISRC- tai UPC-koodin, levy-yhtiön, julkaisupäivän, mainitut artistit ja linkit muihin kauppoihin Spotifyssa avaamallesi musiikille. Ilmainen, ei tiliä."
+	},
+	"welcomeOpenTitle": {
+		"message": "Avaa albumi tai kappale"
+	},
+	"welcomeOpenBody": {
+		"message": "Siirry osoitteeseen open.spotify.com ja avaa mikä tahansa albumi tai kappale. Kortti näkyy oikeassa yläkulmassa."
+	},
+	"welcomePinTitle": {
+		"message": "Kiinnitä Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Napsauta Chromen työkalupalkin palapelikuvaketta ja sitten Dynamoin vieressä olevaa nastaa. Ponnahdusikkuna hakee minkä tahansa liittämäsi Spotify-linkin, UPC:n tai ISRC:n."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Käytä pikanäppäintä"
+	},
+	"welcomeShortcutBody": {
+		"message": "Paina $VALUE$ Spotify-sivulla näyttääksesi tai piilottaaksesi kortin.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Yksityisyys"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi saa vain avaamasi albumin tai kappaleen Spotify-tunnuksen tai liittämäsi koodin julkaisutietojen hakemista varten. Ei tiliä, ei seurantaa. Viimeisimmät hakusi pysyvät tällä laitteella."
+	},
+	"welcomeCta": {
+		"message": "Avaa Spotify"
+	},
+	"welcomeAbout": {
+		"message": "Tietoa Dynamoista"
+	}
+}

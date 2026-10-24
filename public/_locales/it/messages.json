@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi: ISRC, UPC ed etichetta"
+	},
+	"extDescription": {
+		"message": "Strumento Dynamoi gratuito per artisti: ISRC o UPC, etichetta, data di uscita e link agli store di ogni album o brano Spotify."
+	},
+	"commandToggle": {
+		"message": "Mostra o nascondi la scheda dell'uscita"
+	},
+	"badgeDetected": {
+		"message": "Dettagli dell'uscita disponibili"
+	},
+	"cardLabel": {
+		"message": "Dettagli dell'uscita Dynamoi"
+	},
+	"close": {
+		"message": "Chiudi"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Brano"
+	},
+	"untitled": {
+		"message": "Uscita senza titolo"
+	},
+	"fieldTitle": {
+		"message": "Titolo"
+	},
+	"fieldArtists": {
+		"message": "Artisti"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Etichetta"
+	},
+	"fieldReleased": {
+		"message": "Uscita"
+	},
+	"copyField": {
+		"message": "Copia $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ copiato",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Copia non riuscita. Seleziona il testo e copialo tu."
+	},
+	"copySheet": {
+		"message": "Copia scheda uscita"
+	},
+	"sheetCopied": {
+		"message": "Scheda copiata"
+	},
+	"alsoOn": {
+		"message": "Anche su"
+	},
+	"noLinks": {
+		"message": "Nessun altro link agli store per ora."
+	},
+	"opensInNewTab": {
+		"message": "(si apre in una nuova scheda)"
+	},
+	"promote": {
+		"message": "Promuovi questa uscita con Dynamoi"
+	},
+	"loading": {
+		"message": "Ricerca dell'uscita in corso"
+	},
+	"notFoundTitle": {
+		"message": "Non ancora nel nostro catalogo"
+	},
+	"notFoundBody": {
+		"message": "Le nuove uscite di solito compaiono entro un giorno. Riprova domani."
+	},
+	"limitedTitle": {
+		"message": "Una breve pausa"
+	},
+	"limitedBody": {
+		"message": "Le ricerche gratuite sono molto richieste ora. Riprova più tardi."
+	},
+	"unavailableTitle": {
+		"message": "Ricerca non disponibile"
+	},
+	"unavailableBody": {
+		"message": "Qualcosa non ha funzionato da parte nostra. Riprova tra qualche minuto."
+	},
+	"offlineTitle": {
+		"message": "Sei offline"
+	},
+	"offlineBody": {
+		"message": "Connettiti a internet per cercare questa uscita."
+	},
+	"retry": {
+		"message": "Riprova"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi ti è utile? Una valutazione veloce aiuta altri artisti a trovarlo."
+	},
+	"rateAction": {
+		"message": "Valuta"
+	},
+	"rateDismiss": {
+		"message": "Non ora"
+	},
+	"popupInputLabel": {
+		"message": "Cerca un'uscita"
+	},
+	"popupPlaceholder": {
+		"message": "Link Spotify, UPC o ISRC"
+	},
+	"popupSubmit": {
+		"message": "Cerca"
+	},
+	"popupInvalid": {
+		"message": "Incolla un link di album o brano da open.spotify.com, un UPC o un ISRC."
+	},
+	"popupRecent": {
+		"message": "Ricerche recenti"
+	},
+	"popupEmptyHistory": {
+		"message": "Qui trovi le tue ultime 20 ricerche. Restano su questo dispositivo."
+	},
+	"popupClearHistory": {
+		"message": "Cancella"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ mostra o nasconde la scheda su Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "I dettagli di ogni album e brano"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi mostra ISRC o UPC, etichetta, data di uscita, artisti accreditati e link ad altri store per la musica che apri su Spotify. Gratis, senza account."
+	},
+	"welcomeOpenTitle": {
+		"message": "Apri un album o un brano"
+	},
+	"welcomeOpenBody": {
+		"message": "Vai su open.spotify.com e apri un album o un brano. La scheda compare in alto a destra."
+	},
+	"welcomePinTitle": {
+		"message": "Fissa Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Fai clic sull'icona del puzzle nella barra di Chrome, poi sulla puntina accanto a Dynamoi. Il popup cerca qualsiasi link Spotify, UPC o ISRC che incolli."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Usa la scorciatoia"
+	},
+	"welcomeShortcutBody": {
+		"message": "Premi $VALUE$ su una pagina Spotify per mostrare o nascondere la scheda.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Privacy"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi riceve solo l'ID Spotify dell'album o del brano che apri, o il codice che incolli, per cercarne i dati. Nessun account, nessun tracciamento. Le ricerche recenti restano su questo dispositivo."
+	},
+	"welcomeCta": {
+		"message": "Apri Spotify"
+	},
+	"welcomeAbout": {
+		"message": "Informazioni su Dynamoi"
+	}
+}

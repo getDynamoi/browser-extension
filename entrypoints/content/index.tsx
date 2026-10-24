@@ -1,162 +1,160 @@
-import { createRoot } from "react-dom/client";
+import { createRoot, type Root } from "react-dom/client";
 import { createShadowRootUi } from "wxt/utils/content-script-ui/shadow-root";
 import { defineContentScript } from "wxt/utils/define-content-script";
-import type { RequestMessage, ResponseMessage } from "../../lib/messages";
-import { parseSpotifyUrl } from "../../lib/spotify-url";
-import App from "./components/App";
+import { lookup, type ToBackground, type ToContent } from "../../lib/messages";
+import { finishRatingPrompt, RATING_AFTER_LOOKUPS, readRating, STORE_REVIEW_URL } from "../../lib/storage";
+import { type LookupTarget, targetFromSpotifyPath, targetKey } from "../../lib/target";
+import { Card, type CardModel } from "./Card";
 import "./style.css";
+
+const FONT_STYLE_ID = "dynamoi-extension-font";
+
+/** Shadow roots cannot load @font-face, so the face is declared once on the page. */
+function ensureFont() {
+	if (document.getElementById(FONT_STYLE_ID)) return;
+	const style = document.createElement("style");
+	style.id = FONT_STYLE_ID;
+	style.textContent = `@font-face{font-family:"Dynamoi Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("${chrome.runtime.getURL("/fonts/inter-variable-latin.woff2")}") format("woff2");}`;
+	document.head.append(style);
+}
+
+async function reportPage(page: ToBackground) {
+	try {
+		await chrome.runtime.sendMessage(page);
+	} catch {
+		// The worker may be restarting; the badge is cosmetic and the next navigation retries.
+	}
+}
 
 export default defineContentScript({
 	matches: ["https://open.spotify.com/*"],
 	cssInjectionMode: "ui",
 
 	async main(ctx) {
-		const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.svg");
+		ensureFont();
+		const wordmarkUrl = chrome.runtime.getURL("/dynamoi-wordmark.svg");
+		let target: LookupTarget | null = null;
+		let model: CardModel | null = null;
+		let hidden = false;
+		let focusOnRender = false;
+		let root: Root | null = null;
+		let ui: Awaited<ReturnType<typeof createShadowRootUi<Root>>> | null = null;
 
-		let currentData: ResponseMessage | null = null;
-		let isHidden = false;
-		let root: ReturnType<typeof createRoot> | null = null;
-		let mountedUi: Awaited<ReturnType<typeof createShadowRootUi>> | null =
-			null;
-
-		function renderApp() {
-			if (!root) return;
+		function render() {
+			if (!(root && model && target)) return;
+			const autoFocus = focusOnRender;
+			focusOnRender = false;
 			root.render(
-				<App
-					data={currentData}
-					logoUrl={logoUrl}
-					onClose={() => {
-						isHidden = true;
-						mountedUi?.remove();
+				<Card
+					autoFocus={autoFocus}
+					model={model}
+					onClose={hide}
+					onDismissRating={() => {
+						void finishRatingPrompt();
+						if (model) model = { ...model, showRating: false };
+						render();
 					}}
+					onRate={() => {
+						void finishRatingPrompt();
+						window.open(STORE_REVIEW_URL, "_blank", "noopener");
+						if (model) model = { ...model, showRating: false };
+						render();
+					}}
+					onRetry={() => target && void load(target)}
+					target={target}
+					wordmarkUrl={wordmarkUrl}
 				/>,
 			);
 		}
 
-		async function mountOverlay() {
-			if (mountedUi) return;
-
-			const ui = await createShadowRootUi(ctx, {
-				name: "music-data-lens",
-				position: "overlay",
-				onMount(container: Element) {
-					const wrapper = document.createElement("div");
-					container.append(wrapper);
-					root = createRoot(wrapper);
-					renderApp();
-					return root;
-				},
-				onRemove(r: ReturnType<typeof createRoot> | undefined) {
-					r?.unmount();
-					root = null;
-				},
-			});
-
-			ui.mount();
-			mountedUi = ui;
+		async function show() {
+			if (!ui) {
+				ui = await createShadowRootUi(ctx, {
+					name: "dynamoi-release-card",
+					position: "overlay",
+					onMount(container) {
+						const wrapper = document.createElement("div");
+						container.append(wrapper);
+						root = createRoot(wrapper);
+						return root;
+					},
+					onRemove(mounted) {
+						mounted?.unmount();
+						root = null;
+					},
+				});
+				ui.mount();
+			}
+			render();
 		}
 
-		function requestData() {
-			const info = parseSpotifyUrl(window.location.pathname);
-			if (!info) {
-				// Not on a supported page — remove overlay
-				mountedUi?.remove();
-				mountedUi = null;
-				currentData = null;
-				isHidden = false;
-				return;
-			}
+		function hide() {
+			hidden = true;
+			ui?.remove();
+			ui = null;
+		}
 
-			if (isHidden) return;
-
-			const message: RequestMessage = {
-				type: "GET_SPOTIFY_DATA",
-				itemType: info.type,
-				id: info.id,
+		async function load(next: LookupTarget) {
+			const key = targetKey(next);
+			model = { showRating: false, state: { status: "loading" } };
+			if (!hidden) await show();
+			const [state, rating] = await Promise.all([lookup(next), readRating()]);
+			if (!target || targetKey(target) !== key) return;
+			model = {
+				showRating: !rating.done && rating.lookups >= RATING_AFTER_LOOKUPS,
+				state,
 			};
-			chrome.runtime.sendMessage(message);
+			if (!hidden) render();
 		}
 
-		// Listen for data from background
-		function onMessage(message: ResponseMessage) {
-			if (
-				message.type !== "SPOTIFY_DATA_RESULT" &&
-				message.type !== "SPOTIFY_DATA_ERROR"
-			) {
+		function sync() {
+			const next = targetFromSpotifyPath(window.location.pathname);
+			if (next && target && targetKey(next) === targetKey(target)) return;
+			target = next;
+			hidden = false;
+			const page: ToBackground = { itemType: next?.itemType ?? null, type: "PAGE" };
+			void reportPage(page);
+			if (!next) {
+				model = null;
+				ui?.remove();
+				ui = null;
 				return;
 			}
-
-			// Ignore late responses that no longer match the current Spotify URL.
-			const currentInfo = parseSpotifyUrl(window.location.pathname);
-			if (
-				!currentInfo ||
-				currentInfo.id !== message.id ||
-				currentInfo.type !== message.itemType
-			) {
-				return;
-			}
-
-			currentData = message;
-			if (!isHidden) {
-				void mountOverlay().then(renderApp);
-			}
+			void load(next);
 		}
 
+		function onMessage(message: ToContent) {
+			if (message.type !== "TOGGLE_CARD" || !target) return;
+			if (hidden || !ui) {
+				hidden = false;
+				focusOnRender = true;
+				void show();
+			} else {
+				hide();
+			}
+		}
 		chrome.runtime.onMessage.addListener(onMessage);
+
+		// Spotify is a single-page app. Content scripts run in an isolated world,
+		// so watch navigation events and the document title instead of patching
+		// the page's History API.
+		const navigation = (window as Window & { navigation?: EventTarget })
+			.navigation;
+		navigation?.addEventListener("currententrychange", sync);
+		window.addEventListener("popstate", sync);
+		const titleObserver = new MutationObserver(sync);
+		const title = document.querySelector("title");
+		if (title) {
+			titleObserver.observe(title, { characterData: true, childList: true, subtree: true });
+		}
+
 		ctx.onInvalidated(() => {
 			chrome.runtime.onMessage.removeListener(onMessage);
-		});
-
-		// Detect SPA navigation via History API interception + title MutationObserver
-		let lastPath = window.location.pathname;
-
-		function checkNavigation() {
-			const currentPath = window.location.pathname;
-			if (currentPath !== lastPath) {
-				lastPath = currentPath;
-				isHidden = false;
-				mountedUi?.remove();
-				mountedUi = null;
-				currentData = null;
-				requestData();
-			}
-		}
-
-		// Intercept History API
-		const originalPushState = history.pushState.bind(history);
-		const originalReplaceState = history.replaceState.bind(history);
-
-		history.pushState = (...args) => {
-			originalPushState(...args);
-			checkNavigation();
-		};
-
-		history.replaceState = (...args) => {
-			originalReplaceState(...args);
-			checkNavigation();
-		};
-
-		window.addEventListener("popstate", checkNavigation);
-
-		// Also observe title changes as a fallback
-		const titleObserver = new MutationObserver(checkNavigation);
-		const titleEl = document.querySelector("title");
-		if (titleEl) {
-			titleObserver.observe(titleEl, {
-				childList: true,
-				characterData: true,
-				subtree: true,
-			});
-		}
-
-		ctx.onInvalidated(() => {
-			history.pushState = originalPushState;
-			history.replaceState = originalReplaceState;
-			window.removeEventListener("popstate", checkNavigation);
+			navigation?.removeEventListener("currententrychange", sync);
+			window.removeEventListener("popstate", sync);
 			titleObserver.disconnect();
 		});
 
-		// Initial check
-		requestData();
+		sync();
 	},
 });

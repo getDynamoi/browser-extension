@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi: Cek ISRC, UPC & Label Rilisan"
+	},
+	"extDescription": {
+		"message": "Alat gratis Dynamoi untuk artis: ISRC atau UPC, label, tanggal rilis, dan tautan toko untuk album atau lagu Spotify mana pun."
+	},
+	"commandToggle": {
+		"message": "Tampilkan atau sembunyikan kartu rilisan"
+	},
+	"badgeDetected": {
+		"message": "Detail rilisan tersedia"
+	},
+	"cardLabel": {
+		"message": "Detail rilisan Dynamoi"
+	},
+	"close": {
+		"message": "Tutup"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Lagu"
+	},
+	"untitled": {
+		"message": "Rilisan tanpa judul"
+	},
+	"fieldTitle": {
+		"message": "Judul"
+	},
+	"fieldArtists": {
+		"message": "Artis"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Label"
+	},
+	"fieldReleased": {
+		"message": "Dirilis"
+	},
+	"copyField": {
+		"message": "Salin $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ disalin",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Gagal menyalin. Pilih teksnya lalu salin sendiri."
+	},
+	"copySheet": {
+		"message": "Salin ringkasan rilisan"
+	},
+	"sheetCopied": {
+		"message": "Ringkasan rilisan disalin"
+	},
+	"alsoOn": {
+		"message": "Juga di"
+	},
+	"noLinks": {
+		"message": "Belum ada tautan toko lain."
+	},
+	"opensInNewTab": {
+		"message": "(terbuka di tab baru)"
+	},
+	"promote": {
+		"message": "Promosikan rilisan ini dengan Dynamoi"
+	},
+	"loading": {
+		"message": "Mencari rilisan ini"
+	},
+	"notFoundTitle": {
+		"message": "Belum ada di katalog kami"
+	},
+	"notFoundBody": {
+		"message": "Rilisan baru biasanya muncul dalam sehari. Coba lagi besok."
+	},
+	"limitedTitle": {
+		"message": "Istirahat sebentar"
+	},
+	"limitedBody": {
+		"message": "Pencarian gratis sedang ramai. Coba lagi nanti."
+	},
+	"unavailableTitle": {
+		"message": "Pencarian tidak tersedia"
+	},
+	"unavailableBody": {
+		"message": "Ada masalah di pihak kami. Coba lagi dalam beberapa menit."
+	},
+	"offlineTitle": {
+		"message": "Anda sedang offline"
+	},
+	"offlineBody": {
+		"message": "Sambungkan ke internet untuk mencari rilisan ini."
+	},
+	"retry": {
+		"message": "Coba lagi"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi bermanfaat? Rating singkat membantu artis lain menemukannya."
+	},
+	"rateAction": {
+		"message": "Beri rating"
+	},
+	"rateDismiss": {
+		"message": "Nanti saja"
+	},
+	"popupInputLabel": {
+		"message": "Cari rilisan"
+	},
+	"popupPlaceholder": {
+		"message": "Tautan Spotify, UPC, atau ISRC"
+	},
+	"popupSubmit": {
+		"message": "Cari"
+	},
+	"popupInvalid": {
+		"message": "Tempel tautan album atau lagu dari open.spotify.com, UPC, atau ISRC."
+	},
+	"popupRecent": {
+		"message": "Pencarian terbaru"
+	},
+	"popupEmptyHistory": {
+		"message": "20 pencarian terakhir Anda muncul di sini. Semuanya tetap di perangkat ini."
+	},
+	"popupClearHistory": {
+		"message": "Hapus"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ menampilkan atau menyembunyikan kartu di Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Detail rilisan untuk setiap album dan lagu"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi menampilkan ISRC atau UPC, label, tanggal rilis, artis yang dikreditkan, dan tautan ke toko lain untuk musik yang Anda buka di Spotify. Gratis, tanpa akun."
+	},
+	"welcomeOpenTitle": {
+		"message": "Buka album atau lagu"
+	},
+	"welcomeOpenBody": {
+		"message": "Buka open.spotify.com lalu buka album atau lagu mana pun. Kartu muncul di pojok kanan atas."
+	},
+	"welcomePinTitle": {
+		"message": "Sematkan Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Klik ikon puzzle di toolbar Chrome, lalu pin di samping Dynamoi. Popup akan mencari setiap tautan Spotify, UPC, atau ISRC yang Anda tempel."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Gunakan pintasan"
+	},
+	"welcomeShortcutBody": {
+		"message": "Tekan $VALUE$ di halaman Spotify untuk menampilkan atau menyembunyikan kartu.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Privasi"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi hanya menerima ID Spotify dari album atau lagu yang Anda buka, atau kode yang Anda tempel, untuk mencari data rilisannya. Tanpa akun, tanpa pelacakan. Pencarian terbaru Anda tetap di perangkat ini."
+	},
+	"welcomeCta": {
+		"message": "Buka Spotify"
+	},
+	"welcomeAbout": {
+		"message": "Tentang Dynamoi"
+	}
+}

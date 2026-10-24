@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi 릴리스 조회: ISRC, UPC, 레이블"
+	},
+	"extDescription": {
+		"message": "아티스트를 위한 무료 Dynamoi 도구: Spotify 앨범이나 트랙의 ISRC 또는 UPC, 레이블, 발매일, 다른 스토어 링크를 보여줍니다."
+	},
+	"commandToggle": {
+		"message": "릴리스 카드 표시 또는 숨기기"
+	},
+	"badgeDetected": {
+		"message": "릴리스 정보 있음"
+	},
+	"cardLabel": {
+		"message": "Dynamoi 릴리스 정보"
+	},
+	"close": {
+		"message": "닫기"
+	},
+	"kindAlbum": {
+		"message": "앨범"
+	},
+	"kindTrack": {
+		"message": "트랙"
+	},
+	"untitled": {
+		"message": "제목 없는 릴리스"
+	},
+	"fieldTitle": {
+		"message": "제목"
+	},
+	"fieldArtists": {
+		"message": "아티스트"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "레이블"
+	},
+	"fieldReleased": {
+		"message": "발매일"
+	},
+	"copyField": {
+		"message": "$VALUE$ 복사",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ 복사됨",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "복사하지 못했습니다. 텍스트를 선택해 직접 복사하세요."
+	},
+	"copySheet": {
+		"message": "릴리스 시트 복사"
+	},
+	"sheetCopied": {
+		"message": "릴리스 시트 복사됨"
+	},
+	"alsoOn": {
+		"message": "다른 스토어"
+	},
+	"noLinks": {
+		"message": "아직 다른 스토어 링크가 없습니다."
+	},
+	"opensInNewTab": {
+		"message": "(새 탭에서 열림)"
+	},
+	"promote": {
+		"message": "Dynamoi로 이 릴리스 홍보하기"
+	},
+	"loading": {
+		"message": "릴리스를 조회하는 중"
+	},
+	"notFoundTitle": {
+		"message": "아직 카탈로그에 없습니다"
+	},
+	"notFoundBody": {
+		"message": "새 릴리스는 보통 하루 안에 표시됩니다. 내일 다시 확인하세요."
+	},
+	"limitedTitle": {
+		"message": "잠시 쉬는 중"
+	},
+	"limitedBody": {
+		"message": "무료 조회 요청이 많습니다. 나중에 다시 시도하세요."
+	},
+	"unavailableTitle": {
+		"message": "조회를 사용할 수 없음"
+	},
+	"unavailableBody": {
+		"message": "저희 쪽에 문제가 생겼습니다. 몇 분 후 다시 시도하세요."
+	},
+	"offlineTitle": {
+		"message": "오프라인 상태입니다"
+	},
+	"offlineBody": {
+		"message": "이 릴리스를 조회하려면 인터넷에 연결하세요."
+	},
+	"retry": {
+		"message": "다시 시도"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi가 유용한가요? 간단한 평가가 다른 아티스트에게 도움이 됩니다."
+	},
+	"rateAction": {
+		"message": "평가하기"
+	},
+	"rateDismiss": {
+		"message": "나중에"
+	},
+	"popupInputLabel": {
+		"message": "릴리스 조회"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify 링크, UPC 또는 ISRC"
+	},
+	"popupSubmit": {
+		"message": "조회"
+	},
+	"popupInvalid": {
+		"message": "open.spotify.com의 앨범 또는 트랙 링크, UPC, ISRC를 붙여넣으세요."
+	},
+	"popupRecent": {
+		"message": "최근 조회"
+	},
+	"popupEmptyHistory": {
+		"message": "최근 조회 20개가 여기에 표시됩니다. 이 기기에만 저장됩니다."
+	},
+	"popupClearHistory": {
+		"message": "지우기"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ 키로 Spotify에서 카드를 표시하거나 숨깁니다",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "모든 앨범과 트랙의 릴리스 정보"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi는 Spotify에서 여는 음악의 ISRC 또는 UPC, 레이블, 발매일, 크레딧 아티스트, 다른 스토어 링크를 보여줍니다. 무료이며 계정이 필요 없습니다."
+	},
+	"welcomeOpenTitle": {
+		"message": "앨범이나 트랙 열기"
+	},
+	"welcomeOpenBody": {
+		"message": "open.spotify.com에서 앨범이나 트랙을 열면 오른쪽 위에 카드가 나타납니다."
+	},
+	"welcomePinTitle": {
+		"message": "Dynamoi 고정하기"
+	},
+	"welcomePinBody": {
+		"message": "Chrome 툴바의 퍼즐 아이콘을 클릭한 다음 Dynamoi 옆의 핀을 클릭하세요. 팝업에서 붙여넣은 Spotify 링크, UPC, ISRC를 조회할 수 있습니다."
+	},
+	"welcomeShortcutTitle": {
+		"message": "단축키 사용"
+	},
+	"welcomeShortcutBody": {
+		"message": "Spotify 페이지에서 $VALUE$ 키를 누르면 카드를 표시하거나 숨깁니다.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "개인정보"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi는 릴리스 정보를 조회하기 위해 사용자가 연 앨범이나 트랙의 Spotify ID 또는 붙여넣은 코드만 받습니다. 계정도 추적도 없습니다. 최근 조회 기록은 이 기기에 남습니다."
+	},
+	"welcomeCta": {
+		"message": "Spotify 열기"
+	},
+	"welcomeAbout": {
+		"message": "Dynamoi 소개"
+	}
+}

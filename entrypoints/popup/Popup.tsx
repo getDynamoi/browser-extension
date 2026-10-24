@@ -1,126 +1,159 @@
-import { useSyncExternalStore } from "react";
-
-type TabState = "spotify" | "other" | "loading";
-let currentTabState: TabState = "loading";
-
-function tabStateFromUrl(url: string | undefined): Exclude<TabState, "loading"> {
-	if (!url) {
-		return "other";
-	}
-
-	try {
-		return new URL(url).origin === "https://open.spotify.com"
-			? "spotify"
-			: "other";
-	} catch {
-		return "other";
-	}
-}
-
-function subscribeToTabState(onStoreChange: () => void) {
-	let isSubscribed = true;
-	currentTabState = "loading";
-	onStoreChange();
-
-	chrome.tabs.query({ active: true, currentWindow: true }, (tabs: chrome.tabs.Tab[]) => {
-		if (!isSubscribed) {
-			return;
-		}
-		currentTabState = tabStateFromUrl(tabs[0]?.url);
-		onStoreChange();
-	});
-
-	return () => {
-		isSubscribed = false;
-	};
-}
-
-function getTabStateSnapshot() {
-	return currentTabState;
-}
-
-function SpotifyLogo({ className }: { className?: string }) {
-	return (
-		<svg
-			viewBox="0 0 256 256"
-			xmlns="http://www.w3.org/2000/svg"
-			preserveAspectRatio="xMidYMid"
-			className={className}
-		>
-			<path
-				d="M128 0C57.308 0 0 57.309 0 128c0 70.696 57.309 128 128 128 70.697 0 128-57.304 128-128C256 57.314 198.697.007 127.998.007l.001-.006Zm58.699 184.614c-2.293 3.76-7.215 4.952-10.975 2.644-30.053-18.357-67.885-22.515-112.44-12.335a7.981 7.981 0 0 1-9.552-6.007 7.968 7.968 0 0 1 6-9.553c48.76-11.14 90.583-6.344 124.323 14.276 3.76 2.308 4.952 7.215 2.644 10.975Zm15.667-34.853c-2.89 4.695-9.034 6.178-13.726 3.289-34.406-21.148-86.853-27.273-127.548-14.92-5.278 1.594-10.852-1.38-12.454-6.649-1.59-5.278 1.386-10.842 6.655-12.446 46.485-14.106 104.275-7.273 143.787 17.007 4.692 2.89 6.175 9.034 3.286 13.72v-.001Zm1.345-36.293C162.457 88.964 94.394 86.71 55.007 98.666c-6.325 1.918-13.014-1.653-14.93-7.978-1.917-6.328 1.65-13.012 7.98-14.935C93.27 62.027 168.434 64.68 215.929 92.876c5.702 3.376 7.566 10.724 4.188 16.405-3.362 5.69-10.73 7.565-16.4 4.187h-.006Z"
-				fill="#1ED760"
-			/>
-		</svg>
-	);
-}
-
-function DynamoiFooterLink() {
-	return (
-		<div className="text-center">
-			<a
-				href="https://dynamoi.com"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="text-[10px] text-text-muted hover:text-brand-ember transition-colors"
-			>
-				dynamoi.com
-			</a>
-		</div>
-	);
-}
+import { useCallback, useEffect, useId, useState } from "react";
+import { BloomMark } from "../../components/icons";
+import { type CardState, ReleaseCard } from "../../components/ReleaseCard";
+import { t } from "../../lib/i18n";
+import { lookup, readShortcut } from "../../lib/messages";
+import { clearHistory, type HistoryEntry, readHistory } from "../../lib/storage";
+import { type LookupTarget, targetFromInput, targetFromSpotifyPath } from "../../lib/target";
 
 export default function Popup() {
-	const tabState = useSyncExternalStore(
-		subscribeToTabState,
-		getTabStateSnapshot,
-		getTabStateSnapshot,
-	);
-	const logoUrl = chrome.runtime.getURL("dynamoi-wordmark.svg");
+	const inputId = useId();
+	const errorId = useId();
+	const [input, setInput] = useState("");
+	const [invalid, setInvalid] = useState(false);
+	const [current, setCurrent] = useState<{ state: CardState; target: LookupTarget } | null>(null);
+	const [history, setHistory] = useState<HistoryEntry[]>([]);
+	const [shortcut, setShortcut] = useState("Alt+Shift+D");
 
-	if (tabState === "loading") {
-		return <div className="w-70 h-25 bg-surface-bg" />;
-	}
+	const run = useCallback(async (target: LookupTarget) => {
+		setCurrent({ state: { status: "loading" }, target });
+		const state = await lookup(target);
+		setCurrent({ state, target });
+		setHistory(await readHistory());
+	}, []);
 
-	if (tabState === "spotify") {
-		return (
-			<div className="w-70 bg-surface-bg text-text-primary p-4 space-y-3">
-				<div className="flex items-center justify-between">
-					<img src={logoUrl} alt="Dynamoi" className="h-3.5 w-auto" />
-					<div className="flex items-center gap-1.5">
-						<div className="size-1.5 rounded-full bg-brand-emerald" />
-						<span className="text-[11px] text-brand-emerald">Active</span>
-					</div>
-				</div>
-				<DynamoiFooterLink />
-			</div>
-		);
-	}
+	useEffect(() => {
+		void readHistory().then(setHistory);
+		void readShortcut().then(setShortcut);
+		// Host access to open.spotify.com exposes that tab's URL; nothing else is read.
+		void (async () => {
+			const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+			if (!tab?.url) return;
+			const url = new URL(tab.url);
+			const target = url.hostname === "open.spotify.com" ? targetFromSpotifyPath(url.pathname) : null;
+			if (target) await run(target);
+		})();
+	}, [run]);
 
 	return (
-		<div className="w-70 bg-surface-bg text-text-primary p-5 space-y-4">
-			<div className="flex flex-col items-center text-center gap-3">
-				<SpotifyLogo className="size-10" />
-				<div>
-					<img
-						src={logoUrl}
-						alt="Dynamoi"
-						className="h-4 w-auto mx-auto"
+		<main className="w-[25rem] p-5">
+			<header className="flex items-center justify-between">
+				<a
+					className="kbd-focus -m-1 inline-flex items-center gap-2 rounded-sm p-1"
+					href="https://dynamoi.com/?utm_source=chrome-extension&utm_medium=extension&utm_campaign=popup"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<BloomMark className="size-5" />
+					<img alt="Dynamoi" className="h-3.5 w-auto" src="/dynamoi-wordmark.svg" />
+				</a>
+			</header>
+
+			<form
+				className="mt-5"
+				noValidate
+				onSubmit={(event) => {
+					event.preventDefault();
+					const target = targetFromInput(input);
+					setInvalid(!target);
+					if (target) void run(target);
+				}}
+			>
+				<label className="text-label font-semibold text-quiet" htmlFor={inputId}>
+					{t("popupInputLabel")}
+				</label>
+				<div className="mt-1.5 flex gap-2">
+					<input
+						aria-describedby={invalid ? errorId : undefined}
+						aria-invalid={invalid}
+						autoComplete="off"
+						className="kbd-focus min-h-10 min-w-0 flex-1 rounded-sm bg-field px-3 text-body text-text caret-ember placeholder:text-faint aria-invalid:shadow-[0_0_0_2px_var(--color-danger)]"
+						id={inputId}
+						onChange={(event) => {
+							setInput(event.target.value);
+							setInvalid(false);
+						}}
+						placeholder={t("popupPlaceholder")}
+						spellCheck={false}
+						value={input}
 					/>
-					<p className="text-[12px] text-text-secondary mt-2">
-						Only works on{" "}
-						<a
-							href="https://open.spotify.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-brand-ember hover:underline"
-						>
-							open.spotify.com
-						</a>
-					</p>
+					<button
+						className="kbd-focus min-h-10 cursor-pointer rounded-sm bg-ember px-4 text-body font-semibold text-ink transition-colors duration-150 hover:bg-ember-hi"
+						type="submit"
+					>
+						{t("popupSubmit")}
+					</button>
 				</div>
-			</div>
-			<DynamoiFooterLink />
-		</div>
+				{invalid ? (
+					<p className="mt-2 text-label text-danger" id={errorId}>
+						{t("popupInvalid")}
+					</p>
+				) : null}
+			</form>
+
+			{current ? (
+				<div className="mt-5 rounded-md bg-surface p-4">
+					<ReleaseCard
+						onRetry={() => void run(current.target)}
+						state={current.state}
+						target={current.target}
+					/>
+				</div>
+			) : null}
+
+			<section aria-labelledby="recent-heading" className="mt-6">
+				<div className="flex items-center justify-between">
+					<h2 className="text-label font-semibold text-quiet" id="recent-heading">
+						{t("popupRecent")}
+					</h2>
+					{history.length > 0 ? (
+						<button
+							className="kbd-focus cursor-pointer rounded-sm px-1 text-label text-quiet hover:text-text"
+							onClick={() => {
+								void clearHistory().then(() => setHistory([]));
+							}}
+							type="button"
+						>
+							{t("popupClearHistory")}
+						</button>
+					) : null}
+				</div>
+				{history.length > 0 ? (
+					<ul className="-mx-2 mt-1.5 max-h-56 overflow-y-auto">
+						{history.map((entry) => (
+							<li key={`${entry.target.by}:${entry.target.value}`}>
+								<button
+									className="kbd-focus flex w-full cursor-pointer items-baseline gap-3 rounded-sm px-2 py-2 text-left transition-colors duration-150 hover:bg-hover"
+									onClick={() => void run(entry.target)}
+									type="button"
+								>
+									<span className="min-w-0 flex-1">
+										<span className="block truncate text-body text-text">{entry.name ?? t("untitled")}</span>
+										<span className="block truncate text-label text-muted">{entry.artists.join(", ")}</span>
+									</span>
+									{entry.code ? (
+										<span className="tabular shrink-0 text-label text-quiet">{entry.code}</span>
+									) : null}
+								</button>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p className="mt-1.5 text-body text-muted">{t("popupEmptyHistory")}</p>
+				)}
+			</section>
+
+			<footer className="mt-6 flex items-center justify-between gap-3 text-label text-quiet">
+				<span>{t("shortcutHint", shortcut)}</span>
+				<a
+					className="kbd-focus shrink-0 rounded-sm underline-offset-4 hover:text-text hover:underline"
+					href="https://dynamoi.com/?utm_source=chrome-extension&utm_medium=extension&utm_campaign=popup"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					dynamoi.com
+				</a>
+			</footer>
+		</main>
 	);
 }

@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi : ISRC, UPC et label des sorties"
+	},
+	"extDescription": {
+		"message": "Outil Dynamoi gratuit pour artistes : ISRC ou UPC, label, date de sortie et liens des plateformes de tout album ou titre Spotify."
+	},
+	"commandToggle": {
+		"message": "Afficher ou masquer la fiche de la sortie"
+	},
+	"badgeDetected": {
+		"message": "Infos de la sortie disponibles"
+	},
+	"cardLabel": {
+		"message": "Infos de la sortie par Dynamoi"
+	},
+	"close": {
+		"message": "Fermer"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Titre"
+	},
+	"untitled": {
+		"message": "Sortie sans titre"
+	},
+	"fieldTitle": {
+		"message": "Titre"
+	},
+	"fieldArtists": {
+		"message": "Artistes"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Label"
+	},
+	"fieldReleased": {
+		"message": "Sortie"
+	},
+	"copyField": {
+		"message": "Copier $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ copié",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Copie impossible. Sélectionnez le texte et copiez-le vous-même."
+	},
+	"copySheet": {
+		"message": "Copier la fiche de sortie"
+	},
+	"sheetCopied": {
+		"message": "Fiche copiée"
+	},
+	"alsoOn": {
+		"message": "Aussi sur"
+	},
+	"noLinks": {
+		"message": "Aucun autre lien de plateforme pour l'instant."
+	},
+	"opensInNewTab": {
+		"message": "(s'ouvre dans un nouvel onglet)"
+	},
+	"promote": {
+		"message": "Promouvoir cette sortie avec Dynamoi"
+	},
+	"loading": {
+		"message": "Recherche de cette sortie"
+	},
+	"notFoundTitle": {
+		"message": "Pas encore dans notre catalogue"
+	},
+	"notFoundBody": {
+		"message": "Les nouvelles sorties apparaissent en général sous 24 heures. Revenez demain."
+	},
+	"limitedTitle": {
+		"message": "Petite pause"
+	},
+	"limitedBody": {
+		"message": "Les recherches gratuites sont très sollicitées. Réessayez plus tard."
+	},
+	"unavailableTitle": {
+		"message": "Recherche indisponible"
+	},
+	"unavailableBody": {
+		"message": "Un problème est survenu de notre côté. Réessayez dans quelques minutes."
+	},
+	"offlineTitle": {
+		"message": "Vous êtes hors ligne"
+	},
+	"offlineBody": {
+		"message": "Connectez-vous à Internet pour rechercher cette sortie."
+	},
+	"retry": {
+		"message": "Réessayer"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi vous est utile ? Une note rapide aide d'autres artistes à le trouver."
+	},
+	"rateAction": {
+		"message": "Noter"
+	},
+	"rateDismiss": {
+		"message": "Plus tard"
+	},
+	"popupInputLabel": {
+		"message": "Rechercher une sortie"
+	},
+	"popupPlaceholder": {
+		"message": "Lien Spotify, UPC ou ISRC"
+	},
+	"popupSubmit": {
+		"message": "Rechercher"
+	},
+	"popupInvalid": {
+		"message": "Collez un lien d'album ou de titre open.spotify.com, un UPC ou un ISRC."
+	},
+	"popupRecent": {
+		"message": "Recherches récentes"
+	},
+	"popupEmptyHistory": {
+		"message": "Vos 20 dernières recherches s'affichent ici. Elles restent sur cet appareil."
+	},
+	"popupClearHistory": {
+		"message": "Effacer"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ affiche ou masque la fiche sur Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Les infos de sortie de chaque album et titre"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi affiche l'ISRC ou l'UPC, le label, la date de sortie, les artistes crédités et les liens vers d'autres plateformes pour la musique que vous ouvrez sur Spotify. Gratuit, sans compte."
+	},
+	"welcomeOpenTitle": {
+		"message": "Ouvrez un album ou un titre"
+	},
+	"welcomeOpenBody": {
+		"message": "Allez sur open.spotify.com et ouvrez un album ou un titre. La fiche apparaît en haut à droite."
+	},
+	"welcomePinTitle": {
+		"message": "Épinglez Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Cliquez sur l'icône puzzle de la barre d'outils Chrome, puis sur l'épingle à côté de Dynamoi. La fenêtre recherche tout lien Spotify, UPC ou ISRC que vous collez."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Utilisez le raccourci"
+	},
+	"welcomeShortcutBody": {
+		"message": "Appuyez sur $VALUE$ sur une page Spotify pour afficher ou masquer la fiche.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Confidentialité"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi reçoit uniquement l'ID Spotify de l'album ou du titre ouvert, ou le code collé, pour rechercher ses données. Ni compte ni pistage. Vos recherches récentes restent sur cet appareil."
+	},
+	"welcomeCta": {
+		"message": "Ouvrir Spotify"
+	},
+	"welcomeAbout": {
+		"message": "À propos de Dynamoi"
+	}
+}

@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi Release Lookup: ISRC, UPC & Label"
+	},
+	"extDescription": {
+		"message": "Free Dynamoi tool for artists: see the ISRC or UPC, label, release date and store links for any Spotify album or track."
+	},
+	"commandToggle": {
+		"message": "Show or hide the release card"
+	},
+	"badgeDetected": {
+		"message": "Release details available"
+	},
+	"cardLabel": {
+		"message": "Dynamoi release details"
+	},
+	"close": {
+		"message": "Close"
+	},
+	"kindAlbum": {
+		"message": "Album"
+	},
+	"kindTrack": {
+		"message": "Track"
+	},
+	"untitled": {
+		"message": "Untitled release"
+	},
+	"fieldTitle": {
+		"message": "Title"
+	},
+	"fieldArtists": {
+		"message": "Artists"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Label"
+	},
+	"fieldReleased": {
+		"message": "Released"
+	},
+	"copyField": {
+		"message": "Copy $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ copied",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Couldn't copy. Select the text and copy it instead."
+	},
+	"copySheet": {
+		"message": "Copy release sheet"
+	},
+	"sheetCopied": {
+		"message": "Release sheet copied"
+	},
+	"alsoOn": {
+		"message": "Also on"
+	},
+	"noLinks": {
+		"message": "No other store links found yet."
+	},
+	"opensInNewTab": {
+		"message": "(opens in a new tab)"
+	},
+	"promote": {
+		"message": "Promote this release on Dynamoi"
+	},
+	"loading": {
+		"message": "Looking up this release"
+	},
+	"notFoundTitle": {
+		"message": "Not in our catalog yet"
+	},
+	"notFoundBody": {
+		"message": "New releases usually appear within a day. Check back tomorrow."
+	},
+	"limitedTitle": {
+		"message": "Taking a short break"
+	},
+	"limitedBody": {
+		"message": "Free lookups are busy right now. Try again later."
+	},
+	"unavailableTitle": {
+		"message": "Lookups are unavailable"
+	},
+	"unavailableBody": {
+		"message": "Something went wrong on our side. Try again in a few minutes."
+	},
+	"offlineTitle": {
+		"message": "You're offline"
+	},
+	"offlineBody": {
+		"message": "Reconnect to the internet to look up this release."
+	},
+	"retry": {
+		"message": "Try again"
+	},
+	"ratePrompt": {
+		"message": "Finding Dynamoi useful? A quick rating helps other artists find it."
+	},
+	"rateAction": {
+		"message": "Rate it"
+	},
+	"rateDismiss": {
+		"message": "Not now"
+	},
+	"popupInputLabel": {
+		"message": "Look up a release"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify link, UPC or ISRC"
+	},
+	"popupSubmit": {
+		"message": "Look up"
+	},
+	"popupInvalid": {
+		"message": "Paste an album or track link from open.spotify.com, a UPC or an ISRC."
+	},
+	"popupRecent": {
+		"message": "Recent lookups"
+	},
+	"popupEmptyHistory": {
+		"message": "Your last 20 lookups appear here. They stay on this device."
+	},
+	"popupClearHistory": {
+		"message": "Clear"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ shows or hides the card on Spotify",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Release details for any album or track"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi shows the ISRC or UPC, label, release date, credited artists and links to other stores for the music you open on Spotify. Free, with no account."
+	},
+	"welcomeOpenTitle": {
+		"message": "Open an album or track"
+	},
+	"welcomeOpenBody": {
+		"message": "Go to open.spotify.com and open any album or track. The card appears in the top-right corner."
+	},
+	"welcomePinTitle": {
+		"message": "Pin Dynamoi"
+	},
+	"welcomePinBody": {
+		"message": "Click the puzzle icon in Chrome's toolbar, then the pin next to Dynamoi. The popup looks up any Spotify link, UPC or ISRC you paste."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Use the shortcut"
+	},
+	"welcomeShortcutBody": {
+		"message": "Press $VALUE$ on a Spotify page to show or hide the card.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Privacy"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi receives only the Spotify ID of the album or track you open, or the code you paste, to look up its release data. No account, no tracking. Your recent lookups stay on this device."
+	},
+	"welcomeCta": {
+		"message": "Open Spotify"
+	},
+	"welcomeAbout": {
+		"message": "About Dynamoi"
+	}
+}

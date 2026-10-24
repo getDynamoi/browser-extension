@@ -5,35 +5,40 @@
 [![Available in the Chrome Web Store](https://img.shields.io/chrome-web-store/v/abagmakkbloofbpnbldkaolinegeklhf?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/dynamoi/abagmakkbloofbpnbldkaolinegeklhf)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
-Open a track, artist or album on [open.spotify.com](https://open.spotify.com)
-and a small Dynamoi card shows the details Spotify keeps off the page. Use it
-to research comparable artists or check your own release metadata. No account needed, nothing to set up.
+Open an album or track on [open.spotify.com](https://open.spotify.com) and a
+small Dynamoi card shows its release details: the UPC or ISRC, label, release
+date, credited artists and links to the same release on other stores. Use it to
+check your own release metadata or research comparable releases. No account
+needed, nothing to set up.
 
 <p align="center">
-  <img alt="The Dynamoi card on a Spotify track page, showing popularity 89, genre, track number, duration and ISRC" src="./.github/screenshot.png" width="720">
+  <img alt="The Dynamoi card on a Spotify album page, showing the UPC, label, release date, artists and links to other stores" src="./.github/screenshot.png" width="720">
 </p>
 
-## What it shows
+## What it does
 
-| Page | Details |
-| --- | --- |
-| Track | Popularity score, ISRC, duration, track and disc number, explicit flag, the artist's genres, and audio features where Spotify provides them |
-| Artist | Followers, popularity and genre tags |
-| Album | Record label, release date, UPC, copyright line, track count and popularity |
-
-The card sits in the top-right corner and goes away when you leave the page.
+- **Release card.** On album and track pages, the card shows the UPC (albums)
+  or ISRC (tracks), label, release date and credited artists, each with a copy
+  button, plus links to Apple Music, YouTube Music, Amazon Music, Deezer, TIDAL
+  and more.
+- **Copy release sheet.** One click copies every field as plain text, ready
+  for a distributor ticket or a pitch.
+- **Look up anything.** Paste a Spotify link, UPC or ISRC into the toolbar
+  popup. Your last 20 lookups stay on your device.
+- **Keyboard first.** `Alt+Shift+D` shows or hides the card; `Esc` closes it.
 
 ## Install
 
 Add it from the [Chrome Web Store](https://chromewebstore.google.com/detail/dynamoi/abagmakkbloofbpnbldkaolinegeklhf),
-then open any track, artist or album on open.spotify.com.
+then open any album or track on open.spotify.com.
 
 ## Privacy
 
 - No sign-in and no tracking. The extension does not collect or sell data.
-- It runs only on `open.spotify.com`. It reads the Spotify ID of the page you
-  are on and asks `dynamoi.com` for that item's public metadata.
-- The only permission is `activeTab`.
+- It reads only the Spotify ID in the page address of the album or track you
+  open (or the code you paste) and asks `dynamoi.com` for that release's data.
+- It needs only the `storage` permission, for your on-device lookup history,
+  and access to `open.spotify.com` and `dynamoi.com`.
 
 ## Grow the music you research
 

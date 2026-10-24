@@ -1,0 +1,193 @@
+{
+	"extName": {
+		"message": "Dynamoi: ISRC, UPC ve Plak Şirketi Sorgusu"
+	},
+	"extDescription": {
+		"message": "Sanatçılar için ücretsiz Dynamoi aracı: Spotify albüm ve parçaları için ISRC ya da UPC, plak şirketi, tarih ve mağaza bağlantıları."
+	},
+	"commandToggle": {
+		"message": "Yayın kartını göster veya gizle"
+	},
+	"badgeDetected": {
+		"message": "Yayın bilgileri mevcut"
+	},
+	"cardLabel": {
+		"message": "Dynamoi yayın bilgileri"
+	},
+	"close": {
+		"message": "Kapat"
+	},
+	"kindAlbum": {
+		"message": "Albüm"
+	},
+	"kindTrack": {
+		"message": "Parça"
+	},
+	"untitled": {
+		"message": "Adsız yayın"
+	},
+	"fieldTitle": {
+		"message": "Ad"
+	},
+	"fieldArtists": {
+		"message": "Sanatçılar"
+	},
+	"fieldUpc": {
+		"message": "UPC"
+	},
+	"fieldIsrc": {
+		"message": "ISRC"
+	},
+	"fieldLabel": {
+		"message": "Plak şirketi"
+	},
+	"fieldReleased": {
+		"message": "Yayın tarihi"
+	},
+	"copyField": {
+		"message": "$VALUE$ kopyala",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copiedField": {
+		"message": "$VALUE$ kopyalandı",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"copyFailed": {
+		"message": "Kopyalanamadı. Metni seçip kendiniz kopyalayın."
+	},
+	"copySheet": {
+		"message": "Yayın özetini kopyala"
+	},
+	"sheetCopied": {
+		"message": "Yayın özeti kopyalandı"
+	},
+	"alsoOn": {
+		"message": "Diğer platformlar"
+	},
+	"noLinks": {
+		"message": "Henüz başka mağaza bağlantısı bulunamadı."
+	},
+	"opensInNewTab": {
+		"message": "(yeni sekmede açılır)"
+	},
+	"promote": {
+		"message": "Bu yayını Dynamoi ile tanıtın"
+	},
+	"loading": {
+		"message": "Yayın aranıyor"
+	},
+	"notFoundTitle": {
+		"message": "Henüz kataloğumuzda yok"
+	},
+	"notFoundBody": {
+		"message": "Yeni yayınlar genellikle bir gün içinde görünür. Yarın tekrar bakın."
+	},
+	"limitedTitle": {
+		"message": "Kısa bir mola"
+	},
+	"limitedBody": {
+		"message": "Ücretsiz sorgular şu an yoğun. Daha sonra tekrar deneyin."
+	},
+	"unavailableTitle": {
+		"message": "Sorgular kullanılamıyor"
+	},
+	"unavailableBody": {
+		"message": "Bizim tarafımızda bir sorun oluştu. Birkaç dakika sonra tekrar deneyin."
+	},
+	"offlineTitle": {
+		"message": "Çevrimdışısınız"
+	},
+	"offlineBody": {
+		"message": "Bu yayını aramak için internete bağlanın."
+	},
+	"retry": {
+		"message": "Tekrar dene"
+	},
+	"ratePrompt": {
+		"message": "Dynamoi işinize yarıyor mu? Kısa bir puan, diğer sanatçıların onu bulmasına yardım eder."
+	},
+	"rateAction": {
+		"message": "Puan ver"
+	},
+	"rateDismiss": {
+		"message": "Şimdi değil"
+	},
+	"popupInputLabel": {
+		"message": "Yayın ara"
+	},
+	"popupPlaceholder": {
+		"message": "Spotify bağlantısı, UPC veya ISRC"
+	},
+	"popupSubmit": {
+		"message": "Ara"
+	},
+	"popupInvalid": {
+		"message": "open.spotify.com'dan bir albüm veya parça bağlantısı, bir UPC ya da ISRC yapıştırın."
+	},
+	"popupRecent": {
+		"message": "Son aramalar"
+	},
+	"popupEmptyHistory": {
+		"message": "Son 20 aramanız burada görünür. Bu cihazda kalır."
+	},
+	"popupClearHistory": {
+		"message": "Temizle"
+	},
+	"shortcutHint": {
+		"message": "$VALUE$ Spotify'da kartı gösterir veya gizler",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomeTitle": {
+		"message": "Her albüm ve parça için yayın bilgileri"
+	},
+	"welcomeBody": {
+		"message": "Dynamoi, Spotify'da açtığınız müzik için ISRC veya UPC'yi, plak şirketini, yayın tarihini, katkıda bulunan sanatçıları ve diğer mağaza bağlantılarını gösterir. Ücretsiz, hesap gerekmez."
+	},
+	"welcomeOpenTitle": {
+		"message": "Bir albüm veya parça açın"
+	},
+	"welcomeOpenBody": {
+		"message": "open.spotify.com'a gidin ve herhangi bir albüm ya da parça açın. Kart sağ üst köşede görünür."
+	},
+	"welcomePinTitle": {
+		"message": "Dynamoi'yi sabitleyin"
+	},
+	"welcomePinBody": {
+		"message": "Chrome araç çubuğundaki yapboz simgesine, ardından Dynamoi'nin yanındaki raptiyeye tıklayın. Açılır pencere yapıştırdığınız her Spotify bağlantısını, UPC'yi veya ISRC'yi sorgular."
+	},
+	"welcomeShortcutTitle": {
+		"message": "Kısayolu kullanın"
+	},
+	"welcomeShortcutBody": {
+		"message": "Kartı göstermek veya gizlemek için bir Spotify sayfasında $VALUE$ tuşlarına basın.",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"welcomePrivacyTitle": {
+		"message": "Gizlilik"
+	},
+	"welcomePrivacyBody": {
+		"message": "Dynamoi, yayın verilerini bulmak için yalnızca açtığınız albümün veya parçanın Spotify kimliğini ya da yapıştırdığınız kodu alır. Hesap yok, izleme yok. Son aramalarınız bu cihazda kalır."
+	},
+	"welcomeCta": {
+		"message": "Spotify'ı aç"
+	},
+	"welcomeAbout": {
+		"message": "Dynamoi hakkında"
+	}
+}
