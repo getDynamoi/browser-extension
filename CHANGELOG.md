@@ -4,6 +4,23 @@ All notable changes to the Dynamoi Chrome extension will be documented in this f
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-10-25
+
+### Added
+
+- Track details: length, explicit flag and producers.
+- Sound section on tracks: BPM, key with its Camelot code, energy,
+  danceability and positivity, estimated from the audio.
+- Playlist count, with editorial playlists, for tracks.
+- Album details: track count, P line and distributor (as reported).
+- Artist section for the lead artist: monthly listeners, country, genres and
+  top cities, loaded after the release details.
+
+### Changed
+
+- Version-specific track facts (ISRC, length, explicit, sound, playlists) show
+  only when the page is the version the data describes.
+
 ## [2.0.0] - 2026-10-24
 
 ### Changed

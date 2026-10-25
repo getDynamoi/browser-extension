@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Dynamoi について"
+	},
+	"explicit": {
+		"message": "露骨な表現"
+	},
+	"albumTracks": {
+		"message": "$VALUE$曲",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "サウンド"
+	},
+	"soundEstimated": {
+		"message": "音声からの推定値"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "キー"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "エナジー"
+	},
+	"soundDanceability": {
+		"message": "ダンサビリティ"
+	},
+	"soundPositivity": {
+		"message": "ポジティブさ"
+	},
+	"keyMajor": {
+		"message": "$VALUE$メジャー",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$マイナー",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C D♭ D E♭ E F F♯ G A♭ A B♭ B"
+	},
+	"notesMinor": {
+		"message": "C C♯ D E♭ E F F♯ G G♯ A B♭ B"
+	},
+	"fieldDistributor": {
+		"message": "ディストリビューター"
+	},
+	"fieldPLine": {
+		"message": "Pライン"
+	},
+	"fieldProducers": {
+		"message": "プロデューサー"
+	},
+	"fieldPlaylists": {
+		"message": "プレイリスト"
+	},
+	"asOf": {
+		"message": "$VALUE$時点",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "アーティスト"
+	},
+	"artistListeners": {
+		"message": "月間リスナー $VALUE$人",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "リスナーの多い都市"
+	},
+	"fieldDuration": {
+		"message": "長さ"
+	},
+	"distributorNote": {
+		"message": "報告値"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · 公式 $EDITORIAL$",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "プロモーション"
 	}
 }

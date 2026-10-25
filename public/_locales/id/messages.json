@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Tentang Dynamoi"
+	},
+	"explicit": {
+		"message": "Eksplisit"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ lagu",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Suara"
+	},
+	"soundEstimated": {
+		"message": "Diperkirakan dari audio"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Kunci nada"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energi"
+	},
+	"soundDanceability": {
+		"message": "Danceability"
+	},
+	"soundPositivity": {
+		"message": "Positivitas"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ mayor",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ minor",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C D♭ D E♭ E F F♯ G A♭ A B♭ B"
+	},
+	"notesMinor": {
+		"message": "C C♯ D E♭ E F F♯ G G♯ A B♭ B"
+	},
+	"fieldDistributor": {
+		"message": "Distributor"
+	},
+	"fieldPLine": {
+		"message": "Baris P"
+	},
+	"fieldProducers": {
+		"message": "Produser"
+	},
+	"fieldPlaylists": {
+		"message": "Playlist"
+	},
+	"asOf": {
+		"message": "per $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artis"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ pendengar bulanan",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Kota teratas"
+	},
+	"fieldDuration": {
+		"message": "Durasi"
+	},
+	"distributorNote": {
+		"message": "Sesuai laporan"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ editorial",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promosikan"
 	}
 }

@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Om Dynamoi"
+	},
+	"explicit": {
+		"message": "Eksplisitt"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ spor",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Lyd"
+	},
+	"soundEstimated": {
+		"message": "Anslått ut fra lyden"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Toneart"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energi"
+	},
+	"soundDanceability": {
+		"message": "Dansbarhet"
+	},
+	"soundPositivity": {
+		"message": "Positivitet"
+	},
+	"keyMajor": {
+		"message": "$VALUE$-dur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$-moll",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Dess D Ess E F Fiss G Ass A B H"
+	},
+	"notesMinor": {
+		"message": "c ciss d ess e f fiss g giss a b h"
+	},
+	"fieldDistributor": {
+		"message": "Distributør"
+	},
+	"fieldPLine": {
+		"message": "P-linje"
+	},
+	"fieldProducers": {
+		"message": "Produsenter"
+	},
+	"fieldPlaylists": {
+		"message": "Spillelister"
+	},
+	"asOf": {
+		"message": "per $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artist"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ månedlige lyttere",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Toppbyer"
+	},
+	"fieldDuration": {
+		"message": "Lengde"
+	},
+	"distributorNote": {
+		"message": "Som oppgitt"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ redaksjonelle",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promoter"
 	}
 }

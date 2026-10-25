@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Dynamoi 소개"
+	},
+	"explicit": {
+		"message": "19금"
+	},
+	"albumTracks": {
+		"message": "$VALUE$곡",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "사운드"
+	},
+	"soundEstimated": {
+		"message": "오디오 기반 추정치"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "키"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "에너지"
+	},
+	"soundDanceability": {
+		"message": "댄서빌리티"
+	},
+	"soundPositivity": {
+		"message": "긍정도"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ 메이저",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ 마이너",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C D♭ D E♭ E F F♯ G A♭ A B♭ B"
+	},
+	"notesMinor": {
+		"message": "C C♯ D E♭ E F F♯ G G♯ A B♭ B"
+	},
+	"fieldDistributor": {
+		"message": "유통사"
+	},
+	"fieldPLine": {
+		"message": "P 라인"
+	},
+	"fieldProducers": {
+		"message": "프로듀서"
+	},
+	"fieldPlaylists": {
+		"message": "플레이리스트"
+	},
+	"asOf": {
+		"message": "$VALUE$ 기준",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "아티스트"
+	},
+	"artistListeners": {
+		"message": "월간 리스너 $VALUE$명",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "상위 도시"
+	},
+	"fieldDuration": {
+		"message": "길이"
+	},
+	"distributorNote": {
+		"message": "보고된 정보"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · 에디토리얼 $EDITORIAL$",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "프로모션"
 	}
 }

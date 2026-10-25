@@ -41,6 +41,14 @@ export function ExternalIcon({ className }: IconProps) {
 	);
 }
 
+export function ChevronIcon({ className }: IconProps) {
+	return (
+		<svg aria-hidden="true" className={className} viewBox="0 0 16 16" {...STROKE}>
+			<path d="m4 6 4 4 4-4" />
+		</svg>
+	);
+}
+
 const PETALS = [
 	"M558.67,460.61 C583.08,441.98 586.35,435.75 615.79,427.00 A44.14,44.14 0 1 0 562.68,367.20 C550.51,395.39 547.15,423.19 545.78,453.87 A8.03,8.03 0 0 0 558.67,460.61Z",
 	"M599.62,481.22 C635.84,483.84 644.73,481.18 677.66,496.49 A49.83,49.83 0 1 0 678.39,405.80 C645.22,420.58 620.30,441.92 594.54,467.52 A8.03,8.03 0 0 0 599.62,481.22Z",

@@ -1,7 +1,8 @@
-import type { LookupResult } from "./api";
+import type { ArtistResult, LookupResult } from "./api";
 import type { ItemType, LookupTarget } from "./target";
 
 export type ToBackground =
+	| { type: "ARTIST"; artistKey: string }
 	| { type: "LOOKUP"; target: LookupTarget }
 	| { type: "PAGE"; itemType: ItemType | null };
 
@@ -16,6 +17,16 @@ export async function lookup(target: LookupTarget): Promise<LookupResult> {
 		return result ?? UNAVAILABLE;
 	} catch {
 		return UNAVAILABLE;
+	}
+}
+
+export async function lookupArtist(artistKey: string): Promise<ArtistResult> {
+	const message: ToBackground = { artistKey, type: "ARTIST" };
+	try {
+		const result: ArtistResult | undefined = await chrome.runtime.sendMessage(message);
+		return result ?? { status: "none" };
+	} catch {
+		return { status: "none" };
 	}
 }
 

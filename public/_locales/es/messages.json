@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Sobre Dynamoi"
+	},
+	"explicit": {
+		"message": "Explícito"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ canciones",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Sonido"
+	},
+	"soundEstimated": {
+		"message": "Estimado a partir del audio"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Tonalidad"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energía"
+	},
+	"soundDanceability": {
+		"message": "Bailabilidad"
+	},
+	"soundPositivity": {
+		"message": "Positividad"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ mayor",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ menor",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "Do Re♭ Re Mi♭ Mi Fa Fa♯ Sol La♭ La Si♭ Si"
+	},
+	"notesMinor": {
+		"message": "Do Do♯ Re Mi♭ Mi Fa Fa♯ Sol Sol♯ La Si♭ Si"
+	},
+	"fieldDistributor": {
+		"message": "Distribuidora"
+	},
+	"fieldPLine": {
+		"message": "Línea P"
+	},
+	"fieldProducers": {
+		"message": "Productores"
+	},
+	"fieldPlaylists": {
+		"message": "Playlists"
+	},
+	"asOf": {
+		"message": "a $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artista"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ oyentes mensuales",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Ciudades principales"
+	},
+	"fieldDuration": {
+		"message": "Duración"
+	},
+	"distributorNote": {
+		"message": "Según lo informado"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ editoriales",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promocionar"
 	}
 }

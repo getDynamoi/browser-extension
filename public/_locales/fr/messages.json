@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "À propos de Dynamoi"
+	},
+	"explicit": {
+		"message": "Explicite"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ titres",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Son"
+	},
+	"soundEstimated": {
+		"message": "Estimé à partir de l’audio"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Tonalité"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Énergie"
+	},
+	"soundDanceability": {
+		"message": "Dansabilité"
+	},
+	"soundPositivity": {
+		"message": "Positivité"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ majeur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ mineur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "Do Ré♭ Ré Mi♭ Mi Fa Fa♯ Sol La♭ La Si♭ Si"
+	},
+	"notesMinor": {
+		"message": "Do Do♯ Ré Mi♭ Mi Fa Fa♯ Sol Sol♯ La Si♭ Si"
+	},
+	"fieldDistributor": {
+		"message": "Distributeur"
+	},
+	"fieldPLine": {
+		"message": "Mention ℗"
+	},
+	"fieldProducers": {
+		"message": "Producteurs"
+	},
+	"fieldPlaylists": {
+		"message": "Playlists"
+	},
+	"asOf": {
+		"message": "au $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artiste"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ auditeurs mensuels",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Villes principales"
+	},
+	"fieldDuration": {
+		"message": "Durée"
+	},
+	"distributorNote": {
+		"message": "Selon les données déclarées"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ éditoriales",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promouvoir"
 	}
 }

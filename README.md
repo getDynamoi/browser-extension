@@ -21,6 +21,11 @@ needed, nothing to set up.
 - **Release card.** On album and track pages, the card shows the UPC (albums)
   or ISRC (tracks), label, release date and credited artists, each with a copy
   button. Links to the release on other stores appear when Dynamoi finds them.
+- **More detail.** Tracks add length, explicit, producers, playlist count and
+  a Sound section (BPM, key with Camelot code, energy, danceability,
+  positivity). Albums add track count, P line and distributor. An artist
+  section shows the lead artist's monthly listeners, country, genres and top
+  cities.
 - **Copy release sheet.** One click copies every field as plain text, ready
   for a distributor ticket or a pitch.
 - **Look up anything.** Paste a Spotify link, UPC or ISRC into the toolbar

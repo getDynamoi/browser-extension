@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Tietoa Dynamoista"
+	},
+	"explicit": {
+		"message": "Eksplisiittinen"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ kappaletta",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Soundi"
+	},
+	"soundEstimated": {
+		"message": "Arvioitu äänestä"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Sävellaji"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energia"
+	},
+	"soundDanceability": {
+		"message": "Tanssittavuus"
+	},
+	"soundPositivity": {
+		"message": "Positiivisuus"
+	},
+	"keyMajor": {
+		"message": "$VALUE$-duuri",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$-molli",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Des D Es E F Fis G As A B H"
+	},
+	"notesMinor": {
+		"message": "c cis d es e f fis g gis a b h"
+	},
+	"fieldDistributor": {
+		"message": "Jakelija"
+	},
+	"fieldPLine": {
+		"message": "P-merkintä"
+	},
+	"fieldProducers": {
+		"message": "Tuottajat"
+	},
+	"fieldPlaylists": {
+		"message": "Soittolistat"
+	},
+	"asOf": {
+		"message": "$VALUE$ tilanne",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artisti"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ kuukausikuuntelijaa",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Suosituimmat kaupungit"
+	},
+	"fieldDuration": {
+		"message": "Kesto"
+	},
+	"distributorNote": {
+		"message": "Ilmoitettu"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ toimituksen",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Markkinoi"
 	}
 }

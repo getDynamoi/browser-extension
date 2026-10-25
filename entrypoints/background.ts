@@ -1,5 +1,5 @@
 import { defineBackground } from "wxt/utils/define-background";
-import { fetchRelease, type LookupResult } from "../lib/api";
+import { type ArtistResult, fetchArtist, fetchRelease, type LookupResult } from "../lib/api";
 import { t } from "../lib/i18n";
 import type { ToBackground, ToContent } from "../lib/messages";
 import { rememberLookup } from "../lib/storage";
@@ -48,6 +48,12 @@ export default defineBackground(() => {
 
 	chrome.runtime.onMessage.addListener(
 		(message: ToBackground, sender, sendResponse) => {
+			if (message.type === "ARTIST") {
+				void fetchArtist(message.artistKey).then(sendResponse, () =>
+					sendResponse({ status: "none" } satisfies ArtistResult),
+				);
+				return true;
+			}
 			if (message.type === "LOOKUP") {
 				void cachedLookup(message.target).then(sendResponse, () =>
 					sendResponse({ status: "unavailable" } satisfies LookupResult),

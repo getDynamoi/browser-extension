@@ -1,7 +1,7 @@
 import { createRoot, type Root } from "react-dom/client";
 import { createShadowRootUi } from "wxt/utils/content-script-ui/shadow-root";
 import { defineContentScript } from "wxt/utils/define-content-script";
-import { lookup, type ToBackground, type ToContent } from "../../lib/messages";
+import { lookup, lookupArtist, type ToBackground, type ToContent } from "../../lib/messages";
 import { finishRatingPrompt, RATING_AFTER_LOOKUPS, readRating, STORE_REVIEW_URL } from "../../lib/storage";
 import { type LookupTarget, targetFromSpotifyPath, targetKey } from "../../lib/target";
 import { Card, type CardModel } from "./Card";
@@ -96,14 +96,21 @@ export default defineContentScript({
 
 		async function load(next: LookupTarget) {
 			const key = targetKey(next);
-			model = { showRating: false, state: { status: "loading" } };
+			model = { artist: { status: "none" }, showRating: false, state: { status: "loading" } };
 			if (!hidden) await show();
 			const [state, rating] = await Promise.all([lookup(next), readRating()]);
 			if (!target || targetKey(target) !== key) return;
+			const artistKey = state.status === "found" ? state.release.artistKey : null;
 			model = {
+				artist: artistKey ? { status: "loading" } : { status: "none" },
 				showRating: !rating.done && rating.lookups >= RATING_AFTER_LOOKUPS,
 				state,
 			};
+			if (!hidden) render();
+			if (!artistKey) return;
+			const artist = await lookupArtist(artistKey);
+			if (!(target && targetKey(target) === key && model)) return;
+			model = { ...model, artist };
 			if (!hidden) render();
 		}
 

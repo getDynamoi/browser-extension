@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useId, useState } from "react";
 import { BloomMark } from "../../components/icons";
-import { type CardState, ReleaseCard } from "../../components/ReleaseCard";
+import { type ArtistState, type CardState, ReleaseCard } from "../../components/ReleaseCard";
 import { t } from "../../lib/i18n";
-import { lookup, readShortcut } from "../../lib/messages";
+import { lookup, lookupArtist, readShortcut } from "../../lib/messages";
 import { clearHistory, type HistoryEntry, readHistory } from "../../lib/storage";
 import { type LookupTarget, targetFromInput, targetFromSpotifyPath } from "../../lib/target";
 
@@ -11,15 +11,23 @@ export default function Popup() {
 	const errorId = useId();
 	const [input, setInput] = useState("");
 	const [invalid, setInvalid] = useState(false);
-	const [current, setCurrent] = useState<{ state: CardState; target: LookupTarget } | null>(null);
+	const [current, setCurrent] = useState<{
+		artist: ArtistState;
+		state: CardState;
+		target: LookupTarget;
+	} | null>(null);
 	const [history, setHistory] = useState<HistoryEntry[]>([]);
 	const [shortcut, setShortcut] = useState("Alt+Shift+D");
 
 	const run = useCallback(async (target: LookupTarget) => {
-		setCurrent({ state: { status: "loading" }, target });
+		setCurrent({ artist: { status: "none" }, state: { status: "loading" }, target });
 		const state = await lookup(target);
-		setCurrent({ state, target });
+		const artistKey = state.status === "found" ? state.release.artistKey : null;
+		setCurrent({ artist: artistKey ? { status: "loading" } : { status: "none" }, state, target });
 		setHistory(await readHistory());
+		if (!artistKey) return;
+		const artist = await lookupArtist(artistKey);
+		setCurrent((now) => (now?.target === target ? { ...now, artist } : now));
 	}, []);
 
 	useEffect(() => {
@@ -94,6 +102,7 @@ export default function Popup() {
 			{current ? (
 				<div className="mt-5 rounded-md bg-surface p-4">
 					<ReleaseCard
+						artist={current.artist}
 						onRetry={() => void run(current.target)}
 						state={current.state}
 						target={current.target}

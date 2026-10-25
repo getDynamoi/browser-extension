@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { BloomMark, CloseIcon } from "../../components/icons";
-import { type CardState, ReleaseCard } from "../../components/ReleaseCard";
+import { type ArtistState, type CardState, ReleaseCard } from "../../components/ReleaseCard";
 import { t } from "../../lib/i18n";
 import type { LookupTarget } from "../../lib/target";
 
-export type CardModel = { showRating: boolean; state: CardState };
+export type CardModel = { artist: ArtistState; showRating: boolean; state: CardState };
 
 type CardProps = {
 	autoFocus: boolean;
@@ -63,6 +63,7 @@ export function Card({
 				</button>
 			</div>
 			<ReleaseCard
+				artist={model.artist}
 				onDismissRating={onDismissRating}
 				onRate={onRate}
 				onRetry={onRetry}

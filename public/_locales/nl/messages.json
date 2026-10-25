@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Over Dynamoi"
+	},
+	"explicit": {
+		"message": "Expliciet"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ nummers",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Sound"
+	},
+	"soundEstimated": {
+		"message": "Geschat op basis van audio"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Toonsoort"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energie"
+	},
+	"soundDanceability": {
+		"message": "Dansbaarheid"
+	},
+	"soundPositivity": {
+		"message": "Positiviteit"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ majeur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ mineur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Des D Es E F Fis G As A Bes B"
+	},
+	"notesMinor": {
+		"message": "C Cis D Es E F Fis G Gis A Bes B"
+	},
+	"fieldDistributor": {
+		"message": "Distributeur"
+	},
+	"fieldPLine": {
+		"message": "P-regel"
+	},
+	"fieldProducers": {
+		"message": "Producers"
+	},
+	"fieldPlaylists": {
+		"message": "Playlists"
+	},
+	"asOf": {
+		"message": "per $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artiest"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ maandelijkse luisteraars",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Topsteden"
+	},
+	"fieldDuration": {
+		"message": "Duur"
+	},
+	"distributorNote": {
+		"message": "Zoals opgegeven"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ redactioneel",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promoten"
 	}
 }

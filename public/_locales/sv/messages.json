@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Om Dynamoi"
+	},
+	"explicit": {
+		"message": "Explicit"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ spår",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Ljud"
+	},
+	"soundEstimated": {
+		"message": "Uppskattat utifrån ljudet"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Tonart"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energi"
+	},
+	"soundDanceability": {
+		"message": "Dansbarhet"
+	},
+	"soundPositivity": {
+		"message": "Positivitet"
+	},
+	"keyMajor": {
+		"message": "$VALUE$-dur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$-moll",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Dess D Ess E F Fiss G Ass A B H"
+	},
+	"notesMinor": {
+		"message": "c ciss d ess e f fiss g giss a b h"
+	},
+	"fieldDistributor": {
+		"message": "Distributör"
+	},
+	"fieldPLine": {
+		"message": "P-rad"
+	},
+	"fieldProducers": {
+		"message": "Producenter"
+	},
+	"fieldPlaylists": {
+		"message": "Spellistor"
+	},
+	"asOf": {
+		"message": "per $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artist"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ lyssnare per månad",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Toppstäder"
+	},
+	"fieldDuration": {
+		"message": "Längd"
+	},
+	"distributorNote": {
+		"message": "Enligt uppgift"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ redaktionella",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Marknadsför"
 	}
 }

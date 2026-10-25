@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Über Dynamoi"
+	},
+	"explicit": {
+		"message": "Explicit"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ Tracks",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Sound"
+	},
+	"soundEstimated": {
+		"message": "Aus dem Audio geschätzt"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Tonart"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energie"
+	},
+	"soundDanceability": {
+		"message": "Tanzbarkeit"
+	},
+	"soundPositivity": {
+		"message": "Positivität"
+	},
+	"keyMajor": {
+		"message": "$VALUE$-Dur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$-Moll",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Des D Es E F Fis G As A B H"
+	},
+	"notesMinor": {
+		"message": "c cis d es e f fis g gis a b h"
+	},
+	"fieldDistributor": {
+		"message": "Vertrieb"
+	},
+	"fieldPLine": {
+		"message": "P-Vermerk"
+	},
+	"fieldProducers": {
+		"message": "Produzenten"
+	},
+	"fieldPlaylists": {
+		"message": "Playlists"
+	},
+	"asOf": {
+		"message": "Stand $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artist"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ monatliche Hörer",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Top-Städte"
+	},
+	"fieldDuration": {
+		"message": "Länge"
+	},
+	"distributorNote": {
+		"message": "Laut Angabe"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ redaktionell",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Bewerben"
 	}
 }

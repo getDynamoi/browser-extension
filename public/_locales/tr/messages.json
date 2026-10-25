@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "Dynamoi hakkında"
+	},
+	"explicit": {
+		"message": "Müstehcen"
+	},
+	"albumTracks": {
+		"message": "$VALUE$ parça",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Ses"
+	},
+	"soundEstimated": {
+		"message": "Sesten tahmin edildi"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Ton"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Enerji"
+	},
+	"soundDanceability": {
+		"message": "Dans edilebilirlik"
+	},
+	"soundPositivity": {
+		"message": "Pozitiflik"
+	},
+	"keyMajor": {
+		"message": "$VALUE$ majör",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$ minör",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C D♭ D E♭ E F F♯ G A♭ A B♭ B"
+	},
+	"notesMinor": {
+		"message": "C C♯ D E♭ E F F♯ G G♯ A B♭ B"
+	},
+	"fieldDistributor": {
+		"message": "Dağıtımcı"
+	},
+	"fieldPLine": {
+		"message": "P satırı"
+	},
+	"fieldProducers": {
+		"message": "Yapımcılar"
+	},
+	"fieldPlaylists": {
+		"message": "Çalma listeleri"
+	},
+	"asOf": {
+		"message": "$VALUE$ itibarıyla",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Sanatçı"
+	},
+	"artistListeners": {
+		"message": "$VALUE$ aylık dinleyici",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "En çok dinlenen şehirler"
+	},
+	"fieldDuration": {
+		"message": "Süre"
+	},
+	"distributorNote": {
+		"message": "Bildirildiği gibi"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · $EDITORIAL$ editoryal",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Tanıt"
 	}
 }

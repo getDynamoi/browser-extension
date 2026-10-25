@@ -189,5 +189,116 @@
 	},
 	"welcomeAbout": {
 		"message": "O Dynamoi"
+	},
+	"explicit": {
+		"message": "Treści dla dorosłych"
+	},
+	"albumTracks": {
+		"message": "Utwory: $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"soundTitle": {
+		"message": "Brzmienie"
+	},
+	"soundEstimated": {
+		"message": "Oszacowane na podstawie nagrania"
+	},
+	"soundBpm": {
+		"message": "BPM"
+	},
+	"soundKey": {
+		"message": "Tonacja"
+	},
+	"soundCamelot": {
+		"message": "Camelot"
+	},
+	"soundEnergy": {
+		"message": "Energia"
+	},
+	"soundDanceability": {
+		"message": "Taneczność"
+	},
+	"soundPositivity": {
+		"message": "Pozytywność"
+	},
+	"keyMajor": {
+		"message": "$VALUE$-dur",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"keyMinor": {
+		"message": "$VALUE$-moll",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"notesMajor": {
+		"message": "C Des D Es E F Fis G As A B H"
+	},
+	"notesMinor": {
+		"message": "c cis d es e f fis g gis a b h"
+	},
+	"fieldDistributor": {
+		"message": "Dystrybutor"
+	},
+	"fieldPLine": {
+		"message": "Linia P"
+	},
+	"fieldProducers": {
+		"message": "Producenci"
+	},
+	"fieldPlaylists": {
+		"message": "Playlisty"
+	},
+	"asOf": {
+		"message": "stan na $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTitle": {
+		"message": "Artysta"
+	},
+	"artistListeners": {
+		"message": "Słuchacze miesięcznie: $VALUE$",
+		"placeholders": {
+			"value": {
+				"content": "$1"
+			}
+		}
+	},
+	"artistTopCities": {
+		"message": "Najważniejsze miasta"
+	},
+	"fieldDuration": {
+		"message": "Długość"
+	},
+	"distributorNote": {
+		"message": "Według zgłoszenia"
+	},
+	"playlistSummary": {
+		"message": "$COUNT$ · redakcyjne: $EDITORIAL$",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			},
+			"editorial": {
+				"content": "$2"
+			}
+		}
+	},
+	"promoteShort": {
+		"message": "Promuj"
 	}
 }
