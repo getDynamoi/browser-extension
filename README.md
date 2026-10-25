@@ -13,7 +13,7 @@ check your own release metadata or research comparable releases. No account
 needed, nothing to set up.
 
 <p align="center">
-  <img alt="The Dynamoi card on a Spotify album page, showing the UPC, label, release date, artists and links to other stores" src="./.github/screenshot.png" width="720">
+  <img alt="The Dynamoi card on a Spotify track page, showing the ISRC, audio-based sound estimates, producers, playlists, the lead artist and links to other stores" src="./.github/screenshot.png" width="720">
 </p>
 
 ## What it does
