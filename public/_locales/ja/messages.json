@@ -1,6 +1,6 @@
 {
 	"extName": {
-		"message": "Dynamoi リリース検索: ISRC・UPC・レーベル"
+		"message": "Spotify用 ISRC・UPC・BPM検索 – Dynamoi"
 	},
 	"extDescription": {
 		"message": "アーティスト向けの無料Dynamoiツール。SpotifyのアルバムやトラックのUPC/ISRCとリリース情報をワンクリックでコピーできます。"

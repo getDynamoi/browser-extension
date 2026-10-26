@@ -1,6 +1,6 @@
 {
 	"extName": {
-		"message": "Dynamoi 릴리스 조회: ISRC, UPC, 레이블"
+		"message": "Spotify용 ISRC, UPC, BPM 찾기 – Dynamoi"
 	},
 	"extDescription": {
 		"message": "아티스트를 위한 무료 Dynamoi 도구: Spotify 앨범과 트랙의 UPC 또는 ISRC와 발매 정보를 한 번에 복사하세요."

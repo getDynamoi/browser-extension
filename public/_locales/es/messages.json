@@ -1,6 +1,6 @@
 {
 	"extName": {
-		"message": "Dynamoi: busca ISRC, UPC y sello"
+		"message": "Busca ISRC, UPC y BPM en Spotify – Dynamoi"
 	},
 	"extDescription": {
 		"message": "Herramienta gratis de Dynamoi para artistas: copia el UPC o ISRC y los datos de lanzamiento de álbumes y canciones de Spotify."

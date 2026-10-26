@@ -4,6 +4,12 @@ All notable changes to the Dynamoi Chrome extension will be documented in this f
 
 ## [Unreleased]
 
+## [2.1.1] - 2026-10-26
+
+### Changed
+
+- Store title: "ISRC, UPC & BPM Finder for Spotify – Dynamoi", translated in all 16 languages.
+
 ## [2.1.0] - 2026-10-25
 
 ### Added
