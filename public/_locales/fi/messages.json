@@ -182,7 +182,7 @@
 		"message": "Yksityisyys"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi saa vain avaamasi albumin tai kappaleen Spotify-tunnuksen tai liittämäsi koodin julkaisutietojen hakemista varten. Ei tiliä, ei seurantaa. Viimeisimmät hakusi pysyvät tällä laitteella."
+		"message": "Dynamoi käyttää avaamasi albumin tai kappaleen Spotify-tunnusta tai liittämääsi koodia julkaisutietojen hakemiseen. Tiliä ei tarvita. Viimeisimmät hakusi pysyvät tällä laitteella."
 	},
 	"welcomeCta": {
 		"message": "Avaa Spotify"

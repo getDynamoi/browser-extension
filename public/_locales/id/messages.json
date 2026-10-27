@@ -182,7 +182,7 @@
 		"message": "Privasi"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi hanya menerima ID Spotify dari album atau lagu yang Anda buka, atau kode yang Anda tempel, untuk mencari data rilisannya. Tanpa akun, tanpa pelacakan. Pencarian terbaru Anda tetap di perangkat ini."
+		"message": "Dynamoi menggunakan ID Spotify dari album atau lagu yang Anda buka, atau kode yang Anda tempel, untuk mencari data rilisannya. Tidak perlu akun. Pencarian terbaru Anda tetap di perangkat ini."
 	},
 	"welcomeCta": {
 		"message": "Buka Spotify"

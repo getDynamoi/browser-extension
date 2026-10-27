@@ -182,7 +182,7 @@
 		"message": "Privacy"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi ontvangt alleen de Spotify-ID van het album of nummer dat je opent, of de code die je plakt, om de releasegegevens op te zoeken. Geen account, geen tracking. Je recente zoekopdrachten blijven op dit apparaat."
+		"message": "Dynamoi gebruikt de Spotify-ID van het album of nummer dat je opent, of de code die je plakt, om de releasegegevens op te zoeken. Je hebt geen account nodig. Je recente zoekopdrachten blijven op dit apparaat."
 	},
 	"welcomeCta": {
 		"message": "Spotify openen"

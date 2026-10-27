@@ -182,7 +182,7 @@
 		"message": "Datenschutz"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi erhält nur die Spotify-ID des geöffneten Albums oder Tracks bzw. den eingefügten Code, um die Release-Daten nachzuschlagen. Kein Konto, kein Tracking. Deine letzten Suchen bleiben auf diesem Gerät."
+		"message": "Dynamoi verwendet die Spotify-ID des geöffneten Albums oder Tracks bzw. den eingefügten Code, um die Release-Daten nachzuschlagen. Ein Konto ist nicht nötig. Deine letzten Suchen bleiben auf diesem Gerät."
 	},
 	"welcomeCta": {
 		"message": "Spotify öffnen"

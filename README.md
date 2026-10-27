@@ -39,9 +39,9 @@ then open any album or track on open.spotify.com.
 
 ## Privacy
 
-- No sign-in and no tracking. The extension does not collect or sell data.
-- It reads only the Spotify ID in the page address of the album or track you
-  open (or the code you paste) and asks `dynamoi.com` for that release's data.
+- No sign-in is needed. The extension uses the Spotify ID in the page address of
+  the album or track you open (or the code you paste) to ask `dynamoi.com` for
+  that release's data. See the [Privacy Policy](https://dynamoi.com/privacy-policy).
 - It needs only the `storage` permission, for your on-device lookup history,
   and access to `open.spotify.com` and `dynamoi.com`.
 

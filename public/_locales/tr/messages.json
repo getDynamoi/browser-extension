@@ -182,7 +182,7 @@
 		"message": "Gizlilik"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi, yayın verilerini bulmak için yalnızca açtığınız albümün veya parçanın Spotify kimliğini ya da yapıştırdığınız kodu alır. Hesap yok, izleme yok. Son aramalarınız bu cihazda kalır."
+		"message": "Dynamoi, yayın verilerini bulmak için açtığınız albümün veya parçanın Spotify kimliğini ya da yapıştırdığınız kodu kullanır. Hesap gerekmez. Son aramalarınız bu cihazda kalır."
 	},
 	"welcomeCta": {
 		"message": "Spotify'ı aç"

@@ -182,7 +182,7 @@
 		"message": "Integritet"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi tar bara emot Spotify-ID:t för albumet eller spåret du öppnar, eller koden du klistrar in, för att slå upp releaseuppgifterna. Inget konto, ingen spårning. Dina senaste sökningar stannar på den här enheten."
+		"message": "Dynamoi använder Spotify-ID:t för albumet eller spåret du öppnar, eller koden du klistrar in, för att slå upp releaseuppgifterna. Du behöver inget konto. Dina senaste sökningar stannar på den här enheten."
 	},
 	"welcomeCta": {
 		"message": "Öppna Spotify"

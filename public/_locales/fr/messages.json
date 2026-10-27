@@ -182,7 +182,7 @@
 		"message": "Confidentialité"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi reçoit uniquement l'ID Spotify de l'album ou du titre ouvert, ou le code collé, pour rechercher ses données. Ni compte ni pistage. Vos recherches récentes restent sur cet appareil."
+		"message": "Dynamoi utilise l'ID Spotify de l'album ou du titre ouvert, ou le code collé, pour rechercher ses données. Aucun compte n'est nécessaire. Vos recherches récentes restent sur cet appareil."
 	},
 	"welcomeCta": {
 		"message": "Ouvrir Spotify"

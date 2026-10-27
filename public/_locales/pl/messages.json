@@ -182,7 +182,7 @@
 		"message": "Prywatność"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi otrzymuje tylko identyfikator Spotify otwartego albumu lub utworu albo wklejony kod, aby wyszukać dane wydania. Bez konta, bez śledzenia. Ostatnie wyszukiwania zostają na tym urządzeniu."
+		"message": "Dynamoi używa identyfikatora Spotify otwartego albumu lub utworu albo wklejonego kodu, aby wyszukać dane wydania. Konto nie jest potrzebne. Ostatnie wyszukiwania zostają na tym urządzeniu."
 	},
 	"welcomeCta": {
 		"message": "Otwórz Spotify"

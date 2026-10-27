@@ -182,7 +182,7 @@
 		"message": "개인정보"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi는 릴리스 정보를 조회하기 위해 사용자가 연 앨범이나 트랙의 Spotify ID 또는 붙여넣은 코드만 받습니다. 계정도 추적도 없습니다. 최근 조회 기록은 이 기기에 남습니다."
+		"message": "Dynamoi는 릴리스 정보를 조회하기 위해 사용자가 연 앨범이나 트랙의 Spotify ID 또는 붙여넣은 코드를 사용합니다. 계정은 필요하지 않습니다. 최근 조회 기록은 이 기기에 남습니다."
 	},
 	"welcomeCta": {
 		"message": "Spotify 열기"

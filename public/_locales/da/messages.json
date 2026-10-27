@@ -182,7 +182,7 @@
 		"message": "Privatliv"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi modtager kun Spotify-id'et for det album eller nummer, du åbner, eller den kode, du indsætter, for at slå udgivelsesdata op. Ingen konto, ingen sporing. Dine seneste opslag bliver på denne enhed."
+		"message": "Dynamoi bruger Spotify-id'et for det album eller nummer, du åbner, eller den kode, du indsætter, til at slå udgivelsesdata op. Du behøver ingen konto. Dine seneste opslag bliver på denne enhed."
 	},
 	"welcomeCta": {
 		"message": "Åbn Spotify"

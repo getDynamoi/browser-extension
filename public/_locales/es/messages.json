@@ -182,7 +182,7 @@
 		"message": "Privacidad"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi solo recibe el ID de Spotify del álbum o la canción que abres, o el código que pegas, para buscar sus datos. Sin cuenta ni rastreo. Tus búsquedas recientes se quedan en este dispositivo."
+		"message": "Dynamoi usa el ID de Spotify del álbum o la canción que abres, o el código que pegas, para buscar sus datos. No necesitas una cuenta. Tus búsquedas recientes se quedan en este dispositivo."
 	},
 	"welcomeCta": {
 		"message": "Abrir Spotify"

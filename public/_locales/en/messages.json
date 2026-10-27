@@ -182,7 +182,7 @@
 		"message": "Privacy"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi receives only the Spotify ID of the album or track you open, or the code you paste, to look up its release data. No account, no tracking. Your recent lookups stay on this device."
+		"message": "Dynamoi uses the Spotify ID of the album or track you open, or the code you paste, to look up its release data. No account is needed. Your recent lookups stay on this device."
 	},
 	"welcomeCta": {
 		"message": "Open Spotify"

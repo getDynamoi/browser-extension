@@ -182,7 +182,7 @@
 		"message": "プライバシー"
 	},
 	"welcomePrivacyBody": {
-		"message": "Dynamoi が受け取るのは、リリース情報を調べるための、開いたアルバムや曲の Spotify ID、または貼り付けたコードだけです。アカウントもトラッキングもありません。最近の検索はこの端末に保存されます。"
+		"message": "Dynamoi は、リリース情報を調べるために、開いたアルバムや曲の Spotify ID、または貼り付けたコードを使用します。アカウントは不要です。最近の検索はこの端末に保存されます。"
 	},
 	"welcomeCta": {
 		"message": "Spotify を開く"
