@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "プロモーション"
+	},
+	"firefoxAccessTitle": {
+		"message": "サイトへのアクセスを許可"
+	},
+	"firefoxAccessBody": {
+		"message": "リリースカードの表示のためにSpotifyへのアクセスを、リリース情報の取得のためにDynamoiへのアクセスを許可してください。許可後、開いているSpotifyのタブを再読み込みしてください。拒否した場合も、ここから再試行できます。"
+	},
+	"firefoxPinBody": {
+		"message": "Firefoxの拡張機能メニューを開き、Dynamoiをツールバーにピン留めしてください。ポップアップにSpotifyのリンク、UPC、ISRCを貼り付けると検索できます。"
 	}
 }

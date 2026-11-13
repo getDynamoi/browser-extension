@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promote"
+	},
+	"firefoxAccessTitle": {
+		"message": "Enable site access"
+	},
+	"firefoxAccessBody": {
+		"message": "Allow access to Spotify to show release cards and to Dynamoi to fetch release details. After allowing, reload any open Spotify tabs. If you decline, you can try again here."
+	},
+	"firefoxPinBody": {
+		"message": "Open Firefox’s extensions menu and pin Dynamoi to the toolbar. The popup looks up any Spotify link, UPC or ISRC you paste."
 	}
 }

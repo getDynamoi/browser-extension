@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promuovi"
+	},
+	"firefoxAccessTitle": {
+		"message": "Consenti l’accesso ai siti"
+	},
+	"firefoxAccessBody": {
+		"message": "Consenti l’accesso a Spotify per mostrare le schede delle uscite e a Dynamoi per recuperarne i dettagli. Poi ricarica le schede Spotify aperte. Se rifiuti, puoi riprovare qui."
+	},
+	"firefoxPinBody": {
+		"message": "Apri il menu delle estensioni di Firefox e fissa Dynamoi alla barra degli strumenti. La finestra cerca qualsiasi link Spotify, UPC o ISRC che incolli."
 	}
 }

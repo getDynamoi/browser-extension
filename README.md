@@ -58,6 +58,47 @@ This repository mirrors the extension's source from the Dynamoi monorepo,
 where it is built with WXT and React. Read the code, and report bugs in
 [issues](https://github.com/getDynamoi/browser-extension/issues).
 
+### Firefox release and reviewer build
+
+Firefox support is prepared for AMO; no Firefox listing is live yet. Use Node 24
+and Bun 1.4.4. From the monorepo root (also the root of the extracted sources zip):
+
+```sh
+bun install --frozen-lockfile --ignore-scripts
+bun --cwd apps/chrome-extension build:firefox
+bun --cwd apps/chrome-extension zip:firefox
+```
+
+WXT writes the MV3 build to `apps/chrome-extension/.output/firefox-mv3/` and
+the installable `dynamoichrome-extension-2.1.1-firefox.zip` and reviewer
+`dynamoichrome-extension-2.1.1-sources.zip` beside it. The sources zip includes
+the root catalog, lockfile, patches and workspace package manifests so reviewers
+can install the exact dependencies without unrelated application source. Install
+scripts are skipped because the other workspace shells have no source to build;
+WXT prepares its own generated files during the Firefox build. No secrets needed.
+Run `bunx web-ext@10.8.0 lint --source-dir apps/chrome-extension/.output/firefox-mv3`
+before submitting both zips manually to AMO. Check npm publication times before
+changing tool versions; all newly selected versions must be at least 24 hours old.
+
+The fixed Gecko ID is `browser-extension@dynamoi.com`. Firefox 140 is the minimum
+because its built-in data consent covers the transmitted Spotify page ID
+(`browsingActivity`) and pasted lookup codes (`searchTerms`). These are required
+for release lookup, not analytics; history and rating counters stay on-device.
+There are only two fetch calls, both in `lib/api.ts`: release lookup and a follow-up
+artist-key lookup, both sent to Dynamoi. No Spotify DOM content is uploaded.
+See [Mozilla's consent taxonomy](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
+Use the same disclosure and [privacy policy](https://dynamoi.com/privacy-policy)
+in AMO; the earlier Edge “no user data collected” answer must be reconciled before
+that draft is submitted. Firefox install prompts request Spotify and Dynamoi host
+access; if withheld or revoked, the welcome page and popup offer a grant button.
+Reload existing Spotify tabs after granting access. Firefox rating prompts stay
+off until the actual AMO listing/review URL is available.
+
+Before release, verify popup lookup, the Spotify card, `Alt+Shift+D`, copy actions,
+and denied/revoked host access in Firefox. `bun validate` builds both browsers and
+checks the Firefox identity, data declaration and background scripts while keeping
+Gecko settings out of Chrome. AMO upload/signing and listing creation remain manual.
+
 MIT licensed. See [LICENSE](./LICENSE).
 
 ---

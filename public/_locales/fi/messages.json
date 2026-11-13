@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Markkinoi"
+	},
+	"firefoxAccessTitle": {
+		"message": "Salli sivustojen käyttö"
+	},
+	"firefoxAccessBody": {
+		"message": "Salli Spotifyn käyttö julkaisukorttien näyttämistä varten ja Dynamoin käyttö julkaisutietojen hakemista varten. Lataa sitten avoimet Spotify-välilehdet uudelleen. Jos kieltäydyt, voit yrittää uudelleen tästä."
+	},
+	"firefoxPinBody": {
+		"message": "Avaa Firefoxin laajennusvalikko ja kiinnitä Dynamoi työkalupalkkiin. Ponnahdusikkuna hakee tiedot liittämäsi Spotify-linkin, UPC:n tai ISRC:n perusteella."
 	}
 }

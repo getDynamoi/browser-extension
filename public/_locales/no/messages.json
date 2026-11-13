@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promoter"
+	},
+	"firefoxAccessTitle": {
+		"message": "Tillat nettstedstilgang"
+	},
+	"firefoxAccessBody": {
+		"message": "Tillat tilgang til Spotify for å vise utgivelseskort og til Dynamoi for å hente utgivelsesdetaljer. Last deretter åpne Spotify-faner på nytt. Hvis du avslår, kan du prøve igjen her."
+	},
+	"firefoxPinBody": {
+		"message": "Åpne utvidelsesmenyen i Firefox og fest Dynamoi til verktøylinjen. Popupvinduet slår opp enhver Spotify-lenke, UPC eller ISRC du limer inn."
 	}
 }

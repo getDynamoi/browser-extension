@@ -1,9 +1,24 @@
+import { browser } from "../../lib/browser";
 import { createRoot, type Root } from "react-dom/client";
 import { createShadowRootUi } from "wxt/utils/content-script-ui/shadow-root";
 import { defineContentScript } from "wxt/utils/define-content-script";
-import { lookup, lookupArtist, type ToBackground, type ToContent } from "../../lib/messages";
-import { finishRatingPrompt, RATING_AFTER_LOOKUPS, readRating, STORE_REVIEW_URL } from "../../lib/storage";
-import { type LookupTarget, targetFromSpotifyPath, targetKey } from "../../lib/target";
+import {
+	lookup,
+	lookupArtist,
+	type ToBackground,
+	type ToContent,
+} from "../../lib/messages";
+import {
+	finishRatingPrompt,
+	RATING_AFTER_LOOKUPS,
+	readRating,
+	STORE_REVIEW_URL,
+} from "../../lib/storage";
+import {
+	type LookupTarget,
+	targetFromSpotifyPath,
+	targetKey,
+} from "../../lib/target";
 import { Card, type CardModel } from "./Card";
 import "./style.css";
 
@@ -14,13 +29,13 @@ function ensureFont() {
 	if (document.getElementById(FONT_STYLE_ID)) return;
 	const style = document.createElement("style");
 	style.id = FONT_STYLE_ID;
-	style.textContent = `@font-face{font-family:"Dynamoi Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("${chrome.runtime.getURL("/fonts/inter-variable-latin.woff2")}") format("woff2");}`;
+	style.textContent = `@font-face{font-family:"Dynamoi Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("${browser.runtime.getURL("/fonts/inter-variable-latin.woff2")}") format("woff2");}`;
 	document.head.append(style);
 }
 
 async function reportPage(page: ToBackground) {
 	try {
-		await chrome.runtime.sendMessage(page);
+		await browser.runtime.sendMessage(page);
 	} catch {
 		// The worker may be restarting; the badge is cosmetic and the next navigation retries.
 	}
@@ -32,7 +47,7 @@ export default defineContentScript({
 
 	async main(ctx) {
 		ensureFont();
-		const wordmarkUrl = chrome.runtime.getURL("/dynamoi-wordmark.svg");
+		const wordmarkUrl = browser.runtime.getURL("/dynamoi-wordmark.svg");
 		let target: LookupTarget | null = null;
 		let model: CardModel | null = null;
 		let hidden = false;
@@ -96,14 +111,22 @@ export default defineContentScript({
 
 		async function load(next: LookupTarget) {
 			const key = targetKey(next);
-			model = { artist: { status: "none" }, showRating: false, state: { status: "loading" } };
+			model = {
+				artist: { status: "none" },
+				showRating: false,
+				state: { status: "loading" },
+			};
 			if (!hidden) await show();
 			const [state, rating] = await Promise.all([lookup(next), readRating()]);
 			if (!target || targetKey(target) !== key) return;
-			const artistKey = state.status === "found" ? state.release.artistKey : null;
+			const artistKey =
+				state.status === "found" ? state.release.artistKey : null;
 			model = {
 				artist: artistKey ? { status: "loading" } : { status: "none" },
-				showRating: !rating.done && rating.lookups >= RATING_AFTER_LOOKUPS,
+				showRating:
+					!import.meta.env.FIREFOX &&
+					!rating.done &&
+					rating.lookups >= RATING_AFTER_LOOKUPS,
 				state,
 			};
 			if (!hidden) render();
@@ -119,7 +142,10 @@ export default defineContentScript({
 			if (next && target && targetKey(next) === targetKey(target)) return;
 			target = next;
 			hidden = false;
-			const page: ToBackground = { itemType: next?.itemType ?? null, type: "PAGE" };
+			const page: ToBackground = {
+				itemType: next?.itemType ?? null,
+				type: "PAGE",
+			};
 			void reportPage(page);
 			if (!next) {
 				model = null;
@@ -140,7 +166,7 @@ export default defineContentScript({
 				hide();
 			}
 		}
-		chrome.runtime.onMessage.addListener(onMessage);
+		browser.runtime.onMessage.addListener(onMessage);
 
 		// Spotify is a single-page app. Content scripts run in an isolated world,
 		// so watch navigation events and the document title instead of patching
@@ -152,11 +178,15 @@ export default defineContentScript({
 		const titleObserver = new MutationObserver(sync);
 		const title = document.querySelector("title");
 		if (title) {
-			titleObserver.observe(title, { characterData: true, childList: true, subtree: true });
+			titleObserver.observe(title, {
+				characterData: true,
+				childList: true,
+				subtree: true,
+			});
 		}
 
 		ctx.onInvalidated(() => {
-			chrome.runtime.onMessage.removeListener(onMessage);
+			browser.runtime.onMessage.removeListener(onMessage);
 			navigation?.removeEventListener("currententrychange", sync);
 			window.removeEventListener("popstate", sync);
 			titleObserver.disconnect();

@@ -1,3 +1,4 @@
+import { browser } from "./browser";
 import type { Sound } from "./api";
 import { t } from "./i18n";
 
@@ -8,7 +9,8 @@ const CAMELOT_MINOR = [5, 12, 7, 2, 9, 4, 11, 6, 1, 8, 3, 10];
 /** Note names follow the reader's convention (German H, French Do and so on). */
 export function keyName(sound: Sound): string {
 	const major = sound.mode === 1;
-	const root = t(major ? "notesMajor" : "notesMinor").split(" ")[sound.key] ?? "?";
+	const root =
+		t(major ? "notesMajor" : "notesMinor").split(" ")[sound.key] ?? "?";
 	return t(major ? "keyMajor" : "keyMinor", root);
 }
 
@@ -26,14 +28,14 @@ export function formatDuration(seconds: number): string {
 }
 
 export function formatCompact(value: number): string {
-	return new Intl.NumberFormat(chrome.i18n.getUILanguage(), {
+	return new Intl.NumberFormat(browser.i18n.getUILanguage(), {
 		maximumFractionDigits: 1,
 		notation: "compact",
 	}).format(value);
 }
 
 export function formatShortDate(value: string): string {
-	return new Intl.DateTimeFormat(chrome.i18n.getUILanguage(), {
+	return new Intl.DateTimeFormat(browser.i18n.getUILanguage(), {
 		day: "numeric",
 		month: "short",
 		timeZone: "UTC",
@@ -43,8 +45,9 @@ export function formatShortDate(value: string): string {
 export function countryName(code: string): string {
 	try {
 		return (
-			new Intl.DisplayNames([chrome.i18n.getUILanguage()], { type: "region" }).of(code) ??
-			code
+			new Intl.DisplayNames([browser.i18n.getUILanguage()], {
+				type: "region",
+			}).of(code) ?? code
 		);
 	} catch {
 		return code;

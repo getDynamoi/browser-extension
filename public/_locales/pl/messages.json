@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promuj"
+	},
+	"firefoxAccessTitle": {
+		"message": "Zezwól na dostęp do stron"
+	},
+	"firefoxAccessBody": {
+		"message": "Zezwól na dostęp do Spotify, aby wyświetlać karty wydań, i do Dynamoi, aby pobierać szczegóły wydań. Następnie odśwież otwarte karty Spotify. Jeśli odmówisz, możesz spróbować ponownie tutaj."
+	},
+	"firefoxPinBody": {
+		"message": "Otwórz menu rozszerzeń Firefoksa i przypnij Dynamoi do paska narzędzi. W oknie rozszerzenia możesz wyszukać dowolny wklejony link Spotify, UPC lub ISRC."
 	}
 }

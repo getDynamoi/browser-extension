@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promosikan"
+	},
+	"firefoxAccessTitle": {
+		"message": "Izinkan akses situs"
+	},
+	"firefoxAccessBody": {
+		"message": "Izinkan akses ke Spotify untuk menampilkan kartu rilisan dan ke Dynamoi untuk mengambil detail rilisan. Setelah itu, muat ulang tab Spotify yang terbuka. Jika menolak, Anda dapat mencoba lagi di sini."
+	},
+	"firefoxPinBody": {
+		"message": "Buka menu ekstensi Firefox dan sematkan Dynamoi ke bilah alat. Popup mencari tautan Spotify, UPC, atau ISRC yang Anda tempel."
 	}
 }

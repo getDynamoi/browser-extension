@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "프로모션"
+	},
+	"firefoxAccessTitle": {
+		"message": "사이트 접근 허용"
+	},
+	"firefoxAccessBody": {
+		"message": "발매 카드를 표시하려면 Spotify 접근을, 발매 정보를 가져오려면 Dynamoi 접근을 허용해 주세요. 허용한 후 열려 있는 Spotify 탭을 새로고침하세요. 거부해도 여기서 다시 시도할 수 있습니다."
+	},
+	"firefoxPinBody": {
+		"message": "Firefox 확장 기능 메뉴를 열고 Dynamoi를 도구 모음에 고정하세요. 팝업에 Spotify 링크, UPC 또는 ISRC를 붙여넣어 조회할 수 있습니다."
 	}
 }

@@ -9,7 +9,10 @@
 		"build": "wxt build",
 		"typecheck": "wxt prepare && tsrs --noEmit -p tsconfig.json",
 		"lint": "echo 'no lint configured'",
-		"postinstall": "wxt prepare"
+		"postinstall": "wxt prepare",
+		"build:firefox": "wxt build -b firefox",
+		"zip:firefox": "wxt zip -b firefox",
+		"validate": "bun run build && bun run build:firefox && bun scripts/validate-manifests.ts"
 	},
 	"dependencies": {
 		"react": "catalog:",

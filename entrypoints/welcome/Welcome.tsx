@@ -1,3 +1,4 @@
+import SiteAccess from "../../components/SiteAccess";
 import { useEffect, useState } from "react";
 import { BloomMark } from "../../components/icons";
 import { t } from "../../lib/i18n";
@@ -12,7 +13,10 @@ export default function Welcome() {
 
 	const steps = [
 		[t("welcomeOpenTitle"), t("welcomeOpenBody")],
-		[t("welcomePinTitle"), t("welcomePinBody")],
+		[
+			t("welcomePinTitle"),
+			t(import.meta.env.FIREFOX ? "firefoxPinBody" : "welcomePinBody"),
+		],
 		[t("welcomeShortcutTitle"), t("welcomeShortcutBody", shortcut)],
 	] as const;
 
@@ -25,7 +29,11 @@ export default function Welcome() {
 			<h1 className="mt-10 text-title font-semibold tracking-[-0.01em] text-balance">
 				{t("welcomeTitle")}
 			</h1>
-			<p className="mt-3 max-w-[60ch] text-section text-muted">{t("welcomeBody")}</p>
+			<p className="mt-3 max-w-[60ch] text-section text-muted">
+				{t("welcomeBody")}
+			</p>
+
+			{import.meta.env.FIREFOX ? <SiteAccess /> : null}
 
 			<ol className="mt-10 space-y-6">
 				{steps.map(([title, body]) => (
@@ -38,7 +46,9 @@ export default function Welcome() {
 
 			<div className="mt-10 rounded-md bg-surface px-5 py-4">
 				<h2 className="text-body font-semibold">{t("welcomePrivacyTitle")}</h2>
-				<p className="mt-1 max-w-[62ch] text-body text-muted">{t("welcomePrivacyBody")}</p>
+				<p className="mt-1 max-w-[62ch] text-body text-muted">
+					{t("welcomePrivacyBody")}
+				</p>
 			</div>
 
 			<div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">

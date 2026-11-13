@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promoten"
+	},
+	"firefoxAccessTitle": {
+		"message": "Websitetoegang toestaan"
+	},
+	"firefoxAccessBody": {
+		"message": "Sta toegang tot Spotify toe om releasekaarten te tonen en tot Dynamoi om releasegegevens op te halen. Herlaad daarna geopende Spotify-tabbladen. Als je weigert, kun je het hier opnieuw proberen."
+	},
+	"firefoxPinBody": {
+		"message": "Open het extensiemenu van Firefox en maak Dynamoi vast aan de werkbalk. De pop-up zoekt elke Spotify-link, UPC of ISRC op die je plakt."
 	}
 }

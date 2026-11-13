@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Bewerben"
+	},
+	"firefoxAccessTitle": {
+		"message": "Website-Zugriff erlauben"
+	},
+	"firefoxAccessBody": {
+		"message": "Erlaube den Zugriff auf Spotify für Veröffentlichungskarten und auf Dynamoi zum Abrufen der Veröffentlichungsdaten. Lade danach offene Spotify-Tabs neu. Wenn du ablehnst, kannst du es hier erneut versuchen."
+	},
+	"firefoxPinBody": {
+		"message": "Öffne das Erweiterungsmenü von Firefox und hefte Dynamoi an die Symbolleiste. Das Popup sucht nach jedem Spotify-Link, UPC oder ISRC, den du einfügst."
 	}
 }

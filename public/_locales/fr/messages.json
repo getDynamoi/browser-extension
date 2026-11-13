@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promouvoir"
+	},
+	"firefoxAccessTitle": {
+		"message": "Autoriser l’accès aux sites"
+	},
+	"firefoxAccessBody": {
+		"message": "Autorisez l’accès à Spotify pour afficher les fiches de sortie et à Dynamoi pour récupérer leurs détails. Rechargez ensuite les onglets Spotify ouverts. Si vous refusez, vous pourrez réessayer ici."
+	},
+	"firefoxPinBody": {
+		"message": "Ouvrez le menu des extensions de Firefox et épinglez Dynamoi à la barre d’outils. La fenêtre recherche tout lien Spotify, UPC ou ISRC que vous collez."
 	}
 }

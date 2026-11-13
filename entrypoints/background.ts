@@ -1,5 +1,11 @@
+import { browser } from "../lib/browser";
 import { defineBackground } from "wxt/utils/define-background";
-import { type ArtistResult, fetchArtist, fetchRelease, type LookupResult } from "../lib/api";
+import {
+	type ArtistResult,
+	fetchArtist,
+	fetchRelease,
+	type LookupResult,
+} from "../lib/api";
 import { t } from "../lib/i18n";
 import type { ToBackground, ToContent } from "../lib/messages";
 import { rememberLookup } from "../lib/storage";
@@ -15,9 +21,8 @@ const inFlight = new Map<string, Promise<LookupResult>>();
 
 async function cachedLookup(target: LookupTarget): Promise<LookupResult> {
 	const key = `lookup:${targetKey(target)}`;
-	const stored = (await chrome.storage.session.get(key))[key] as
-		| { at: number; result: LookupResult }
-		| undefined;
+	const stored = (await browser.storage.session.get(key))[key] as
+		{ at: number; result: LookupResult } | undefined;
 	if (stored && Date.now() - stored.at < SESSION_CACHE_MS) {
 		return stored.result;
 	}
@@ -26,7 +31,7 @@ async function cachedLookup(target: LookupTarget): Promise<LookupResult> {
 	try {
 		const result = await pending;
 		if (result.status === "found" || result.status === "not_found") {
-			await chrome.storage.session.set({ [key]: { at: Date.now(), result } });
+			await browser.storage.session.set({ [key]: { at: Date.now(), result } });
 		}
 		if (result.status === "found") {
 			await rememberLookup(target, result.release);
@@ -38,15 +43,17 @@ async function cachedLookup(target: LookupTarget): Promise<LookupResult> {
 }
 
 export default defineBackground(() => {
-	void chrome.runtime.setUninstallURL(UNINSTALL_URL);
+	void browser.runtime.setUninstallURL(UNINSTALL_URL);
 
-	chrome.runtime.onInstalled.addListener(({ reason }) => {
+	browser.runtime.onInstalled.addListener(({ reason }) => {
 		if (reason === "install") {
-			void chrome.tabs.create({ url: chrome.runtime.getURL("/welcome.html") });
+			void browser.tabs.create({
+				url: browser.runtime.getURL("/welcome.html"),
+			});
 		}
 	});
 
-	chrome.runtime.onMessage.addListener(
+	browser.runtime.onMessage.addListener(
 		(message: ToBackground, sender, sendResponse) => {
 			if (message.type === "ARTIST") {
 				void fetchArtist(message.artistKey).then(sendResponse, () =>
@@ -65,10 +72,16 @@ export default defineBackground(() => {
 				const text = message.itemType
 					? t(message.itemType === "album" ? "fieldUpc" : "fieldIsrc")
 					: "";
-				void chrome.action.setBadgeText({ tabId, text });
-				void chrome.action.setBadgeBackgroundColor({ color: BADGE_COLOR, tabId });
-				void chrome.action.setBadgeTextColor({ color: BADGE_TEXT_COLOR, tabId });
-				void chrome.action.setTitle({
+				void browser.action.setBadgeText({ tabId, text });
+				void browser.action.setBadgeBackgroundColor({
+					color: BADGE_COLOR,
+					tabId,
+				});
+				void browser.action.setBadgeTextColor({
+					color: BADGE_TEXT_COLOR,
+					tabId,
+				});
+				void browser.action.setTitle({
 					tabId,
 					title: message.itemType ? t("badgeDetected") : t("extName"),
 				});
@@ -77,10 +90,10 @@ export default defineBackground(() => {
 		},
 	);
 
-	chrome.commands.onCommand.addListener((command, tab) => {
+	browser.commands.onCommand.addListener((command, tab) => {
 		if (command !== "toggle-card" || tab?.id === undefined) return;
 		const message: ToContent = { type: "TOGGLE_CARD" };
-		chrome.tabs.sendMessage(tab.id, message).catch(() => {
+		browser.tabs.sendMessage(tab.id, message).catch(() => {
 			// Not a Spotify tab; nothing to toggle.
 		});
 	});

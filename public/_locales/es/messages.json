@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Promocionar"
+	},
+	"firefoxAccessTitle": {
+		"message": "Permitir acceso a los sitios"
+	},
+	"firefoxAccessBody": {
+		"message": "Permite el acceso a Spotify para mostrar tarjetas de lanzamientos y a Dynamoi para obtener sus datos. Después, recarga las pestañas abiertas de Spotify. Si lo rechazas, puedes volver a intentarlo aquí."
+	},
+	"firefoxPinBody": {
+		"message": "Abre el menú de extensiones de Firefox y fija Dynamoi en la barra de herramientas. La ventana emergente busca cualquier enlace de Spotify, UPC o ISRC que pegues."
 	}
 }

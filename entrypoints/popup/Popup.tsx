@@ -1,10 +1,24 @@
+import SiteAccess from "../../components/SiteAccess";
+import { browser } from "../../lib/browser";
 import { useCallback, useEffect, useId, useState } from "react";
 import { BloomMark } from "../../components/icons";
-import { type ArtistState, type CardState, ReleaseCard } from "../../components/ReleaseCard";
+import {
+	type ArtistState,
+	type CardState,
+	ReleaseCard,
+} from "../../components/ReleaseCard";
 import { t } from "../../lib/i18n";
 import { lookup, lookupArtist, readShortcut } from "../../lib/messages";
-import { clearHistory, type HistoryEntry, readHistory } from "../../lib/storage";
-import { type LookupTarget, targetFromInput, targetFromSpotifyPath } from "../../lib/target";
+import {
+	clearHistory,
+	type HistoryEntry,
+	readHistory,
+} from "../../lib/storage";
+import {
+	type LookupTarget,
+	targetFromInput,
+	targetFromSpotifyPath,
+} from "../../lib/target";
 
 export default function Popup() {
 	const inputId = useId();
@@ -20,10 +34,18 @@ export default function Popup() {
 	const [shortcut, setShortcut] = useState("Alt+Shift+D");
 
 	const run = useCallback(async (target: LookupTarget) => {
-		setCurrent({ artist: { status: "none" }, state: { status: "loading" }, target });
+		setCurrent({
+			artist: { status: "none" },
+			state: { status: "loading" },
+			target,
+		});
 		const state = await lookup(target);
 		const artistKey = state.status === "found" ? state.release.artistKey : null;
-		setCurrent({ artist: artistKey ? { status: "loading" } : { status: "none" }, state, target });
+		setCurrent({
+			artist: artistKey ? { status: "loading" } : { status: "none" },
+			state,
+			target,
+		});
 		setHistory(await readHistory());
 		if (!artistKey) return;
 		const artist = await lookupArtist(artistKey);
@@ -35,10 +57,16 @@ export default function Popup() {
 		void readShortcut().then(setShortcut);
 		// Host access to open.spotify.com exposes that tab's URL; nothing else is read.
 		void (async () => {
-			const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+			const [tab] = await browser.tabs.query({
+				active: true,
+				currentWindow: true,
+			});
 			if (!tab?.url) return;
 			const url = new URL(tab.url);
-			const target = url.hostname === "open.spotify.com" ? targetFromSpotifyPath(url.pathname) : null;
+			const target =
+				url.hostname === "open.spotify.com"
+					? targetFromSpotifyPath(url.pathname)
+					: null;
 			if (target) await run(target);
 		})();
 	}, [run]);
@@ -53,9 +81,15 @@ export default function Popup() {
 					target="_blank"
 				>
 					<BloomMark className="size-5" />
-					<img alt="Dynamoi" className="h-3.5 w-auto" src="/dynamoi-wordmark.svg" />
+					<img
+						alt="Dynamoi"
+						className="h-3.5 w-auto"
+						src="/dynamoi-wordmark.svg"
+					/>
 				</a>
 			</header>
+
+			{import.meta.env.FIREFOX ? <SiteAccess /> : null}
 
 			<form
 				className="mt-5"
@@ -67,7 +101,10 @@ export default function Popup() {
 					if (target) void run(target);
 				}}
 			>
-				<label className="text-label font-semibold text-quiet" htmlFor={inputId}>
+				<label
+					className="text-label font-semibold text-quiet"
+					htmlFor={inputId}
+				>
 					{t("popupInputLabel")}
 				</label>
 				<div className="mt-1.5 flex gap-2">
@@ -112,7 +149,10 @@ export default function Popup() {
 
 			<section aria-labelledby="recent-heading" className="mt-6">
 				<div className="flex items-center justify-between">
-					<h2 className="text-label font-semibold text-quiet" id="recent-heading">
+					<h2
+						className="text-label font-semibold text-quiet"
+						id="recent-heading"
+					>
 						{t("popupRecent")}
 					</h2>
 					{history.length > 0 ? (
@@ -137,18 +177,26 @@ export default function Popup() {
 									type="button"
 								>
 									<span className="min-w-0 flex-1">
-										<span className="block truncate text-body text-text">{entry.name ?? t("untitled")}</span>
-										<span className="block truncate text-label text-muted">{entry.artists.join(", ")}</span>
+										<span className="block truncate text-body text-text">
+											{entry.name ?? t("untitled")}
+										</span>
+										<span className="block truncate text-label text-muted">
+											{entry.artists.join(", ")}
+										</span>
 									</span>
 									{entry.code ? (
-										<span className="tabular shrink-0 text-label text-quiet">{entry.code}</span>
+										<span className="tabular shrink-0 text-label text-quiet">
+											{entry.code}
+										</span>
 									) : null}
 								</button>
 							</li>
 						))}
 					</ul>
 				) : (
-					<p className="mt-1.5 text-body text-muted">{t("popupEmptyHistory")}</p>
+					<p className="mt-1.5 text-body text-muted">
+						{t("popupEmptyHistory")}
+					</p>
 				)}
 			</section>
 

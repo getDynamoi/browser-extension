@@ -1,3 +1,4 @@
+import { browser } from "./browser";
 import type { ArtistResult, LookupResult } from "./api";
 import type { ItemType, LookupTarget } from "./target";
 
@@ -13,7 +14,8 @@ const UNAVAILABLE: LookupResult = { status: "unavailable" };
 export async function lookup(target: LookupTarget): Promise<LookupResult> {
 	const message: ToBackground = { target, type: "LOOKUP" };
 	try {
-		const result: LookupResult | undefined = await chrome.runtime.sendMessage(message);
+		const result: LookupResult | undefined =
+			await browser.runtime.sendMessage(message);
 		return result ?? UNAVAILABLE;
 	} catch {
 		return UNAVAILABLE;
@@ -23,16 +25,17 @@ export async function lookup(target: LookupTarget): Promise<LookupResult> {
 export async function lookupArtist(artistKey: string): Promise<ArtistResult> {
 	const message: ToBackground = { artistKey, type: "ARTIST" };
 	try {
-		const result: ArtistResult | undefined = await chrome.runtime.sendMessage(message);
+		const result: ArtistResult | undefined =
+			await browser.runtime.sendMessage(message);
 		return result ?? { status: "none" };
 	} catch {
 		return { status: "none" };
 	}
 }
 
-/** The user's current card shortcut (they can rebind it in chrome://extensions). */
+/** The user's current card shortcut (they can rebind it in extension settings). */
 export async function readShortcut(): Promise<string> {
-	const commands = await chrome.commands.getAll();
+	const commands = await browser.commands.getAll();
 	return (
 		commands.find((command) => command.name === "toggle-card")?.shortcut ||
 		"Alt+Shift+D"

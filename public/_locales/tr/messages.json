@@ -300,5 +300,14 @@
 	},
 	"promoteShort": {
 		"message": "Tanıt"
+	},
+	"firefoxAccessTitle": {
+		"message": "Site erişimine izin ver"
+	},
+	"firefoxAccessBody": {
+		"message": "Yayın kartlarını göstermek için Spotify’a, yayın ayrıntılarını almak için Dynamoi’ye erişim izni verin. Ardından açık Spotify sekmelerini yeniden yükleyin. Reddederseniz buradan tekrar deneyebilirsiniz."
+	},
+	"firefoxPinBody": {
+		"message": "Firefox’un eklentiler menüsünü açıp Dynamoi’yi araç çubuğuna sabitleyin. Açılır pencereye yapıştırdığınız Spotify bağlantısı, UPC veya ISRC sorgulanır."
 	}
 }
