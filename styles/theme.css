@@ -24,7 +24,7 @@
 	--color-danger: oklch(0.7 0.19 22);
 	--color-transparent: transparent;
 
-	--font-sans: "Dynamoi Inter", "Inter", system-ui, "Segoe UI",
+	--font-sans: "Dynamoi Inter", "Inter", "Dynamoi Inter Fallback", system-ui, "Segoe UI",
 		"Helvetica Neue", Arial, sans-serif;
 
 	--text-label: 0.8125rem;

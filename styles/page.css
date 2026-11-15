@@ -7,6 +7,16 @@
 	src: url("/fonts/inter-variable-latin.woff2") format("woff2");
 }
 
+/* Arial sized to Inter's metrics, so the swap does not reflow the page. */
+@font-face {
+	ascent-override: 90.44%;
+	descent-override: 22.52%;
+	font-family: "Dynamoi Inter Fallback";
+	line-gap-override: 0%;
+	size-adjust: 107.12%;
+	src: local("Arial"), local("Liberation Sans");
+}
+
 /* Chrome injects a default body font into extension pages; override it. */
 html,
 body {
