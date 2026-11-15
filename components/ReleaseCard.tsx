@@ -228,7 +228,7 @@ function ArtistSection({ name, state }: { name: string; state: ArtistState }) {
 				</span>
 				{canOpen ? (
 					<ChevronIcon
-						className={`size-4 shrink-0 text-quiet transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+						className={`size-4 shrink-0 text-quiet motion-safe:transition-transform motion-safe:duration-200 ${open ? "rotate-180" : ""}`}
 					/>
 				) : null}
 			</button>

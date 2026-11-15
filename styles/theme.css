@@ -69,34 +69,39 @@
 }
 
 @keyframes shimmer {
-	from {
-		background-position: 100% 0;
-	}
 	to {
-		background-position: -100% 0;
+		translate: 100% 0;
 	}
 }
 
+/* Motion opts in per rule: colour transitions stay for reduced-motion users. */
 @utility animate-card-in {
-	animation: card-in 240ms var(--ease-entrance) both;
+	@media (prefers-reduced-motion: no-preference) {
+		animation: card-in 240ms var(--ease-entrance) both;
+	}
 }
 
+/* The highlight slides on the compositor; reduced motion keeps a still block. */
 @utility skeleton {
+	position: relative;
+	overflow: hidden;
 	border-radius: var(--radius-xs);
-	background: linear-gradient(
+	background: var(--color-raised);
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
 			90deg,
-			var(--color-raised) 0%,
+			transparent 0%,
 			var(--color-hover) 50%,
-			var(--color-raised) 100%
-		)
-		0 0 / 200% 100%;
-	animation: shimmer 1.4s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 0ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0ms !important;
+			transparent 100%
+		);
+		translate: -100% 0;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		&::after {
+			animation: shimmer 1.4s linear infinite;
+		}
 	}
 }
