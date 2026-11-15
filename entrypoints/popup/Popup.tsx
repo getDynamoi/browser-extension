@@ -168,7 +168,7 @@ export default function Popup() {
 					) : null}
 				</div>
 				{history.length > 0 ? (
-					<ul className="-mx-2 mt-1.5 max-h-56 overflow-y-auto">
+					<ul className="-mx-2 mt-1.5 max-h-56 overflow-y-auto overscroll-contain">
 						{history.map((entry) => (
 							<li key={`${entry.target.by}:${entry.target.value}`}>
 								<button

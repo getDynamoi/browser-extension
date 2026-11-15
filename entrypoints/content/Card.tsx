@@ -37,7 +37,7 @@ export function Card({
 		// oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- the card handles Escape for its whole region.
 		<aside
 			aria-label={t("cardLabel")}
-			className="card-root animate-card-in kbd-focus fixed top-18 right-4 z-[2147483000] max-h-[calc(100svh-6rem)] w-[22.5rem] overflow-y-auto rounded-card bg-surface p-5 shadow-pop"
+			className="card-root animate-card-in kbd-focus fixed top-18 right-4 z-[2147483000] max-h-[calc(100svh-6rem)] w-[22.5rem] overflow-y-auto overscroll-contain rounded-card bg-surface p-5 shadow-pop"
 			onKeyDown={(event) => {
 				if (event.key === "Escape") onClose();
 			}}
