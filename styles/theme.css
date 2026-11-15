@@ -16,6 +16,7 @@
 	--color-muted: color-mix(in srgb, #f4ece0 78%, #0c0b0a);
 	--color-quiet: color-mix(in srgb, #f4ece0 64%, #0c0b0a);
 	--color-faint: color-mix(in srgb, #f4ece0 52%, #0c0b0a);
+	--color-control: color-mix(in srgb, #f4ece0 42%, transparent); /* 3:1 boundary */
 	--color-ember: #e2733f;
 	--color-ember-hi: #ec8a58;
 	--color-ink: #0c0b0a;
@@ -48,10 +49,11 @@
 	--ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* An outline, not a box-shadow ring, so forced colors keeps it. */
 @utility kbd-focus {
 	outline: none;
 	&:focus-visible {
-		box-shadow: 0 0 0 2px var(--color-ember);
+		outline: 2px solid var(--color-ember);
 	}
 }
 

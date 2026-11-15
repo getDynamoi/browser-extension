@@ -21,7 +21,7 @@ export default function Welcome() {
 	] as const;
 
 	return (
-		<main className="mx-auto max-w-[40rem] px-6 pt-[12vh] pb-16">
+		<main className="mx-auto max-w-[40rem] px-6 pt-[12svh] pb-16">
 			<div className="flex items-center gap-3">
 				<BloomMark className="size-10" />
 				<img alt="Dynamoi" className="h-6 w-auto" src="/dynamoi-wordmark.svg" />

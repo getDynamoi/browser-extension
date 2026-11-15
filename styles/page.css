@@ -32,7 +32,10 @@ body {
 	color: var(--color-text);
 }
 
-* {
-	scrollbar-color: var(--color-hover) transparent;
+/* scrollbar-color inherits; scrollbar-width does not, so scrollers opt in. */
+:root {
+	scrollbar-color: var(--color-control) transparent;
+}
+:where(html, [class*="overflow-"]) {
 	scrollbar-width: thin;
 }
