@@ -19,10 +19,31 @@ export function camelot(sound: Sound): string {
 	return `${(major ? CAMELOT_MAJOR : CAMELOT_MINOR)[sound.key]}${major ? "B" : "A"}`;
 }
 
+/** Track length as a player clock ("3:05") in the UI language's digits and separator. */
 export function formatDuration(seconds: number): string {
 	const s = Math.round(seconds);
 	const h = Math.floor(s / 3600);
 	const m = Math.floor((s % 3600) / 60);
+	if ("DurationFormat" in Intl) {
+		const locale = browser.i18n.getUILanguage();
+		const zero = new Intl.NumberFormat(locale).format(0);
+		// Digital style pads the leading unit ("03:05"); players show "3:05".
+		return new Intl.DurationFormat(locale, {
+			hoursDisplay: "auto",
+			style: "digital",
+		})
+			.formatToParts(
+				h
+					? { hours: h, minutes: m, seconds: s % 60 }
+					: { minutes: m, seconds: s % 60 },
+			)
+			.map(({ value }, index) =>
+				index === 0 && value.length > 1 && value.startsWith(zero)
+					? value.slice(zero.length)
+					: value,
+			)
+			.join("");
+	}
 	const rest = String(s % 60).padStart(2, "0");
 	return h ? `${h}:${String(m).padStart(2, "0")}:${rest}` : `${m}:${rest}`;
 }
