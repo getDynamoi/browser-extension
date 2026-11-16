@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Ouvrez le menu des extensions de Firefox et épinglez Dynamoi à la barre d’outils. La fenêtre recherche tout lien Spotify, UPC ou ISRC que vous collez."
+	},
+	"uiLanguage": {
+		"message": "fr",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

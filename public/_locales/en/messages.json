@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Open Firefox’s extensions menu and pin Dynamoi to the toolbar. The popup looks up any Spotify link, UPC or ISRC you paste."
+	},
+	"uiLanguage": {
+		"message": "en",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

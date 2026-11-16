@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Avaa Firefoxin laajennusvalikko ja kiinnitä Dynamoi työkalupalkkiin. Ponnahdusikkuna hakee tiedot liittämäsi Spotify-linkin, UPC:n tai ISRC:n perusteella."
+	},
+	"uiLanguage": {
+		"message": "fi",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

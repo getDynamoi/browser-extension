@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Open het extensiemenu van Firefox en maak Dynamoi vast aan de werkbalk. De pop-up zoekt elke Spotify-link, UPC of ISRC op die je plakt."
+	},
+	"uiLanguage": {
+		"message": "nl",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

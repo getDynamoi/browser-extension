@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { BloomMark, CloseIcon } from "../../components/icons";
 import { type ArtistState, type CardState, ReleaseCard } from "../../components/ReleaseCard";
-import { t } from "../../lib/i18n";
+import { t, uiLanguage } from "../../lib/i18n";
 import type { LookupTarget } from "../../lib/target";
 
 export type CardModel = { artist: ArtistState; showRating: boolean; state: CardState };
@@ -41,6 +41,7 @@ export function Card({
 			onKeyDown={(event) => {
 				if (event.key === "Escape") onClose();
 			}}
+			lang={uiLanguage()}
 			ref={regionRef}
 			tabIndex={-1}
 		>

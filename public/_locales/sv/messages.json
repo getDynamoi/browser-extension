@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Öppna Firefox tilläggsmeny och fäst Dynamoi i verktygsfältet. Popupfönstret slår upp alla Spotify-länkar, UPC eller ISRC som du klistrar in."
+	},
+	"uiLanguage": {
+		"message": "sv",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

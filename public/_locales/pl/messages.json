@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Otwórz menu rozszerzeń Firefoksa i przypnij Dynamoi do paska narzędzi. W oknie rozszerzenia możesz wyszukać dowolny wklejony link Spotify, UPC lub ISRC."
+	},
+	"uiLanguage": {
+		"message": "pl",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

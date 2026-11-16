@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Firefox 확장 기능 메뉴를 열고 Dynamoi를 도구 모음에 고정하세요. 팝업에 Spotify 링크, UPC 또는 ISRC를 붙여넣어 조회할 수 있습니다."
+	},
+	"uiLanguage": {
+		"message": "ko",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Åbn Firefox’ udvidelsesmenu, og fastgør Dynamoi til værktøjslinjen. Popupvinduet slår ethvert Spotify-link, UPC eller ISRC op, som du indsætter."
+	},
+	"uiLanguage": {
+		"message": "da",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

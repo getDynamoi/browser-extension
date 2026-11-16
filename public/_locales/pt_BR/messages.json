@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Abra o menu de extensões do Firefox e fixe o Dynamoi na barra de ferramentas. O popup busca qualquer link do Spotify, UPC ou ISRC que você colar."
+	},
+	"uiLanguage": {
+		"message": "pt-BR",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

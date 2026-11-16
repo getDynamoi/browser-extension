@@ -8,12 +8,17 @@ export function t(
 	return browser.i18n.getMessage(key, substitutions) || key;
 }
 
+/** Language of the catalog Chrome actually loaded (English when the UI language has none). */
+export function uiLanguage(): string {
+	return t("uiLanguage");
+}
+
 export function formatReleaseDate(value: string | null): string | null {
 	if (!value) return null;
 	const [year, month, day] = value.split("-").map(Number);
 	if (!year) return value;
 	if (!(month && day)) return String(year);
-	return new Intl.DateTimeFormat(browser.i18n.getUILanguage(), {
+	return new Intl.DateTimeFormat(uiLanguage(), {
 		day: "numeric",
 		month: "long",
 		timeZone: "UTC",

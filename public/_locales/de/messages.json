@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Öffne das Erweiterungsmenü von Firefox und hefte Dynamoi an die Symbolleiste. Das Popup sucht nach jedem Spotify-Link, UPC oder ISRC, den du einfügst."
+	},
+	"uiLanguage": {
+		"message": "de",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

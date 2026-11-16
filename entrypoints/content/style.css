@@ -6,6 +6,8 @@
 }
 
 .card-root {
+	/* The card is always dark; :host { all: initial } would otherwise leave native UI light. */
+	color-scheme: dark;
 	font-family: var(--font-sans);
 	color: var(--color-text);
 	-webkit-font-smoothing: antialiased;

@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Firefoxの拡張機能メニューを開き、Dynamoiをツールバーにピン留めしてください。ポップアップにSpotifyのリンク、UPC、ISRCを貼り付けると検索できます。"
+	},
+	"uiLanguage": {
+		"message": "ja",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

@@ -1,6 +1,5 @@
-import { browser } from "./browser";
 import type { Sound } from "./api";
-import { t } from "./i18n";
+import { t, uiLanguage } from "./i18n";
 
 /** Camelot wheel numbers by pitch class; A is minor, B is major. */
 const CAMELOT_MAJOR = [8, 3, 10, 5, 12, 7, 2, 9, 4, 11, 6, 1];
@@ -19,13 +18,13 @@ export function camelot(sound: Sound): string {
 	return `${(major ? CAMELOT_MAJOR : CAMELOT_MINOR)[sound.key]}${major ? "B" : "A"}`;
 }
 
-/** Track length as a player clock ("3:05") in the UI language's digits and separator. */
+/** Track length as a player clock ("3:05") in the loaded catalog language's digits and separator. */
 export function formatDuration(seconds: number): string {
 	const s = Math.round(seconds);
 	const h = Math.floor(s / 3600);
 	const m = Math.floor((s % 3600) / 60);
 	if ("DurationFormat" in Intl) {
-		const locale = browser.i18n.getUILanguage();
+		const locale = uiLanguage();
 		const zero = new Intl.NumberFormat(locale).format(0);
 		// Digital style pads the leading unit ("03:05"); players show "3:05".
 		return new Intl.DurationFormat(locale, {
@@ -49,14 +48,14 @@ export function formatDuration(seconds: number): string {
 }
 
 export function formatCompact(value: number): string {
-	return new Intl.NumberFormat(browser.i18n.getUILanguage(), {
+	return new Intl.NumberFormat(uiLanguage(), {
 		maximumFractionDigits: 1,
 		notation: "compact",
 	}).format(value);
 }
 
 export function formatShortDate(value: string): string {
-	return new Intl.DateTimeFormat(browser.i18n.getUILanguage(), {
+	return new Intl.DateTimeFormat(uiLanguage(), {
 		day: "numeric",
 		month: "short",
 		timeZone: "UTC",
@@ -66,7 +65,7 @@ export function formatShortDate(value: string): string {
 export function countryName(code: string): string {
 	try {
 		return (
-			new Intl.DisplayNames([browser.i18n.getUILanguage()], {
+			new Intl.DisplayNames([uiLanguage()], {
 				type: "region",
 			}).of(code) ?? code
 		);

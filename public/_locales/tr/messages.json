@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Firefox’un eklentiler menüsünü açıp Dynamoi’yi araç çubuğuna sabitleyin. Açılır pencereye yapıştırdığınız Spotify bağlantısı, UPC veya ISRC sorgulanır."
+	},
+	"uiLanguage": {
+		"message": "tr",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }

@@ -309,5 +309,9 @@
 	},
 	"firefoxPinBody": {
 		"message": "Buka menu ekstensi Firefox dan sematkan Dynamoi ke bilah alat. Popup mencari tautan Spotify, UPC, atau ISRC yang Anda tempel."
+	},
+	"uiLanguage": {
+		"message": "id",
+		"description": "Language tag of this catalog, used as the page lang attribute. Do not translate."
 	}
 }
