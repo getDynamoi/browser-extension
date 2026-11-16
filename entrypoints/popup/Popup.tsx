@@ -99,6 +99,11 @@ export default function Popup() {
 					const target = targetFromInput(input);
 					setInvalid(!target);
 					if (target) void run(target);
+					// A failed submit moves focus to the field, which reads its error.
+					else
+						requestAnimationFrame(() =>
+							document.getElementById(inputId)?.focus(),
+						);
 				}}
 			>
 				<label
