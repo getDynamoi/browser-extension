@@ -75,7 +75,7 @@ function CopyButton({
 		<button
 			aria-label={children ? undefined : t("copyField", label)}
 			className={`kbd-focus inline-flex cursor-pointer items-center gap-1.5 transition-colors duration-150 ${className}`}
-			onClick={async () => {
+			onClick={() => { void (async () => {
 				try {
 					await navigator.clipboard.writeText(text);
 					setCopied(true);
@@ -83,7 +83,7 @@ function CopyButton({
 				} catch {
 					announce(t("copyFailed"));
 				}
-			}}
+			})(); }}
 			type="button"
 		>
 			{copied ? (
