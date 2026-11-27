@@ -42,7 +42,6 @@
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
 		"exactOptionalPropertyTypes": true,
-		"jsx": "react-jsx",
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,

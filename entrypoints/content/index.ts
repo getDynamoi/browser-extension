@@ -1,5 +1,4 @@
 import { browser } from "../../lib/browser";
-import { createRoot, type Root } from "react-dom/client";
 import { createShadowRootUi } from "wxt/utils/content-script-ui/shadow-root";
 import { defineContentScript } from "wxt/utils/define-content-script";
 import {
@@ -19,7 +18,7 @@ import {
 	targetFromSpotifyPath,
 	targetKey,
 } from "../../lib/target";
-import { Card, type CardModel } from "./Card";
+import { Card, type CardModel, type CardView } from "./Card";
 import "./style.css";
 
 const FONT_STYLE_ID = "dynamoi-extension-font";
@@ -52,34 +51,42 @@ export default defineContentScript({
 		let model: CardModel | null = null;
 		let hidden = false;
 		let focusOnRender = false;
-		let root: Root | null = null;
-		let ui: Awaited<ReturnType<typeof createShadowRootUi<Root>>> | null = null;
+		let root: HTMLDivElement | null = null;
+		let card: CardView | null = null;
+		let ui: Awaited<
+			ReturnType<typeof createShadowRootUi<HTMLDivElement>>
+		> | null = null;
 
 		function render() {
 			if (!(root && model && target)) return;
 			const autoFocus = focusOnRender;
 			focusOnRender = false;
-			root.render(
-				<Card
-					autoFocus={autoFocus}
-					model={model}
-					onClose={hide}
-					onDismissRating={() => {
-						void finishRatingPrompt();
-						if (model) model = { ...model, showRating: false };
-						render();
-					}}
-					onRate={() => {
-						void finishRatingPrompt();
-						window.open(STORE_REVIEW_URL, "_blank", "noopener");
-						if (model) model = { ...model, showRating: false };
-						render();
-					}}
-					onRetry={() => target && void load(target)}
-					target={target}
-					wordmarkUrl={wordmarkUrl}
-				/>,
-			);
+			const props = {
+				autoFocus,
+				model,
+				onClose: hide,
+				onDismissRating: () => {
+					void finishRatingPrompt();
+					if (model) model = { ...model, showRating: false };
+					render();
+				},
+				onRate: () => {
+					void finishRatingPrompt();
+					window.open(STORE_REVIEW_URL, "_blank", "noopener");
+					if (model) model = { ...model, showRating: false };
+					render();
+				},
+				onRetry: () => {
+					if (target) void load(target);
+				},
+				target,
+				wordmarkUrl,
+			};
+			if (card) card.update(props);
+			else {
+				card = Card(props);
+				root.replaceChildren(card.element);
+			}
 		}
 
 		async function show() {
@@ -90,11 +97,12 @@ export default defineContentScript({
 					onMount(container) {
 						const wrapper = document.createElement("div");
 						container.append(wrapper);
-						root = createRoot(wrapper);
-						return root;
+						root = wrapper;
+						return wrapper;
 					},
-					onRemove(mounted) {
-						mounted?.unmount();
+					onRemove() {
+						card?.dispose();
+						card = null;
 						root = null;
 					},
 				});
@@ -190,6 +198,8 @@ export default defineContentScript({
 			navigation?.removeEventListener("currententrychange", sync);
 			window.removeEventListener("popstate", sync);
 			titleObserver.disconnect();
+			ui?.remove();
+			ui = null;
 		});
 
 		sync();

@@ -14,16 +14,9 @@
 		"zip:firefox": "wxt zip -b firefox",
 		"validate": "bun run build && bun run build:firefox && bun scripts/validate-manifests.ts"
 	},
-	"dependencies": {
-		"react": "catalog:",
-		"react-dom": "catalog:"
-	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "catalog:",
 		"@types/chrome": "0.1.43",
-		"@types/react": "catalog:",
-		"@types/react-dom": "catalog:",
-		"@wxt-dev/module-react": "1.2.2",
 		"postcss": "catalog:",
 		"tailwindcss": "catalog:",
 		"typescript": "catalog:",

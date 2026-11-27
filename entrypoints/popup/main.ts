@@ -1,9 +1,10 @@
 import { uiLanguage } from "../../lib/i18n";
-import { createRoot } from "react-dom/client";
-import Welcome from "./Welcome";
+import Popup from "./Popup";
 
 document.documentElement.lang = uiLanguage();
 const container = document.getElementById("app");
 if (container) {
-	createRoot(container).render(<Welcome />);
+	const view = Popup();
+	container.append(view.element);
+	window.addEventListener("pagehide", () => view.dispose(), { once: true });
 }
