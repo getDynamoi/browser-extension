@@ -2,11 +2,20 @@
 	"extends": "./.wxt/tsconfig.json",
 	"compilerOptions": {
 		"strict": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
 		"exactOptionalPropertyTypes": true,
 		"jsx": "react-jsx",
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
+		"noUncheckedIndexedAccess": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"verbatimModuleSyntax": true,
+		"erasableSyntaxOnly": true,
+		"isolatedModules": true,
 		"types": ["chrome", "node"]
 	}
 }
