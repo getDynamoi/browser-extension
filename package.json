@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "wxt",
 		"build": "wxt build",
-		"typecheck": "wxt prepare && tsrs --noEmit -p tsconfig.json",
+		"typecheck": "wxt prepare && effect-tsgo tsrs@7.1.0-beta.tsrs5 --noEmit -p tsconfig.json",
 		"lint": "echo 'no lint configured'",
 		"postinstall": "wxt prepare",
 		"build:firefox": "wxt build -b firefox",

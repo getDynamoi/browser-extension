@@ -1,6 +1,43 @@
 {
 	"extends": "./.wxt/tsconfig.json",
 	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "@effect/language-service",
+				"diagnostics": true,
+				"includeSuggestionsInTsc": false,
+				"ignoreEffectErrorsInTscExitCode": false,
+				"ignoreEffectWarningsInTscExitCode": false,
+				"diagnosticSeverity": {
+					"anyUnknownInErrorContext": "error",
+					"classSelfMismatch": "error",
+					"duplicatePackage": "error",
+					"effectFnImplicitAny": "error",
+					"errorPayloadShadowsName": "error",
+					"experimentalApiUsage": "error",
+					"floatingEffect": "error",
+					"floatingEffectInVitest": "error",
+					"genericEffectServices": "error",
+					"missingEffectContext": "error",
+					"missingEffectError": "error",
+					"missingLayerContext": "error",
+					"missingReturnYieldStar": "error",
+					"missingStarInYieldEffectGen": "error",
+					"nonObjectEffectServiceType": "error",
+					"obsoleteMatchImport": "error",
+					"obsoleteSchemaImport": "error",
+					"outdatedApi": "error",
+					"overriddenSchemaConstructor": "error",
+					"promiseInEffectSuccess": "error",
+					"schemaClassMissingBrand": "error",
+					"schemaClassObjectLiteral": "error",
+					"schemaLiteralNonFinite": "error",
+					"schemaOpaqueInstanceMember": "error",
+					"unsafeEffectTypeAssertion": "error",
+					"unstableApiUsage": "error"
+				}
+			}
+		],
 		"strict": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
